@@ -1,2 +1,1 @@
-# website_v2
-Website of FSUMinho Formula Student Team (Version 2)
+![Logo_red](https://github.com/FSUMinho/website/blob/main/imgs/logo_red.png)
