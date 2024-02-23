@@ -1,13 +1,18 @@
 import { Link } from 'react-router-dom';
-import logo_red from '../assets/logo_red.png'
+import logo_white from '../assets/logo_white.png'
 
 const NavBar = () => {
  return (
     <nav style={ container }>
-        <img src={ logo_red } style={ logo } />
+        <Link to="/">
+            <img src={ logo_white } style={ logo } />
+        </Link>
+
         <ul>
             <li>
-                <Link to="/">Home</Link>
+                <Link></Link>
+                <Link></Link>
+                <Link></Link>
             </li>
         </ul>
     </nav>
@@ -19,7 +24,10 @@ export default NavBar;
 const container = {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: "#e52526",
+    minHeight: "70px"
 };
 
 const logo = {
