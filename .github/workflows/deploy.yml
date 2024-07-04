@@ -30,24 +30,33 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
+
+      - name: Change directory to fsuminho_website
+        run: cd fsuminho_website
+
       - name: Install dependencies
         run: npm ci
-        working-directory: ./fsuminho_website/
+        working-directory: ./fsuminho_website
+
       - name: Build
         run: npm run build
-        working-directory: ./fsuminho_website/
+        working-directory: ./fsuminho_website
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload dist folder
           path: './fsuminho_website/dist'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
