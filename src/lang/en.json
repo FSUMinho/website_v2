@@ -1,5 +1,35 @@
 {
     "translation": {
-        "about_us_title": "About us"
+        "navbar": {
+            "team": "Team",
+            "sponsors": "Sponsors"
+        },
+
+        "about_us": {
+            "title": "About us",
+            "description": "We are a technology company that develops solutions for the insurance market.",
+            "text": "We are a group of engineering students from the University of Minho based in the city of Guimarães (Azurém Campus) with a passion for motorsport. As the latest addition to the Formula Student scene in Portugal, we aim to deliver a project with a solid foundation and, in the short term, become a reference in the north of the country.",
+            "members": "Members",
+            "courses": "Courses",
+            "years": "Years",
+            "cars": "Cars"
+        },
+
+        "fs": {
+            "title": "Formula Student",
+            "description": "Formula Student is an international engineering competition that challenges university students to design, manufacture and compete with a racing car. The competition covers rigorous static and dynamic tests. Static tests include the team's business plan presentation, car production cost analysis and technical design evaluation. Dynamic tests assess the car's performance on the track, covering challenges such as skidpad, acceleration, autocross, endurance and efficiency. The scores obtained in these tests contribute to the calculation of the teams' overall score, thus determining the winners of each category.",
+            "classes": {
+                "title": "Formula Student Classes",
+                "description": "In Formula Student competitions there are three different classes",
+                "cv-description": "Internal combustion engine cars",
+                "ev-description": "Cars with an electric motor",
+                "dv-description": "Autonomous driving cars"
+            }
+        },
+
+        "contact": {
+            "title": "Contact us",
+            "button": "Contact"
+        }
     }
 }

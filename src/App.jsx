@@ -2,11 +2,15 @@ import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './App.css'
-import NavBar from './components/navbar';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import NavBar from './components/navbar/navbar';
 import Footer from './components/footer'
 import No_Page from './pages/no_page/no_page';
 import Home from "./pages/homepage/home";
 import ContactForm from './pages/contact_form/contact_form';
+import Team from './pages/team/team';
+import Sponsors from './pages/sponsors/sponsors';
 
 const App = () => {
   const location = useLocation();
@@ -20,6 +24,15 @@ const App = () => {
 
         case '/contact':
           document.title = 'Contact'
+          break;
+
+        case '/team':
+          document.title = 'Team'
+          break;
+
+        case '/sponsors':
+          document.title = 'Sponsosrs'
+          break;
 
         default:
           document.title = 'FSUMinho - Page Not Found';
@@ -28,19 +41,34 @@ const App = () => {
     };
 
     updateTitle(location.pathname);
+
+    AOS.init({
+      once: true,
+      disable: "phone",
+      duration: 300,
+      easing: "ease-out-cubic",
+    });
   }, [location]);
 
   return (
     <>
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<No_Page />} />
-        <Route path="/contact" element={<ContactForm />} />
-      </Routes>
-      <Footer />
+      <div style={style}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<ContactForm />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/sponsors" element={<Sponsors />} />
+          <Route path="*" element={<No_Page />} />
+        </Routes>
+        <Footer />
+      </div>
     </>
   );
 };
+
+const style = {
+  paddingTop: "70px"
+}
 
 export default App;
