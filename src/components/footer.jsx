@@ -9,14 +9,13 @@ const Footer = () => {
 export default Footer;
 
 const container = {
-    position: 'fixed',
-    bottom: '0',
+    marginTop: "20vh",
     width: '100%',
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "#e52526",
+    backgroundColor: "#e52516",
     minHeight: "70px",
     color: 'white'
 };

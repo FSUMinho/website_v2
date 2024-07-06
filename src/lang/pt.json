@@ -1,5 +1,35 @@
 {
     "translation": {
-        "about_us_title": "Sobre nós"
+        "navbar": {
+            "team": "Equipa",
+            "sponsors": "Patrocinadores"
+        },
+
+        "about_us": {
+            "title": "Sobre nós",
+            "description": "Somos uma empresa de tecnologia que desenvolve soluções para o mercado de seguros.",
+            "text": "Somos um grupo de estudantes de engenharia da Universidade do Minho com base na cidade de Guimarães (Campus de Azurém) com uma paixão pelo desporto motorizado. Como a mais recente adição à Formula Student em Portugal, pretendemos entregar um projeto com bases sólidas e, a curto prazo, tornarmo-nos uma referência no norte do país.",
+            "members": "Membros",
+            "courses": "Cursos",
+            "years": "Anos",
+            "cars": "Carros"
+        },
+
+        "fs": {
+            "title": "Formula Student",
+            "description": "A Formula Student é uma competição internacional de engenharia que desafia estudantes universitários a conceber, fabricar e competir com um carro de corrida. A competição abrange provas estáticas e dinâmicas rigorosas. As provas estáticas incluem a apresentação do plano de negócios da equipa, análise dos custos de produção do carro e avaliação técnica do design. Já as provas dinâmicas testam o desempenho do carro em pista, abrangendo desafios como skidpad, aceleração, autocross, resistência e eficiência. A pontuação obtida nestas provas contribui para o cálculo do score geral das equipas, determinando, assim, os vencedores de cada categoria.",
+            "classes": {
+                "title": "Classes da Formula Student",
+                "description": "Nas competições de Formula Student existem três classes diferentes",
+                "cv-description": "Carros com motor de combustão interna",
+                "ev-description": "Carros com motor elétrico",
+                "dv-description": "Carros com condução autónoma"
+            }
+        },
+
+        "contact": {
+            "title": "Entre em contato",
+            "button": "Contacto"
+        }
     }
 }

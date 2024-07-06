@@ -8,6 +8,8 @@
 
 - Multi-language support implemented with <a href="https://react.i18next.com/">i18next</a>
 
+- Scroll animations by <a href="https://github.com/michalsnik/aos/tree/v2">AOS - Animate on scroll library</a>
+
 - Hosting made on GitHub pages
 
 ## Setup

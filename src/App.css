@@ -21,6 +21,28 @@ h3 {
   font-size: 2rem;
 }
 
-ul, li {
+ul, li, button, a {
   all: unset;
+}
+
+p {
+  font-size: 1.5rem;
+
+}
+
+/* SCROLL */
+
+*::-webkit-scrollbar {
+  width: 10px;
+  overflow-x: ;
+}
+
+*::-webkit-scrollbar-track {
+  background: white
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #818181;
+  border-radius: 20px;
+  border: 3px solid #818181;
 }
