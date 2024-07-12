@@ -1,0 +1,21 @@
+.sectors-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sector {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+    gap: 5%;
+}
+
+.sector-icon {
+    width: 250px;
+    height: auto;
+}
