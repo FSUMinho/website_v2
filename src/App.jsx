@@ -11,6 +11,7 @@ import Home from "./pages/homepage/home";
 import ContactForm from './pages/contact_form/contact_form';
 import Team from './pages/team/team';
 import Sponsors from './pages/sponsors/sponsors';
+import Archive from './pages/team_archive/archive';
 
 const App = () => {
   const location = useLocation();
@@ -32,6 +33,10 @@ const App = () => {
 
         case '/sponsors':
           document.title = 'Sponsosrs'
+          break;
+
+        case '/archive':
+          document.title = 'Archive'
           break;
 
         default:
@@ -59,6 +64,7 @@ const App = () => {
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/team" element={<Team />} />
           <Route path="/sponsors" element={<Sponsors />} />
+          <Route path="/archive" element={<Archive />} />
           <Route path="*" element={<No_Page />} />
         </Routes>
         <Footer />
