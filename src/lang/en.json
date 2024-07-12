@@ -2,7 +2,8 @@
     "translation": {
         "navbar": {
             "team": "Team",
-            "sponsors": "Sponsors"
+            "sponsors": "Sponsors",
+            "archive": "Archive"
         },
 
         "about_us": {
@@ -25,6 +26,18 @@
                 "ev-description": "Cars with an electric motor",
                 "dv-description": "Autonomous driving cars"
             }
+        },
+
+        "team": {
+            "title": "Team",
+            "description": "",
+            "sectors-title": "Sectors",
+            "management": "The management sector handles the business side of the team. It is its responsibility to gather funds for the project via partnerships and also for its marketing. Management also has to fulfil the needs of the other departments. This includes ordering parts and tools or provide trainning sessions.",
+            "powertrain": "The powertrain sector is responsible for the development of the power unit. It's the sector's duty to deliver a reliable and powerful electric motor. Efficiency is also key in this sector. The power unit needs to be tuned in such a way that it is always consuming the right amount of energy.",
+            "esw": "As the name suggests, the electronics & software sector handles all the electronic components and software that keep the car safe and running smoothly. The sector makes sure all the major components of the car are properly programmed and communicating between each other.",
+            "drivetrain": "The drivetrain sector focuses on delivering power from the engine to the wheels. It aims to achieve the most efficient power transfer in order to secure maximum acceleration and maintain speed for the full race distance.",
+            "chassiaero": "The chassis and aerodynamics sector is responsible for designing and constructing the car's chassis. The chassis is the structure that supports all the car's components. Aerodynamics is responsible for minimizing air resistance and maximizing downforce.",
+            "suspension": "The suspension & steering sector is essential for the car's performance. The suspension provides grip, stability, and absorbs track irregularities, while the steering allows the driver to control the car with precision."
         },
 
         "contact": {

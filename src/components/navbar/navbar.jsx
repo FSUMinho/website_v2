@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import logo_white from '../../assets/logo_white.png';
 import insta_logo from '../../assets/navbar/insta.png';
 import linkedin_logo from '../../assets/navbar/linkedin.png';
+import email_logo from '../../assets/navbar/email.png';
 import enFlag from '../../assets/navbar/en.png';
 import ptFlag from '../../assets/navbar/pt.png';
 
@@ -38,6 +39,12 @@ const NavBar = () => {
                     </Link>
                 </li>
 
+                <li className={navLink}>
+                    <Link to="/archive" className="link">
+                        {t('navbar.archive')}
+                    </Link>
+                </li>
+
                 <li style={navLink}>
                     <a href="https://www.instagram.com/fsuminho/">
                         <img src={insta_logo} style={navIcons} alt="Instagram" />
@@ -52,7 +59,9 @@ const NavBar = () => {
 
                 <li style={navLink}>
                     <Link to="/contact">
-                        <button style={ contactButton }>{t('contact.button')}</button>
+                        <button>
+                            <img src={email_logo} style={navIcons} alt="Email" />
+                        </button>
                     </Link>
                 </li>
             </ul>
@@ -110,12 +119,4 @@ const langSelect = {
     padding: "1px",
     borderRadius: "50%",
     backgroundColor: "white"
-}
-
-const contactButton = {
-    backgroundColor: "white",
-    color: "black",
-    padding: "5px",
-    borderRadius: "10px",
-    fontWeight: "bold"
 }
