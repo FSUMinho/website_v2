@@ -30,7 +30,7 @@
 
         "team": {
             "title": "Equipa",
-            "description": "",
+            "description": "Atualmente a equipa é composta por 6 setores, cada um dedicado a uma área específica do carro. Cada setor é composto por um head e vários membros, que trabalham em conjunto para desenvolver o melhor carro possível. A equipa é liderada por um Team Leader, que coordena o trabalho de todos os setores. Existem ainda dois diretores técnicos, supervisionando cada um os setores da parte elétrica e mecânica do carro.",
             "sectors-title": "Setores",
             "management": "A equipa de management é responsável pelas finanças da equipa. É responsável pela acumulação de fundos através de parcerias e pelo marketing do projeto. Cabe também à equipa de management satisfazer as necessidades dos outros setores, o que inclui adquirir ferramentas e peças e organizar formações.",
             "powertrain": "O setor de powertrain é responsável pelo desenvolvimento do motor elétrico. Cabe a este setor entregar uma unidade motriz potente e durável. Eficiência é um dos pontos mais importantes para powertrain. O motor deve ser programado de forma a que consuma sempre a quantidade certa de energia.",
@@ -38,6 +38,15 @@
             "drivetrain": "O setor de drivetrain foca-se em passar a potência do motor para as rodas. O seu objetivo é obter a transferência de potência mais eficiente possível para que o carro consiga alcançar a aceleração máxima e manter a velocidade durante a distância da corrida.",
             "chassiaero": "O setor de chassis e aerodinâmica é responsável por projetar e construir o chassis do carro. O chassis é a estrutura que suporta todos os componentes do carro. A aerodinâmica é responsável por minimizar a resistência do ar e maximizar a força descendente.",
             "suspension": "O setor de suspensão e direção é essencial para o desempenho do carro. A suspensão proporciona aderência, estabilidade e absorve as irregularidades da pista, enquanto a direção permite ao piloto controlar o carro com precisão."
+        },
+
+        "archive": {
+            "title": "Arquivo FSUMinho",
+            "country": "País",
+            "city": "Cidade",
+            "circuit": "Circuito",
+            "class_": "Classe",
+            "result": "Resultado classe"
         },
 
         "contact": {

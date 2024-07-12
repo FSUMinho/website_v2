@@ -1,0 +1,79 @@
+.component-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.competition-container {
+    height: 200px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/archive_assets/FSPT_2023_group_phto.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 1rem;
+}
+
+.logo {
+    height: 250px;
+    width: 250px;
+}
+
+.rotate img {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.reverse-rotate img {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.competition-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.event-info {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.event-info table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.event-info th,
+.event-info td {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.event-info th {
+    background-color: #f2f2f2;
+}
+
+.event-info td {
+    background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .component-container {
+        width: 80%;
+    }
+}
