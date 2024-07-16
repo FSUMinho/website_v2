@@ -19,6 +19,7 @@
     background-position: center;
     color: white;
     padding: 1rem;
+    z-index: 2;
 }
 
 .logo {
@@ -70,6 +71,18 @@
 
 .event-info td {
     background-color: #ffffff;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.medal {
+    height: 20px;
+    width: 20px;
 }
 
 @media (max-width: 768px) {

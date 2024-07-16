@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './competition.css';
 import arrow from '../../assets/archive_assets/arrow.png';
 import { useTranslation } from 'react-i18next';
+import gold from '../../assets/sponsors/gold-medal.png';
+import silver from '../../assets/sponsors/silver-medal.png';
+import bronze from '../../assets/sponsors/bronze-medal.png'
 
 const Competition = ({ background, logo, year, country, city, circuit, class_, overall, results }) => {
     const containerStyle = {
@@ -40,7 +43,7 @@ const Competition = ({ background, logo, year, country, city, circuit, class_, o
 
             <div className='competiton-info-container'>
             {showTable && (
-                    <table className='event-info'>
+                    <table className='event-info' data-aos="fade-down">
                         <tbody>
                             <tr className='info'>
                                 <th>{t('archive.country')}</th>
@@ -64,13 +67,29 @@ const Competition = ({ background, logo, year, country, city, circuit, class_, o
 
                             <tr className='info'>
                                 <th>{t('archive.result')}</th>
-                                <td>P{overall}</td>
+                                <td className='result'>
+                                    P{overall}
+
+                                    {overall==="1" && <img className='medal' src={gold} />}
+
+                                    {overall==="2" && <img className='medal' src={silver} />}
+
+                                    {overall==="3" && <img className='medal' src={bronze} />}
+                                </td>
                             </tr>
 
                             {Object.entries(results).map(([key, value]) => (
                                 <tr key={key} className='info'>
                                     <th>{key}</th>
-                                    <td>P{value}</td>
+                                    <td className='result'>
+                                        P{value}
+
+                                        {value==="1" && <img className='medal' src={gold} />}
+
+                                        {value==="2" && <img className='medal' src={silver} />}
+
+                                        {value==="3" && <img className='medal' src={bronze} />}
+                                    </td>
                                 </tr>
                             ))}
                         </tbody>
