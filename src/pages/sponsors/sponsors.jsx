@@ -9,6 +9,7 @@ import piep from '../../assets/sponsors/piep.png'
 import tesla from '../../assets/sponsors/tesla.jpg'
 import tracopower from '../../assets/sponsors/tracopower.jpg'
 import vlb from '../../assets/sponsors/vlb.png'
+import norelem from '../../assets/sponsors/norelem.png'
 
 const Sponsors = () => {
     const { t } = useTranslation();
@@ -50,6 +51,8 @@ const Sponsors = () => {
                     <a href='https://www.isabellenhuette.de/en/'><img src={ihh} className='sponsor-logo' /></a>
 
                     <a href='https://www.piep.pt/'><img src={piep} className='sponsor-logo' /></a>
+
+                    <a href='https://norelem.es/pt/?gad_source=1&gclid=CjwKCAjwtNi0BhA1EiwAWZaANIudrdWOgR9PyGX5LAQIqMXnHsQe5d_NNs3-VgJ_p_E8_JpR-dpOdhoCa34QAvD_BwE'><img src={norelem} className='sponsor-logo' /></a>
                 </div>
             </div>
         </div>

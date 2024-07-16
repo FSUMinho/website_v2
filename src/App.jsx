@@ -5,7 +5,7 @@ import './App.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import NavBar from './components/navbar/navbar';
-import Footer from './components/footer'
+import Footer from './components/footer/footer';
 import No_Page from './pages/no_page/no_page';
 import Home from "./pages/homepage/home";
 import ContactForm from './pages/contact_form/contact_form';
@@ -56,9 +56,10 @@ const App = () => {
   }, [location]);
 
   return (
-    <>
+    
+    <div style={appContainerStyle}>
       <NavBar />
-      <div style={style}>
+      <div style={contentStyle}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<ContactForm />} />
@@ -67,14 +68,22 @@ const App = () => {
           <Route path="/archive" element={<Archive />} />
           <Route path="*" element={<No_Page />} />
         </Routes>
-        <Footer />
       </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 
-const style = {
-  paddingTop: "70px"
-}
+const appContainerStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  minHeight: '100vh',
+};
+
+const contentStyle = {
+  flex: '1',
+  paddingTop: "70px",
+  paddingBottom: "70px"
+};
 
 export default App;

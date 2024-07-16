@@ -3,6 +3,8 @@
         "navbar": {
             "team": "Team",
             "sponsors": "Sponsors",
+            "companies": "Companies",
+            "invest": "Invest",
             "archive": "Archive"
         },
 
@@ -57,6 +59,11 @@
         "contact": {
             "title": "Contact us",
             "button": "Contact"
+        },
+
+        "footer": {
+            "contact": "Contact Us",
+            "social": "Social Media"
         }
     }
 }

@@ -1,4 +1,4 @@
-import './navbar.css'
+import './navbar.css';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useTranslation } from 'react-i18next';
@@ -8,11 +8,19 @@ import linkedin_logo from '../../assets/navbar/linkedin.png';
 import email_logo from '../../assets/navbar/email.png';
 import enFlag from '../../assets/navbar/en.png';
 import ptFlag from '../../assets/navbar/pt.png';
+import { useState } from 'react';
+import arrow from '../../assets/archive_assets/arrow.png';
 
 const NavBar = () => {
     const { t } = useTranslation();
     const { currentLanguage, handleChangeLanguage } = useLanguage();
     const flagImage = currentLanguage === 'en' ? enFlag : ptFlag;
+
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!dropdownOpen);
+    };
 
     return (
         <nav style={container}>
@@ -27,19 +35,29 @@ const NavBar = () => {
                     onClick={handleChangeLanguage} />
                 </li>
 
-                <li className={navLink}>
+                <li className="navLink">
                     <Link to="/team" className="link">
                         {t('navbar.team')}
                     </Link>
                 </li>
 
-                <li className={navLink}>
-                    <Link to="/sponsors" className="link">
-                        {t('navbar.sponsors')}
+                <li className="navLink dropdown" onClick={toggleDropdown}>
+                    <Link to="#" className="link">
+                        <div className='sponsors-link'>
+                            {t('navbar.sponsors')}
+                            <img src={arrow} className={dropdownOpen ? 'arrow rotate' : 'arrow'} />
+                        </div>
                     </Link>
+                    
+                    {dropdownOpen && (
+                        <ul className="dropdown-menu">
+                            <li><Link to="/sponsors" className="dropdown-link">{t('navbar.companies')}</Link></li>
+                            <li><Link to="/invest" className="dropdown-link">{t('navbar.invest')}</Link></li>
+                        </ul>
+                    )}
                 </li>
 
-                <li className={navLink}>
+                <li className="navLink">
                     <Link to="/archive" className="link">
                         {t('navbar.archive')}
                     </Link>
@@ -104,7 +122,8 @@ const navLink = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    cursor: "pointer"
+    cursor: "pointer",
+    position: "relative"
 }
 
 const navIcons = {

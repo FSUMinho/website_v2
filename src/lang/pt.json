@@ -3,6 +3,8 @@
         "navbar": {
             "team": "Equipa",
             "sponsors": "Patrocinadores",
+            "companies": "Empresas",
+            "invest": "Como investir",
             "archive": "Arquivo"
         },
 
@@ -57,6 +59,11 @@
         "contact": {
             "title": "Entre em contato",
             "button": "Contacto"
+        },
+
+        "footer": {
+            "contact": "Contacte-nos",
+            "social": "Redes sociais"
         }
     }
 }
