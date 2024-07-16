@@ -49,6 +49,11 @@
             "result": "Resultado classe"
         },
 
+        "sponsors": {
+            "title": "Patrocinadores",
+            "partner": "Parceiro"
+        },
+
         "contact": {
             "title": "Entre em contato",
             "button": "Contacto"

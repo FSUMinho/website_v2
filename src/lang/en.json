@@ -49,6 +49,11 @@
             "result": "Class result"
         },
 
+        "sponsors": {
+            "title": "Sponsors",
+            "partner": "Partner"
+        },
+
         "contact": {
             "title": "Contact us",
             "button": "Contact"

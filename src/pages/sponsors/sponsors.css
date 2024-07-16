@@ -1,0 +1,29 @@
+.sponsors-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsor-tier {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.sponsor-logo {
+    height: auto;
+    width: 15vw;
+    cursor: pointer;
+}
+
+.tier-title {
+    background-color: #e52526;
+    color: white;
+    width: 80%;
+    border-radius: 20px;
+}
