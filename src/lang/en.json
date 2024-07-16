@@ -63,7 +63,11 @@
 
         "footer": {
             "contact": "Contact Us",
-            "social": "Social Media"
+            "social": "Social Media",
+            "team": "Team",
+            "sponsors": "Sponsors",
+            "invest": "How to invest",
+            "archive": "Archive"
         }
     }
 }

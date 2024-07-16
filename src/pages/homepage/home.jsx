@@ -79,29 +79,35 @@ const Home = () => {
 
                     <p>{t('fs.classes.description')}</p>
 
-                    <div className='classes-container'>
-                        <div className='fs-class'>
-                            <h3 className='class-title'>
-                                CV
-                                <img className='class-icon' src={petrol} />
-                            </h3>
-                            <p className='class-text'>{t('fs.classes.cv-description')}</p>
+                    <div className="classes-container">
+                        <div className="fs-class">
+                            <div className="class-content">
+                                <div className="class-background">
+                                    <img className="class-icon" src={petrol} alt="Petrol Icon"/>
+                                    <span className="class-title">CV</span>
+                                </div>
+                                <p className="class-text">{t('fs.classes.cv-description')}</p>
+                            </div>
                         </div>
 
-                        <div className='fs-class'>
-                            <h3 className='class-title'>
-                                EV
-                                <img className='class-icon' src={lightning} />
-                            </h3>
-                            <p className='class-text'>{t('fs.classes.ev-description')}</p>
+                        <div className="fs-class">
+                            <div className="class-content">
+                                <div className="class-background">
+                                    <img className="class-icon" src={lightning} alt="Lightning Icon"/>
+                                    <span className="class-title">EV</span>
+                                </div>
+                                <p className="class-text">{t('fs.classes.ev-description')}</p>
+                            </div>
                         </div>
 
-                        <div className='fs-class'>
-                            <h3 className='class-title'>
-                                DV
-                                <img className='class-icon' src={self_driving} />
-                            </h3>
-                            <p className='class-text'>{t('fs.classes.dv-description')}</p>
+                        <div className="fs-class">
+                            <div className="class-content">
+                                <div className="class-background">
+                                    <img className="class-icon" src={self_driving} alt="Self Driving Icon"/>
+                                    <span className="class-title">DV</span>
+                                </div>
+                                <p className="class-text">{t('fs.classes.dv-description')}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
