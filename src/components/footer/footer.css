@@ -40,16 +40,14 @@
   
   .footer-section ul li {
     margin-bottom: 10px;
-  }
-  
-  .footer-section ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .footer-section ul li a:hover {
-    color: #e52516;
+    cursor: pointer;
+    text-decoration: underline;
   }
   
   .social-icons {
