@@ -30,11 +30,13 @@
 .rotate img {
     transform: rotate(180deg);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .reverse-rotate img {
     transform: rotate(0deg);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .competition-details {

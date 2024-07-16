@@ -1,3 +1,11 @@
+.navLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
 .link {
     color: white;
     cursor: pointer;
@@ -20,4 +28,38 @@
 
 .link:hover::after {
     width: 100%;
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    z-index: 1000;
+    padding: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.dropdown-link:hover {
+    text-decoration: underline;
+}
+
+.sponsors-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.arrow {
+    height: 15px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.rotate {
+    transform: rotate(180deg);
 }
