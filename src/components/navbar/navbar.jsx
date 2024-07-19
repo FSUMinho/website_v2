@@ -16,10 +16,15 @@ const NavBar = () => {
     const { currentLanguage, handleChangeLanguage } = useLanguage();
     const flagImage = currentLanguage === 'en' ? enFlag : ptFlag;
 
-    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [sponsorsDropdownOpen, setDropdownOpen] = useState(false);
+    const [archiveDropdownOpen, setArchiveDropdownOpen] = useState(false);
 
     const toggleDropdown = () => {
-        setDropdownOpen(!dropdownOpen);
+        setDropdownOpen(!sponsorsDropdownOpen);
+    };
+
+    const toggleArchiveDropdown = () => {
+        setArchiveDropdownOpen(!archiveDropdownOpen);
     };
 
     return (
@@ -45,11 +50,11 @@ const NavBar = () => {
                     <Link to="#" className="link">
                         <div className='sponsors-link'>
                             {t('navbar.sponsors')}
-                            <img src={arrow} className={dropdownOpen ? 'arrow rotate' : 'arrow'} />
+                            <img src={arrow} className={sponsorsDropdownOpen ? 'arrow rotate' : 'arrow'} />
                         </div>
                     </Link>
                     
-                    {dropdownOpen && (
+                    {sponsorsDropdownOpen && (
                         <ul className="dropdown-menu">
                             <li><Link to="/sponsors" className="dropdown-link">{t('navbar.companies')}</Link></li>
                             <li><Link to="/invest" className="dropdown-link">{t('navbar.invest')}</Link></li>
@@ -57,10 +62,20 @@ const NavBar = () => {
                     )}
                 </li>
 
-                <li className="navLink">
-                    <Link to="/archive" className="link">
-                        {t('navbar.archive')}
+                <li className="navLink dropdown" onClick={toggleArchiveDropdown}>
+                    <Link to="#" className="link">
+                        <div className='sponsors-link'>
+                            {t('navbar.archive')}
+                            <img src={arrow} className={archiveDropdownOpen ? 'arrow rotate' : 'arrow'} />
+                        </div>
                     </Link>
+                    
+                    {archiveDropdownOpen && (
+                        <ul className="dropdown-menu">
+                            <li><Link to="/competitions" className="dropdown-link">{t('navbar.competitions')}</Link></li>
+                            <li><Link to="/cars" className="dropdown-link">{t('navbar.cars')}</Link></li>
+                        </ul>
+                    )}
                 </li>
 
                 <li style={navLink}>

@@ -5,7 +5,9 @@
             "sponsors": "Patrocinadores",
             "companies": "Empresas",
             "invest": "Como investir",
-            "archive": "Arquivo"
+            "archive": "Arquivo",
+            "competitions": "Competições",
+            "cars": "Carros"
         },
 
         "about_us": {
@@ -56,6 +58,31 @@
             "partner": "Parceiro"
         },
 
+        "invest": {
+            "title": "Investir na FSUMinho",
+            "why-title": "Porquê investir na FSUMinho?",
+            "why-text": "Nós somos mais que um grupo de estudantes com uma paixão pelo desporto motorizado. A FSUMinho representa o primeiro passo na formação de engenheiros de topo. Os nossos membros entrarão no mercado de trabalho com experiências e capacidades que irão destingui-los da concorrência. Queremos oferecer aos estudantes a oportunidade de fazer parte de um grupo que valoriza o trabalho de todos e incentiva cada membro a mostrar o seu potencial. Investir no nosso projeto significa investir na próxima gereção de engenherios e garantir que estes acumulem o máximo de experiência possível para que no futuro possam fazer a diferença e contribuir para o desenvolvimento tecnológico.",
+            "forms-title": "Como investir",
+            "monetary-title": "Suporte monetário",
+            "monetary-text": "O desporto motorizado não é barato. As despesas começam a acumular no desenvolvimento do carro e alcançam um valor alto na época das competições. Suportar-nos financeiramente ajuda-nos a gerir as despesas e a alcançar os objetivos.",
+            "material-title": "Fornecer material",
+            "material-text": "Para podermos construir o carro que projetamos, nacessitaremos de vários materiais. Fornecer materiais à equipa ajuda-nos a passar o carro do software de modelação para a pista.",
+            "knowledge-title": "Conhecimento",
+            "knowledge-text": "Apesar de nos considerarmos bastante talentosos e experientes, conhecimento nunca é demais. Estamos sempre abertos para aprender com profissionais das nossas áreas de estudo.",
+            "tiers-title": "Pacotes de investimento",
+            "diamond-text": "Os patrocinadores Diamond terão a maior visibilidade no bodywork e no merchandising. Existirá ainda a oportunidade de colaborarem com a equipa num projeto anual. Benefícios de níveis inferiores também se aplicam.",
+            "diamond-value": "Patrocínio Diamond requer um investimento acima dos 10000€",
+            "gold-text": "Os patrocinadores Gold terão poder de voto na tomdada de decisões. O seu logo terá maior destaque no carro e no merchandising. Os patrocionadores Gold serão ainda mencionados em artigos de imprensa ou revistas científicas. Benefícios de níveis inferiores também se aplicam.",
+            "gold-value": "Patrocínio Gold requer um investimento entre 5000€ e 10000€",
+            "silver-text": "Os patrocinadores Silver terão estatuto VIP em eventos organizados pela FSUMinho. O seu logo estará ainda mais visível no bodywork e merchandising em comparação com os logos Bronze. Receberão ainda um relatório mensal sobre o progresso do projeto. Benefícios de níveis inferiores também se aplicam.",
+            "silver-value": "Patrocínio Silver requer um investimento entre 2500€ e 5000€",
+            "bronze-text": "Os patrocinadores Bronze terão um lugar no nosso portfólio de patrocinadores. O seu logo estará mais visível no bodywork do carro e em peças de merchandising. Beneficios de níveis inferiores também se aplicam.",
+            "bronze-value": "Patrocínio Bronze requer um investimento entre 1000€ 2500€",
+            "partner-title": "Parceiros",
+            "partner-text": "Parceiros beneficiarão da divulgação da sua marca através de campanhas nas redes sociais e o seu logo estará presente no carro. Terão ainda um lugar no nosso portfólio de parceiros.",
+            "partner-value": "O estato de parceiro requer um investimento até 1000€ ou outro tipo de colaboração com a equipa."
+        },
+
         "contact": {
             "title": "Entre em contato",
             "button": "Contacto"
@@ -67,7 +94,8 @@
             "team": "Equipa",
             "sponsors": "Patrocinadores",
             "invest": "Como investir",
-            "archive": "Arquivo"
+            "competitions": "Competições",
+            "cars": "Carros"
         }
     }
 }
