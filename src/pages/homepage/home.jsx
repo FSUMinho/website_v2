@@ -30,12 +30,12 @@ const Home = () => {
             <div className='who-are-we-container'>
                 <div className='who-are-we-logo-container'>
                     <div data-aos="fade-right">
-                        <h1>{t('about_us.title')}</h1>
+                        <h1 className='about-us-title'>{t('about_us.title')}</h1>
 
-                        <p className='paragraph who-are-we-text'>{t('about_us.text')}</p>
+                        <p className='who-are-we-text'>{t('about_us.text')}</p>
                     </div>
 
-                    <img data-aos="fade-left" src={ eeum_logo } />
+                    <img data-aos="fade-left" src={ eeum_logo } className='eeum-logo' />
                 </div>
 
                 <div className='stats-container' data-aos="fade">

@@ -18,6 +18,7 @@ const NavBar = () => {
 
     const [sponsorsDropdownOpen, setDropdownOpen] = useState(false);
     const [archiveDropdownOpen, setArchiveDropdownOpen] = useState(false);
+    const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
     const toggleDropdown = () => {
         setDropdownOpen(!sponsorsDropdownOpen);
@@ -27,13 +28,34 @@ const NavBar = () => {
         setArchiveDropdownOpen(!archiveDropdownOpen);
     };
 
+    const toggleHamburger = () => {
+        setHamburgerOpen(!hamburgerOpen);
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        if (hamburgerOpen) {
+            hamburger.classList.add('active');
+            navLinks.classList.add('active');
+        }
+
+        else {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    }
+
     return (
         <nav style={container}>
             <Link style={navBranding} to="/">
                 <img src={logo_white} style={logo} alt="FSUMinho Logo" />
             </Link>
 
-            <ul style={navLinks}>
+            <div className='hamburger' onClick={toggleHamburger}>
+                <div className='bar'></div>
+                <div className='bar'></div>
+                <div className='bar'></div>
+            </div>
+
+            <ul style={navLinks} className='nav-links'>
                 <li style={navLink}>
                     <img src={flagImage} 
                     style={langSelect}
@@ -76,6 +98,30 @@ const NavBar = () => {
                             <li><Link to="/cars" className="dropdown-link">{t('navbar.cars')}</Link></li>
                         </ul>
                     )}
+                </li>
+
+                <li className="navLink mobile-link">
+                    <Link to="/sponsors" className="link">
+                        {t('navbar.sponsors')}
+                    </Link>
+                </li>
+
+                <li className="navLink mobile-link">
+                    <Link to="/invest" className="link">
+                        {t('navbar.invest')}
+                    </Link> 
+                </li>
+
+                <li className="navLink mobile-link">
+                    <Link to="/competitions" className="link">
+                        {t('navbar.competitions')}
+                    </Link>
+                </li>
+
+                <li className="navLink mobile-link">
+                    <Link to="/cars" className="link">
+                        {t('navbar.cars')}
+                    </Link>
                 </li>
 
                 <li style={navLink}>

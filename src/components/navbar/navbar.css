@@ -63,3 +63,75 @@
 .rotate {
     transform: rotate(180deg);
 }
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.mobile-link {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .mobile-link {
+        display: block;
+    }
+
+    .landscape-link {
+        display: none;
+    }
+
+    .hamburger {
+        cursor: pointer;
+        display: block;
+        margin-right: 1%;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-links {
+        position: fixed;
+        left: 100%;
+        top: 50px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #e52526;
+        width: 100%;
+        text-align: center;
+        transition: .5s;
+        padding: 10px;
+        z-index: 9999999;
+        opacity: 0;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active {
+        left: 0;
+        opacity: 1;
+    }
+}
