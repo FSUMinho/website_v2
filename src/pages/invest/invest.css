@@ -1,0 +1,84 @@
+.why-invest-text {
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.invest-forms-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    column-gap: 50px;
+    row-gap: 50px;
+}
+
+.invest-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    color: white;
+    background-color: #e52516;
+    height: 500px;
+    width: 40%;
+    padding: 20px 20px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.invest-form-text {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.invest-form-image {
+    width: 100px;
+    height: 100px;
+}
+
+.tiers-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 50px;
+}
+
+.tier {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 80%;
+    padding: 20px 20px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #e52516;
+}
+
+.tier-description {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.tier-value {
+    font-weight: bold;
+    background-color: #e52516;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.tier-image {
+    width: 100px;
+    height: 100px;
+}

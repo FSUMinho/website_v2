@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import './App.css'
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -11,7 +10,8 @@ import Home from "./pages/homepage/home";
 import ContactForm from './pages/contact_form/contact_form';
 import Team from './pages/team/team';
 import Sponsors from './pages/sponsors/sponsors';
-import Archive from './pages/team_archive/archive';
+import Competitions from './pages/team_archive/competitons/competitions';
+import Invest from './pages/invest/invest';
 
 const App = () => {
   const location = useLocation();
@@ -35,8 +35,16 @@ const App = () => {
           document.title = 'Sponsosrs'
           break;
 
-        case '/archive':
+        case '/invest':
+          document.title = 'Invest'
+          break;
+
+        case '/competitions':
           document.title = 'Archive'
+          break;
+
+        case 'cars':
+          document.title = 'Cars'
           break;
 
         default:
@@ -65,7 +73,9 @@ const App = () => {
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/team" element={<Team />} />
           <Route path="/sponsors" element={<Sponsors />} />
-          <Route path="/archive" element={<Archive />} />
+          <Route path="/invest" element={<Invest />} />
+          <Route path="/competitions" element={<Competitions />} />
+          <Route path="/cars" />
           <Route path="*" element={<No_Page />} />
         </Routes>
       </div>

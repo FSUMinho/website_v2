@@ -4,8 +4,10 @@
             "team": "Team",
             "sponsors": "Sponsors",
             "companies": "Companies",
-            "invest": "Invest",
-            "archive": "Archive"
+            "invest": "How to invest",
+            "archive": "Archive",
+            "competitions": "Competitions",
+            "cars": "Cars"
         },
 
         "about_us": {
@@ -56,6 +58,31 @@
             "partner": "Partner"
         },
 
+        "invest": {
+            "title": "Invest in FSUMinho",
+            "why-title": "Why invest in FSUMinho?",
+            "why-text": "We are more than a group of students with a passion for motorsport. FSUMinho represents the first step in the formation of top engineers. Our members will enter the job market with experience and skills that will make them stand out. We want to offer students the chance of being part of a group that values everyone's work and pushes all members to show their full potential. Investing in our project means investing in the next generation of engineers and making sure that they gather as much experience as possible so that some day in the future they make a difference and push technology foward.",
+            "forms-title": "How to invest",
+            "monetary-title": "Monetary support",
+            "monetary-text": "Motorsport isn't cheap at all. Expenses start accumulating in the development of the car and can reach a great ammount when we start competing. Supporting our project finacially helps us manage all the expences all reach our goals.",
+            "material-title": "Supply materials",
+            "material-text": "In order to build the car that we are designing, we'll need to gather various materials. Supplying materials to the team helps us take the car from the modeling software to the race track.",
+            "knowledge-title": "Knowledge",
+            "knowledge-text": "Even though we consider ourselves very skilled and talented, knowledge is never enough. We are always open to learn from actual professionals from our areas of expertise.",
+            "tiers-title": "Investment tiers",
+            "diamond-text": "Diamond sponsors will receive the highest level of visibility on the bodywork and in our merchandising. Additionally, they will have the opportunity to collaborate with the team on an annual project. Lower tier benefits are also included.",
+            "diamond-value": "Diamond sponsorship requires an investment of 10000€ or more",
+            "gold-text": "Gold sponsors will have voting power in decision-making sessions. Their logo presence will be bigger compared to silver sponsors. The team will mention their company in press articles or scientific magazines. Lower tier benefits are also included.",
+            "gold-value": "Gold sponsorship requires an investment between 5000€ and 10000€",
+            "silver-text": "Silver sponsors will have VIP status in events organized by FSUMinho. Their logo will also be present on the car and merchandising, but will have more presence than bronze logos. This tier will receive a monthly report containing everything done by the team. Lower tier benefits are also included.",
+            "silver-value": "Silver sponsorship requires an investment between 2500€ and 5000€",
+            "bronze-text": "Bronze sponsors will have a spot in our sponsor portfolio. They will have their logo present in the car in more visible parts of the bodywork and merchandising items. Lower tier benefits are also included.",
+            "bronze-value": "Bronze sponsorship requires an investment between 1000€ and 2500€",
+            "partner-title": "Partners",
+            "partner-text": "Partners will benefit from divulgation of their brands via social media campaigns and their logos will be present in our car.",
+            "partner-value": "Partner status requires an investment up to 1000€ or other type of collaboration with the team."
+        },
+
         "contact": {
             "title": "Contact us",
             "button": "Contact"
@@ -67,7 +94,8 @@
             "team": "Team",
             "sponsors": "Sponsors",
             "invest": "How to invest",
-            "archive": "Archive"
+            "competitions": "Competitions",
+            "cars": "Cars"
         }
     }
 }
