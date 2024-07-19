@@ -57,7 +57,10 @@ const App = () => {
 
     AOS.init({
       once: true,
-      disable: "phone",
+      disable: function () {
+        var maxWidth = 800;
+        return window.innerWidth < maxWidth;
+      },
       duration: 300,
       easing: "ease-out-cubic",
     });

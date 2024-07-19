@@ -139,3 +139,34 @@
 .fs-class:hover .class-text {
     opacity: 1;
 }
+
+
+@media (max-width: 800px) {
+    .home-container {
+        background-position: 50% 50%;
+    }
+
+    .logo-white {
+        width: 90%;
+    }
+
+    .eeum-logo {
+        width: 60%;
+        height: auto;
+    }
+
+    .who-are-we-logo-container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: justify;
+    }
+
+    .about-us-title {
+        text-align: center;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
