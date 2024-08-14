@@ -10,6 +10,10 @@
 
 - Scroll animations by <a href="https://github.com/michalsnik/aos/tree/v2">AOS - Animate on scroll library</a>
 
+- Getting Instagram post data with <a href="https://behold.so/">Behold</a>
+
+- News carousel made with <a href="https://github.com/akiran/react-slick/">react-slick</a>
+
 - Hosting made on GitHub pages
 
 ## Setup

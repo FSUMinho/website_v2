@@ -11,12 +11,47 @@ import logo_white from '../../assets/logo_white.png'
 import lightning from '../../assets/lightning.png'
 import petrol from '../../assets/petrol.png'
 import self_driving from '../../assets/self-driving.png'
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Home = () => {
     const { t } = useTranslation();
     const current_date = new Date;
     const current_year = current_date.getFullYear();
     const years_stat = current_year - 2021;
+
+    const slider_settings = {
+        dots: true,
+        autoplay: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+    };
+
+    const [instaData, setInstaData] = useState([]);
+
+    useEffect(() => {
+        const fetchPosts = async () => {
+            try {
+                const response = await fetch('https://feeds.behold.so/1IdZpnDvhFXL2pgpNuA0');
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const data = await response.json();
+                setInstaData(data.posts);
+
+            } catch (error) {
+                console.error('Error fetching posts:', error);
+            }
+        };
+
+        fetchPosts();
+    }, []);
 
     return (
         <div className='homepage-container'>
@@ -111,6 +146,23 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className="slider-container" data-aos="fade">
+                <h1>{t('news')}</h1>
+
+                <Slider {...slider_settings}>
+                    {Object.entries(instaData).map(([index, post]) => (
+                        <div key={index} className="slider-item">
+                            <a href={post.permalink}>
+                                <img
+                                    className="slider-image"
+                                    src={post.sizes.medium.mediaUrl}
+                                />
+                            </a>
+                        </div>
+                    ))}
+                </Slider>
             </div>
         </div>
     )
