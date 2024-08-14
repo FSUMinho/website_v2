@@ -34,7 +34,6 @@ p {
 
 *::-webkit-scrollbar {
   width: 10px;
-  overflow-x: ;
 }
 
 *::-webkit-scrollbar-track {

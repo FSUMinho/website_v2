@@ -10,6 +10,8 @@
             "cars": "Cars"
         },
 
+        "news": "Latest news",
+
         "about_us": {
             "title": "About us",
             "description": "We are a technology company that develops solutions for the insurance market.",
