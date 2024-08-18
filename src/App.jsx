@@ -1,6 +1,7 @@
+// App.jsx
 import React, { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import './App.css'
+import { Routes, Route, useLocation } from 'react-router-dom'; // Remove BrowserRouter import
+import './App.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Slider from "react-slick";
@@ -26,31 +27,24 @@ const App = () => {
         case '/':
           document.title = 'FSUMinho - Home';
           break;
-
         case '/contact':
-          document.title = 'Contact'
+          document.title = 'Contact';
           break;
-
         case '/team':
-          document.title = 'Team'
+          document.title = 'Team';
           break;
-
         case '/sponsors':
-          document.title = 'Sponsosrs'
+          document.title = 'Sponsors';
           break;
-
         case '/invest':
-          document.title = 'Invest'
+          document.title = 'Invest';
           break;
-
         case '/competitions':
-          document.title = 'Archive'
+          document.title = 'Archive';
           break;
-
-        case 'cars':
-          document.title = 'Cars'
+        case '/cars':
+          document.title = 'Cars';
           break;
-
         default:
           document.title = 'FSUMinho - Page Not Found';
           break;
@@ -71,7 +65,6 @@ const App = () => {
   }, [location]);
 
   return (
-    
     <div style={appContainerStyle}>
       <NavBar />
       <div style={contentStyle}>
