@@ -6,7 +6,7 @@ import './i18n_config.js'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/website_v2">
        <App />
     </BrowserRouter>
   </React.StrictMode>,
