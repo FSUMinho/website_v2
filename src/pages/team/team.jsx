@@ -19,54 +19,68 @@ const Team = () => {
 
             <h1 data-aos="fade">{t('team.sectors-title')}</h1>
 
-            <h2 data-aos="fade">Management</h2>
+            <div className='sectors-container'>
+                <div className='sector' data-aos="fade">
+                    <div className="sector-content">
+                        <div className="sector-background">
+                            <span className="sector-title">Management</span>
+                            <img className="sector-icon" src={mnt} />
+                        </div>
+                        <p className="sector-text">{t('team.management')}</p>
+                    </div>
+                </div>
 
-            <div className='sector'>
-                <p data-aos="fade-right">{t('team.management')}</p>
+                <div className='sector' data-aos="fade">
+                    <div className="sector-content">
+                        <div className="sector-background">
+                            <span className="sector-title">Powertrain</span>
+                            <img className="sector-icon" src={pwrt} />
+                        </div>
+                        <p className="sector-text">{t('team.powertrain')}</p>
+                    </div>
+                </div>
 
-                <img src={mnt} className='sector-icon' data-aos="fade-left" />
+                <div className='sector' data-aos="fade">
+                    <div className="sector-content">
+                        <div className="sector-background">
+                            <span className="sector-title">Electronics & Software</span>
+                            <img className="sector-icon" src={ecu} />
+                        </div>
+                        <p className="sector-text">{t('team.esw')}</p>
+                    </div>
+                </div>
+
+                <div className='sector' data-aos="fade">
+                    <div className="sector-content">
+                        <div className="sector-background">
+                            <span className="sector-title">Drivetrain</span>
+                            <img className="sector-icon" src={dvrt} />
+                        </div>
+                        <p className="sector-text">{t('team.drivetrain')}</p>
+                    </div>
+                </div>
+
+                <div className='sector' data-aos="fade">
+                    <div className="sector-content">
+                        <div className="sector-background">
+                            <span className="sector-title">Chassis & Aero</span>
+                            <img className="sector-icon" src={chassi} />
+                        </div>
+                        <p className="sector-text">{t('team.chassiaero')}</p>
+                    </div>
+                </div>
+
+                <div className='sector' data-aos="fade">
+                    <div className="sector-content">
+                        <div className="sector-background">
+                            <span className="sector-title">Suspension & Steering</span>
+                            <img className="sector-icon" src={susp_str} />
+                        </div>
+                        <p className="sector-text">{t('team.suspension')}</p>
+                    </div>
+                </div>
             </div>
-
-            <h2 data-aos="fade">Powertrain</h2>
-
-            <div className='sector'>
-                <img src={pwrt} className='sector-icon' data-aos="fade-right" />
-
-                <p data-aos="fade-left">{t('team.powertrain')}</p>
-            </div>
-
-            <h2 data-aos="fade">Electronics & Software</h2>
-
-            <div className='sector'>
-                <p data-aos="fade-right">{t('team.esw')}</p>
-
-                <img src={ecu} className='sector-icon' data-aos="fade-left" />
-            </div>
-
-            <h2 data-aos="fade">Drivetrain</h2>
-
-            <div className='sector'>
-                <img src={dvrt} className='sector-icon' data-aos="fade-right" />
-
-                <p data-aos="fade-left">{t('team.drivetrain')}</p>
-            </div>
-
-            <h2 data-aos="fade">Chassis & Aerodynamics</h2>
-
-            <div className='sector'>
-                <p data-aos="fade-right">{t('team.chassiaero')}</p>
-
-                <img src={chassi} className='sector-icon' data-aos="fade-left" />
-            </div>
-
-            <h2 data-aos="fade">Drivetrain</h2>
-
-            <div className='sector'>
-                <img src={susp_str} className='sector-icon' data-aos="fade-right" />
-
-                <p data-aos="fade-left">{t('team.suspension')}</p>
-            </div>
-            </div>
+        </div>
     );
 }
 

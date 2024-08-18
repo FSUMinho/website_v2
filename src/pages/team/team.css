@@ -4,18 +4,79 @@
     text-align: justify;
 }
 
-.sector {
+.sectors-container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    gap: 50px 10%;
     margin-left: 10%;
     margin-right: 10%;
-    text-align: justify;
-    gap: 5%;
+}
+
+.sector {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-color: #e52516;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 40%;
+    min-height: 250px;
+}
+
+.sector:hover {
+    transform: translateY(-10px);
+}
+
+.sector-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.sector-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
 }
 
 .sector-icon {
-    width: 250px;
-    height: auto;
+    width: auto;
+    height: 150px;
+}
+
+.sector-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sector-text {
+    opacity: 0;
+    font-size: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+    text-align: justify;
+    padding: 10px;
+    width: 80%;
+    height: 100%;
+}
+
+.sector:hover .sector-background {
+    opacity: 0;
+}
+
+.sector:hover .sector-text {
+    opacity: 1;
 }
