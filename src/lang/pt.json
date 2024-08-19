@@ -87,7 +87,10 @@
 
         "contact": {
             "title": "Entre em contato",
-            "button": "Contacto"
+            "name": "Nome completo",
+            "message": "Mensagem",
+            "send": "Enviar",
+            "thanks": "Obrigado pelo seu contacto!"
         },
 
         "footer": {

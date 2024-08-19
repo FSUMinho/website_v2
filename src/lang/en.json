@@ -87,7 +87,10 @@
 
         "contact": {
             "title": "Contact us",
-            "button": "Contact"
+            "name": "Full name",
+            "message": "Message",
+            "send": "Send",
+            "thanks": "Thank you for contacting us!"
         },
 
         "footer": {

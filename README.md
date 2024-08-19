@@ -14,6 +14,8 @@
 
 - News carousel made with <a href="https://github.com/akiran/react-slick/">react-slick</a>
 
+- Contact form emails sent by <a href="https://www.emailjs.com/">EmailJS</a>
+
 - Hosting made on GitHub pages
 
 ## Setup
