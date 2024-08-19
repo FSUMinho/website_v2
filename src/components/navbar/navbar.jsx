@@ -84,7 +84,7 @@ const NavBar = () => {
                     )}
                 </li>
 
-                <li className="navLink dropdown" onClick={toggleArchiveDropdown}>
+                {/*<li className="navLink dropdown" onClick={toggleArchiveDropdown}>
                     <Link to="#" className="link">
                         <div className='sponsors-link'>
                             {t('navbar.archive')}
@@ -98,7 +98,7 @@ const NavBar = () => {
                             <li><Link to="/cars" className="dropdown-link">{t('navbar.cars')}</Link></li>
                         </ul>
                     )}
-                </li>
+                </li>*/}
 
                 <li className="navLink mobile-link">
                     <Link to="/sponsors" className="link">
@@ -112,17 +112,17 @@ const NavBar = () => {
                     </Link> 
                 </li>
 
-                <li className="navLink mobile-link">
+                <li className="navLink">
                     <Link to="/competitions" className="link">
                         {t('navbar.competitions')}
                     </Link>
                 </li>
 
-                <li className="navLink mobile-link">
+                {/*<li className="navLink mobile-link">
                     <Link to="/cars" className="link">
                         {t('navbar.cars')}
                     </Link>
-                </li>
+                </li>*/}
 
                 <li style={navLink}>
                     <a href="https://www.instagram.com/fsuminho/">

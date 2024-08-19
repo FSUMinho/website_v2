@@ -1,6 +1,130 @@
 .container {
+    width: 100%;
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-title {
+    color: white;
+    text-align: center;
+}
+
+.form-fields {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.fst-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.snd-row {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-field {
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    border: 0;
+    border-radius: 20px;
+    padding: 15px;
+    outline: none;
+    font-size: 16px;
+    font-family: 'Kanit';
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.thankyou_message {
+    font-family: 'Kanit';
+    font-style: italic;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.send-button {
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    max-width: 200px;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: white;
+    font-family: 'Kanit';
+    text-align: center;
+}
+
+.send-button:hover {
+    transform: scale(1.05);
+}
+
+.name,
+.email {
+    width: 100%;
+}
+
+.text-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    background: #e52516;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+    .contact-box {
+        margin-top: 140px;
+        padding: 20px;
+    }
+
+    .fst-row {
+        flex-direction: column;
+    }
+
+    .text-box {
+        width: 100%;
+    }
 }
