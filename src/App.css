@@ -30,6 +30,10 @@ p {
 
 }
 
+fieldset {
+  all: unset;
+}
+
 /* SCROLL */
 
 *::-webkit-scrollbar {
