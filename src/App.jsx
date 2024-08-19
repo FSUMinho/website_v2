@@ -25,7 +25,7 @@ const App = () => {
     const updateTitle = (path) => {
       switch (path) {
         case '/':
-          document.title = 'FSUMinho - Home';
+          document.title = 'FSUMinho';
           break;
         case '/contact':
           document.title = 'Contact';
