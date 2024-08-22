@@ -29,16 +29,19 @@
     padding: 20px 20px;
     border-radius: 20px;
     margin: 5px;
+    transition: all 0.3s ease;
 }
 
 .invest-form-text {
     margin-left: 5%;
     margin-right: 5%;
+    font-size: 1.3rem;
 }
 
 .invest-form-image {
     width: 100px;
     height: 100px;
+    margin-bottom: 20px;
 }
 
 .tiers-container {
@@ -62,6 +65,7 @@
     border-radius: 20px;
     border-style: solid;
     border-color: #e52516;
+    transition: all 0.3s ease;
 }
 
 .tier-description {
@@ -76,9 +80,80 @@
     padding: 20px 20px;
     border-radius: 20px;
     text-align: center;
+    margin-top: 10px;
 }
 
 .tier-image {
     width: 100px;
     height: 100px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .invest-form {
+        width: 80%;
+        height: 400px;
+    }
+
+    .invest-form-text {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 1.1rem;
+    }
+
+    .tiers-container {
+        margin-left: 5%;
+        margin-right: 5%;
+        gap: 20px;
+    }
+
+    .tier {
+        width: 95%;
+    }
+
+    .why-invest-text {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .invest-form {
+        width: 100%;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .invest-form-text {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: .8rem;
+    }
+
+    .invest-form-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .tiers-container {
+        margin-left: 5%;
+        margin-right: 5%;
+        gap: 15px;
+    }
+
+    .tier {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .tier-value {
+        padding: 15px 10px;
+    }
+
+    .why-invest-text {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 0.8rem;
+    }
 }

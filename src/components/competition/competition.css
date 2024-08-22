@@ -28,7 +28,7 @@
 }
 
 .rotate img {
-    transform: rotate(180deg);
+    transform: rotate(360deg);
     transition: transform 0.3s ease;
     cursor: pointer;
 }
@@ -87,8 +87,72 @@
     width: 20px;
 }
 
+/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     .component-container {
         width: 80%;
+    }
+
+    .competition-container {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .logo {
+        height: 150px;
+        width: 150px;
+    }
+
+    .event-info th,
+    .event-info td {
+        padding: 0.75rem;
+    }
+
+    .result {
+        gap: 5px;
+    }
+
+    .medal {
+        height: 16px;
+        width: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .component-container {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .competition-container {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        height: 120px;
+        width: 120px;
+    }
+
+    .event-info th,
+    .event-info td {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .medal {
+        height: 14px;
+        width: 14px;
+    }
+
+    .rotate img,
+    .reverse-rotate img {
+        width: 20px;
     }
 }

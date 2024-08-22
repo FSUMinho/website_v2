@@ -13,6 +13,7 @@
 .form-title {
     color: white;
     text-align: center;
+    font-size: 2rem;
 }
 
 .form-fields {
@@ -111,17 +112,61 @@ form {
     box-sizing: border-box;
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 800px) {
     .contact-box {
-        margin-top: 140px;
         padding: 20px;
+    }
+
+    .form-title {
+        font-size: 1.8rem;
     }
 
     .fst-row {
         flex-direction: column;
+        gap: 10px;
     }
 
-    .text-box {
+    .form-field {
+        padding: 8px;
+    }
+
+    .form-field input,
+    .form-field textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .send-button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-title {
+        font-size: 1.5rem;
+    }
+
+    .form-field input,
+    .form-field textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .send-button {
+        font-size: 14px;
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    form {
         width: 100%;
+        padding: 20px;
     }
 }

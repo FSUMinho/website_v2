@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding: 20px 0;
 }
 
 .sponsor-tier {
@@ -20,6 +21,11 @@
     height: auto;
     width: 15vw;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.sponsor-logo:hover {
+    transform: scale(1.05);
 }
 
 .tier-title {
@@ -27,4 +33,40 @@
     color: white;
     width: 80%;
     border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 800px) {
+    .sponsor-tier {
+        width: 80%;
+        gap: 30px 5%;
+    }
+
+    .sponsor-logo {
+        width: 25vw;
+    }
+
+    .tier-title {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .sponsor-tier {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .sponsor-logo {
+        width: 40vw;
+    }
+
+    .tier-title {
+        width: 95%;
+        font-size: 1rem;
+    }
 }

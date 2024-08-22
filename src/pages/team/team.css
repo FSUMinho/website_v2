@@ -2,6 +2,7 @@
     margin-left: 10%;
     margin-right: 10%;
     text-align: justify;
+    font-size: 1.2rem;
 }
 
 .sectors-container {
@@ -79,4 +80,57 @@
 
 .sector:hover .sector-text {
     opacity: 1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 800px) {
+    .sectors-container {
+        gap: 30px 5%;
+    }
+
+    .sector {
+        width: 80%;
+        min-height: 200px;
+    }
+
+    .sector-title {
+        font-size: 1.25em;
+    }
+
+    .sector-icon {
+        height: 120px;
+    }
+
+    .sector-text {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 500px) {
+    .team-description {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 1rem;
+    }
+
+    .sectors-container {
+        gap: 20px;
+    }
+
+    .sector {
+        width: 100%;
+        min-height: 180px;
+    }
+
+    .sector-title {
+        font-size: 1em;
+    }
+
+    .sector-icon {
+        height: 100px;
+    }
+
+    .sector-text {
+        font-size: 0.8em;
+    }
 }

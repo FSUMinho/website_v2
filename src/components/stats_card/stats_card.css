@@ -33,3 +33,9 @@
     font-weight: bold;
     font-size: 40px;
 }
+
+@media (max-width: 800px) {
+    .stat-card-container {
+        width: 300px;
+    }
+}
