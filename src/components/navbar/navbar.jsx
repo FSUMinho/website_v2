@@ -68,7 +68,7 @@ const NavBar = () => {
                     </Link>
                 </li>
 
-                <li className="navLink dropdown" onClick={toggleDropdown}>
+                <li className="navLink dropdown desktop-link" onClick={toggleDropdown}>
                     <Link to="#" className="link">
                         <div className='sponsors-link'>
                             {t('navbar.sponsors')}
@@ -124,24 +124,48 @@ const NavBar = () => {
                     </Link>
                 </li>*/}
 
-                <li style={navLink}>
+                <li className='navLink desktop-contact'>
                     <a href="https://www.instagram.com/fsuminho/">
                         <img src={insta_logo} style={navIcons} alt="Instagram" />
                     </a>
                 </li>
 
-                <li style={navLink}>
+                <li className='navLink desktop-contact'>
                     <a href="https://pt.linkedin.com/company/fsuminho">
                         <img src={linkedin_logo} style={navIcons} alt="LinkedIn" />
                     </a>
                 </li>
 
-                <li style={navLink}>
+                <li className='navLink desktop-contact'>
                     <Link to="/contact">
                         <button>
                             <img src={email_logo} style={navIcons} alt="Email" />
                         </button>
                     </Link>
+                </li>
+
+                <li className="navLink mobile-contacts">
+                    <ul className='mobile-contact-list'>
+                        <li style={navLink}>
+                            <a href="https://www.instagram.com/fsuminho/">
+                                <img src={insta_logo} style={navIcons} alt="Instagram" />
+                            </a>
+                        </li>
+
+                        <li style={navLink}>
+                            <a href="https://pt.linkedin.com/company/fsuminho">
+                                <img src={linkedin_logo} style={navIcons} alt="LinkedIn" />
+                            </a>
+                        </li>
+
+                        <li style={navLink}>
+                            <Link to="/contact">
+                                <button>
+                                    <img src={email_logo} style={navIcons} alt="Email" />
+                                </button>
+                            </Link>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav>

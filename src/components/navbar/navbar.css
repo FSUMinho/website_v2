@@ -86,9 +86,17 @@
     display: none;
 }
 
+.mobile-contacts {
+    display: none;
+}
+
 @media (max-width: 800px) {
     .mobile-link {
         display: block;
+    }
+
+    .desktop-link {
+        display: none;
     }
 
     .landscape-link {
@@ -133,5 +141,19 @@
     .nav-links.active {
         left: 0;
         opacity: 1;
+    }
+
+    .mobile-contacts {
+        display: block;
+    }
+
+    .mobile-contact-list {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .desktop-contact {
+        display: none;
     }
 }
