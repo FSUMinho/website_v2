@@ -38,7 +38,7 @@ const Footer = () => {
                 <li><Link to="/sponsors">{t('footer.sponsors')}</Link></li>
                 <li><Link to="/invest">{t('footer.invest')}</Link></li>
                 <li><Link to="/competitions">{t('footer.competitions')}</Link></li>
-                <li><Link to="/cars">{t('footer.cars')}</Link></li>
+                {/*<li><Link to="/cars">{t('footer.cars')}</Link></li>*/}
             </ul>
             </div>
         </div>
