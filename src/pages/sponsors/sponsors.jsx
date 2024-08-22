@@ -11,6 +11,7 @@ import tracopower from '../../assets/sponsors/tracopower.jpg'
 import vlb from '../../assets/sponsors/vlb.png'
 import norelem from '../../assets/sponsors/norelem.png'
 import printeca from '../../assets/sponsors/printeca.png'
+import haas from '../../assets/sponsors/geen-haas.jpg'
 
 const Sponsors = () => {
     const { t } = useTranslation();
@@ -41,7 +42,7 @@ const Sponsors = () => {
                     
                     <a href='https://www.cepra.pt/'><img src={cepra} className='sponsor-logo' /></a>
 
-                    <a href='https://vlb-group.com/pt-pt/'><img src={vlb} className='sponsor-logo' /></a>
+                    <a href='https://www.haascnc.com/content/ghf/en/home.html'><img src={haas} className='sponsor-logo' /></a>
                 </div>
 
                 <h2 className='tier-title'>{t('sponsors.partner')}</h2>
@@ -50,6 +51,8 @@ const Sponsors = () => {
                     <a href='https://www.tracopower.com/int'><img src={tracopower} className='sponsor-logo' /></a>
                     
                     <a href='https://www.isabellenhuette.de/en/'><img src={ihh} className='sponsor-logo' /></a>
+
+                    <a href='https://vlb-group.com/pt-pt/'><img src={vlb} className='sponsor-logo' /></a>
 
                     <a href='https://www.piep.pt/'><img src={piep} className='sponsor-logo' /></a>
 
