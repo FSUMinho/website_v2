@@ -15,7 +15,7 @@ import haas from '../../assets/sponsors/geen-haas.jpg'
 import bender from '../../assets/sponsors/bender.png'
 import alwelding from '../../assets/sponsors/alwelding.png'
 import mais_rent from '../../assets/sponsors/mais_rent.png'
-import moura_laser from '../../assets/sponsors/moura_laser.png'
+import moura_laser from '../../assets/sponsors/moura-laser.png'
 
 const Sponsors = () => {
     const { t } = useTranslation();
