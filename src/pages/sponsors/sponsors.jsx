@@ -49,6 +49,8 @@ const Sponsors = () => {
                     <a href='https://www.haascnc.com/content/ghf/en/home.html'><img src={haas} className='sponsor-logo' /></a>
 
                     <a href='https://www.bender.de/en/'><img src={bender} className='sponsor-logo' /></a>
+
+                    <a href='https://www.instagram.com/alwelding/'><img src={alwelding} className='sponsor-logo' /></a>
                 </div>
 
                 <h2 className='tier-title'>{t('sponsors.partner')}</h2>
