@@ -74,6 +74,7 @@ const Sponsors = () => {
                     <a href='https://www.mouralaser.pt/pt/'><img src={moura_laser} className='sponsor-logo' /></a>
 
                     <a href='https://www.gepe.dei.uminho.pt/'><img src={gepe} className='sponsor-logo' /></a>
+                    
                 </div>
             </div>
         </div>
