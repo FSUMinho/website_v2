@@ -17,6 +17,7 @@ import alwelding from '../../assets/sponsors/alwelding.png'
 import mais_rent from '../../assets/sponsors/mais_rent.png'
 import moura_laser from '../../assets/sponsors/moura-laser.png'
 import gepe from '../../assets/sponsors/gepe.png'
+import shapetek from '../../assets/sponsors/shapetek.png'
 
 const Sponsors = () => {
     const { t } = useTranslation();
@@ -75,6 +76,7 @@ const Sponsors = () => {
 
                     <a href='https://www.gepe.dei.uminho.pt/'><img src={gepe} className='sponsor-logo' /></a>
                     
+                    <a href='https://shapetek.pt/'><img src={shapetek} className='sponsor-logo' /></a>
                 </div>
             </div>
         </div>
