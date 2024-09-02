@@ -16,6 +16,7 @@ import bender from '../../assets/sponsors/bender.png'
 import alwelding from '../../assets/sponsors/alwelding.png'
 import mais_rent from '../../assets/sponsors/mais_rent.png'
 import moura_laser from '../../assets/sponsors/moura-laser.png'
+import gepe from '../../assets/sponsors/gepe.png'
 
 const Sponsors = () => {
     const { t } = useTranslation();
@@ -71,6 +72,8 @@ const Sponsors = () => {
                     <a href='https://maisrent.pt/pt'><img src={mais_rent} className='sponsor-logo' /></a>
 
                     <a href='https://www.mouralaser.pt/pt/'><img src={moura_laser} className='sponsor-logo' /></a>
+
+                    <a href='https://www.gepe.dei.uminho.pt/'><img src={gepe} className='sponsor-logo' /></a>
                 </div>
             </div>
         </div>
