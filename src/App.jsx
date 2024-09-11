@@ -17,6 +17,7 @@ import Sponsors from './pages/sponsors/sponsors';
 import Competitions from './pages/team_archive/competitons/competitions';
 import Invest from './pages/invest/invest';
 import Cars from './pages/cars/cars';
+import Recruitment from './pages/recruitment/recruitment';
 
 const App = () => {
   const location = useLocation();
@@ -44,6 +45,9 @@ const App = () => {
           break;
         case '/cars':
           document.title = 'Cars';
+          break;
+        case '/recruitment':
+          document.title = 'Recruitment';
           break;
         default:
           document.title = 'FSUMinho - Page Not Found';
@@ -76,6 +80,7 @@ const App = () => {
           <Route path="/invest" element={<Invest />} />
           <Route path="/competitions" element={<Competitions />} />
           <Route path="/cars" element={<Cars />} />
+          <Route path="/recruitment" element={<Recruitment />} />
           <Route path="*" element={<No_Page />} />
         </Routes>
       </div>
