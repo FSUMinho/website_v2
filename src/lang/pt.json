@@ -7,7 +7,8 @@
             "invest": "Como investir",
             "archive": "Arquivo",
             "competitions": "Competições",
-            "cars": "Carros"
+            "cars": "Carros",
+            "recruitment": "Recrutamento"
         },
 
         "news": "Últimas notícias",
@@ -101,6 +102,34 @@
             "invest": "Como investir",
             "competitions": "Competições",
             "cars": "Carros"
+        },
+
+        "recruitment": {
+            "title": "Recrutamento",
+            "description": "A FSUMinho está à procura de novos membros para se juntarem à equipa. Se estás interessado em fazer parte de um projeto de engenharia desafiante e trabalhar com um grupo de estudantes apaixonados por desporto motorizado, então a FSUMinho é o lugar certo para ti. Não importa o teu curso ou experiência, se tens vontade de aprender e trabalhar em equipa, então estás convidado a juntar-te a nós.",
+            "steps-title": "Processo de recrutamento",
+            "step1": "Candidatura: Preenche o formulário de candidatura e escolhe os setores a que te queres candidatar.",
+            "step2": "Pré-seleção: Os candidatos serão avaliados com base na sua motivação e experiência, e depois apontados para um setor.",
+            "step3": "Integração: Os novos membros irão passar por um periodo de estágio onde irão mostrar as suas capacidades e garantir o lugar na equipa.",
+            "sectors-title": "Setores",
+            "mechanical": "Mecânica",
+            "mechanical-text": "Os setores ligados à mecânica são responsáveis por desenvolver o chassi, a suspensão, a direção, a transmissão e a aerodinâmica do carro. Estes setores trabalham incansavelmente para garantir que cada um desses componentes esteja perfeitamente projetado e integrado, proporcionando desempenho, segurança e inovação.",
+            "electrical": "Eletrónica",
+            "electrical-text": "Os setores ligados à eletrónica são responsáveis por desenvolver o sistema elétrico do carro, incluindo a bateria, o motor elétrico, o sistema de telemetria e o sistema de segurança. Estes setores trabalham em conjunto para garantir que o carro seja seguro, eficiente e rápido.",
+            "management": "Management",
+            "management-text": "O setor de management é responsável por gerir a equipa, angariar fundos, gerir parcerias, marketing e comunicação. Este setor é essencial para garantir que a equipa funcione de forma eficiente e eficaz, cumprindo os objetivos estabelecidos.",
+            "apply": "Candidata-te",
+            "faqs-title": "Perguntas frequentes",
+            "question1": "Quem pode candidatar-se?",
+            "answer1": "Qualquer estudante inscrito numa licensiatura ou mestrado na Universidade do Minho, independentemente do curso, pode candidatar-se à FSUMinho. No entanto recomendamos que o setor a que te candidatas esteja relacionado com o teu curso.",
+            "question2": "Preciso de experiência prévia?",
+            "answer2": "Apesar de experiência prévia ser valorizada, não é um requisito. A FSUMinho é um projeto de aprendizagem e estamos dispostos a ensinar e ajudar todos os membros a desenvolverem as suas competências.",
+            "question3": "Quanto tempo tenho de dedicar à FSUMinho?",
+            "answer3": "O tempo que dedicas à FSUMinho depende do setor em que estás inserido e do teu nível de envolvimento. No entanto, esperamos que todos os membros sejam dedicados e comprometidos com o projeto dada a exigência da Formula Student.",
+            "question4": "É necessário ser fluente em inglês?",
+            "answer4": "A FSUMinho é um projeto internacional e a língua de trabalho é o inglês. A particiapação em competições implica interegir com juizes estrangeiros e toda a documentação técnica é escrita em inglês. Ser fluente não é um requisito mas à algo que valorizamos.",
+            "question5": "Aceitam estudantes de ERASMUS?",
+            "answer5": "Sim, aceitamos estudantes de ERASMUS. A FSUMinho é um projeto inclusivo e estamos abertos a receber estudantes de todas as nacionalidades. Para estes estudantes, falar português ou inglês é um requisito."
         }
     }
 }

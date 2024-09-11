@@ -16,11 +16,20 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'pt',
+    fallbackLng: 'en',
     debug: true,
     interpolation: {
       escapeValue: false,
     },
+    detection: {
+      order: ['navigator', 'querystring', 'cookie', 'localStorage', 'sessionStorage', 'htmlTag', 'path', 'subdomain'],
+      lookupQuerystring: 'lng',
+      lookupCookie: 'i18next',
+      lookupLocalStorage: 'i18nextLng',
+      lookupSessionStorage: 'i18nextLng',
+      caches: ['localStorage', 'cookie'],
+      excludeCacheFor: ['cimode'],
+    }
   });
 
 export default i18n;

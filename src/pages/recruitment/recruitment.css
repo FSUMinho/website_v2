@@ -1,0 +1,213 @@
+.recruitment-container {
+    margin: 0 10%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.recruitment-text {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.step-number {
+    background-color: #e52526;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.step-text {
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+.options-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sector-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e52526;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1 1 calc(33% - 40px); /* Adjust to fit three items per row with gap */
+    box-sizing: border-box;
+}
+
+.sector-icon {
+    width: auto;
+    height: 100px;
+}
+
+.option-text {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.apply-button {
+    background-color: #e52526;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.apply-button:hover {
+    background-color: #bf1f20;
+}
+
+.faq-container {
+    margin-top: 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+.faq-question:hover {
+    color: #e52526;
+}
+
+.faq-toggle {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.faq-text {
+    text-align: justify;
+    margin-top: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+    .recruitment-container {
+        margin: 0 5%;
+        padding: 10px;
+    }
+
+    .options-container {
+        gap: 10px;
+    }
+
+    .sector-form-container {
+        padding: 10px;
+        flex: 1 1 calc(50% - 20px); /* Adjust to fit two items per row with gap */
+    }
+
+    .option-text {
+        margin: 10px 0;
+    }
+
+    .apply-button {
+        padding: 8px 10px;
+        font-size: 1em;
+    }
+
+    .faq-text {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .recruitment-container {
+        margin: 0 5%;
+    }
+
+    .sector-form-container {
+        flex: 1 1 100%; /* Each item takes full width */
+    }
+
+    .apply-button {
+        text-align: center;
+        font-size: 1em;
+    }
+    
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2em;
+        margin-right: 10px; /* Reduce margin for better spacing */
+        padding: 5px; /* Add padding for more space */
+    }
+
+    .step-text {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .recruitment-container {
+        margin: 0 2%;
+    }
+
+    .apply-button {
+        text-align: center;
+        font-size: 1em;
+    }
+    
+    .step-number {
+        width: 30px;
+        height: 30px;
+        font-size: 1em;
+        margin-right: 8px;
+        padding: 5px;
+    }
+
+    .step-text {
+        font-size: 0.9em;
+    }
+
+    .option-text {
+        font-size: 0.9em;
+    }
+
+    .apply-button {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+}

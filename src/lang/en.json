@@ -7,7 +7,8 @@
             "invest": "How to invest",
             "archive": "Archive",
             "competitions": "Competitions",
-            "cars": "Cars"
+            "cars": "Cars",
+            "recruitment": "Recruitment"
         },
 
         "news": "Latest news",
@@ -101,6 +102,34 @@
             "invest": "How to invest",
             "competitions": "Competitions",
             "cars": "Cars"
+        },
+
+        "recruitment": {
+            "title": "Recruitment",
+            "description": "FSUMinho is looking for new members to join the team. If you are interested in being part of a challenging engineering project and working with a group of students passionate about motor sports, then FSUMinho is the right place for you. No matter your course or experience, if you have the willingness to learn and work as a team, then you are invited to join us.",
+            "steps-title": "Recruitment steps",
+            "step1": "Application: Fill out the application form and choose the sectors you want to apply for.", 
+            "step2": "Pre-selection: Candidates will be evaluated based on their motivation and experience, and then assigned to a sector.",
+            "step3": "Integration: New members will go through a probation period where they will demonstrate their skills and secure their place on the team.",
+            "sectors-title": "Sectors",
+            "mechanical": "Mechanical",
+            "mechanical-text": "The sectors related to mechanics are responsible for developing the chassis, suspension, steering, transmission, and aerodynamics of the car. These sectors work tirelessly to ensure that each of these components is perfectly designed and integrated, providing performance, safety, and innovation.",
+            "electrical": "Electrical",
+            "electrical-text": "The sectors related to electronics are responsible for developing the car's electrical system, including the battery, electric motor, telemetry system, and safety system. These sectors work together to ensure the car is safe, efficient, and fast.",
+            "management": "Management",
+            "management-text": "The management sector is responsible for managing the team, raising funds, managing partnerships, marketing, and communication. This sector is essential to ensure that the team operates efficiently and effectively, meeting the established goals.",
+            "apply": "Apply",
+            "faqs-title": "Frequently Asked Questions",
+            "question1": "Who can apply?",
+            "answer1": "Any student enrolled in a bachelor's or master's degree at the University of Minho, regardless of the course, can apply to FSUMinho. However, we recommend that the sector you apply to is related to your course.",
+            "question2": "Do I need prior experience?",
+            "answer2": "Although prior experience is valued, it is not a requirement. FSUMinho is a learning project, and we are willing to teach and help all members develop their skills.",
+            "question3": "How much time do I need to dedicate to FSUMinho?",
+            "answer3": "The time you dedicate to FSUMinho depends on the sector you are in and your level of involvement. However, we expect all members to be dedicated and committed to the project given the demands of Formula Student.",
+            "question4": "Do I need to be fluent in English?",
+            "answer4": "FSUMinho is an international project, and the working language is English. Participation in competitions involves interacting with foreign judges, and all technical documentation is written in English. Being fluent is not a requirement, but it is something we value.",
+            "question5": "Do you accept ERASMUS students?",
+            "answer5": "Yes, we accept ERASMUS students. FSUMinho is an inclusive project, and we are open to receiving students of all nationalities. For these students, speaking Portuguese or English is a requirement."
         }
     }
 }
