@@ -46,7 +46,7 @@
 .options-container {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -60,7 +60,6 @@
     padding: 20px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    flex: 1 1 calc(33% - 40px); /* Adjust to fit three items per row with gap */
     box-sizing: border-box;
 }
 
@@ -83,6 +82,7 @@
     font-size: 1.2em;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-weight: bold;
 }
 
 .apply-button:hover {
