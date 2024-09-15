@@ -110,14 +110,17 @@
             "steps-title": "Processo de recrutamento",
             "step1": "Candidatura: Preenche o formulário de candidatura e escolhe os setores a que te queres candidatar.",
             "step2": "Pré-seleção: Os candidatos serão avaliados com base na sua motivação e experiência, e depois apontados para um setor.",
-            "step3": "Integração: Os novos membros irão passar por um periodo de estágio onde irão mostrar as suas capacidades e garantir o lugar na equipa.",
+            "step3": "Desafio: Os candidatos terão de completar um desafio técnico relacionado com o setor a que se candidataram.",
+            "step4": "Integração: Os novos membros irão passar por um periodo de estágio onde irão mostrar as suas capacidades e garantir o lugar na equipa.",
+            "dates-title": "Datas importantes",
+            "dates-text": "O processo de candidaturas abre no dia 16 de setembro e encerra no dia 1 de outubro. Os resultados da pré-seleção serão anunciados no dia 5 de outubro. As datas disponíveis para o desafio técnico serão anunciadas atempadamente após a pré-seleção e os candidatos deverão escolher um dos horários disponíveis. O início do perído de estágio irá depender do fim do desafio técnico e será anunciado após a sua conclusão.",
             "sectors-title": "Setores",
             "mechanical": "Mecânica",
-            "mechanical-text": "Os setores ligados à mecânica são responsáveis por desenvolver o chassi, a suspensão, a direção, a transmissão e a aerodinâmica do carro. Estes setores trabalham incansavelmente para garantir que cada um desses componentes esteja perfeitamente projetado e integrado, proporcionando desempenho, segurança e inovação.",
+            "mechanical-text": "Os setores relacionados à mecânica desenvolvem o chassi, a suspensão, a direção, a transmissão e a aerodinâmica do carro. Em Chassis and Aerodynamics, irás projetar a estrutura do carro, focando na resistência mecânica, ergonomia do cockpit e integração dos sistemas. Em suspension and steering, irás otimizar os sistemas de suspensão e direção, concentrando-te na geometria, cinemática, dinâmica do carro e design de componentes. O setor de Drivetrain desenvolve a cadeia cinemática para transmissão de potência e refrigeração da bateria, trabalhando na velocidade, aceleração, fluxo de fluidos e dimensionamento dos componentes.",
             "electrical": "Eletrónica",
-            "electrical-text": "Os setores ligados à eletrónica são responsáveis por desenvolver o sistema elétrico do carro, incluindo a bateria, o motor elétrico, o sistema de telemetria e o sistema de segurança. Estes setores trabalham em conjunto para garantir que o carro seja seguro, eficiente e rápido.",
+            "electrical-text": "Os setores de eletrónica desenvolvem os sistemas elétricos do carro, incluindo a bateria, o motor, a telemetria e os sistemas de segurança. No setor de Powertrain, irás trabalharar com componentes de alta tensão e sistemas de segurança, focando em hardware, programação e documentação. No setor de Electronics and Software, irás lidar com simulação de sistemas de segurança, dados de sensores, programação de microcontroladores e telemetria, com funções em testes de hardware, programação em C, desenvolvimento de aplicações e gestão do GitHub.",
             "management": "Management",
-            "management-text": "O setor de management é responsável por gerir a equipa, angariar fundos, gerir parcerias, marketing e comunicação. Este setor é essencial para garantir que a equipa funcione de forma eficiente e eficaz, cumprindo os objetivos estabelecidos.",
+            "management-text": "O setor de management é responsável por gerir a equipa, angariar fundos, parcerias, marketing e comunicação, assegurando a eficiência e eficácia da equipa. A gestão de parcerias estabelece relações benéficas com patrocinadores e fornecedores. O marketing aumenta a visibilidade e a reputação da equipa, além de transmitir os valores da equipa ao público e possíveis patrocinadores. Estes componentes trabalham juntos para garantir os recursos e suporte necessários para alcançar os objetivos.",
             "apply": "Candidata-te",
             "faqs-title": "Perguntas frequentes",
             "question1": "Quem pode candidatar-se?",
@@ -129,7 +132,9 @@
             "question4": "É necessário ser fluente em inglês?",
             "answer4": "A FSUMinho é um projeto internacional e a língua de trabalho é o inglês. A particiapação em competições implica interegir com juizes estrangeiros e toda a documentação técnica é escrita em inglês. Ser fluente não é um requisito mas à algo que valorizamos.",
             "question5": "Aceitam estudantes de ERASMUS?",
-            "answer5": "Sim, aceitamos estudantes de ERASMUS. A FSUMinho é um projeto inclusivo e estamos abertos a receber estudantes de todas as nacionalidades. Para estes estudantes, falar português ou inglês é um requisito."
+            "answer5": "Sim, aceitamos estudantes de ERASMUS. A FSUMinho é um projeto inclusivo e estamos abertos a receber estudantes de todas as nacionalidades. Para estes estudantes, falar português ou inglês é um requisito.",
+            "question6": "Apenas se aceitam estudantes de Guimarães?",
+            "answer6": "Não, aceitamos estudantes de todos os campi da Universidade do Minho. A maioria das reuniões são feitas online para serem acessíveis a todos os membros. No entanto, uma fração das reuniões são presenciais e realizadas em Guimarães."
         }
     }
 }

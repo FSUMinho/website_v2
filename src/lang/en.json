@@ -110,14 +110,17 @@
             "steps-title": "Recruitment steps",
             "step1": "Application: Fill out the application form and choose the sectors you want to apply for.", 
             "step2": "Pre-selection: Candidates will be evaluated based on their motivation and experience, and then assigned to a sector.",
-            "step3": "Integration: New members will go through a probation period where they will demonstrate their skills and secure their place on the team.",
+            "step3": "Challenge: New members will receive a challenge related to the sector they are applying for.",
+            "step4": "Integration: New members will go through a probation period where they will demonstrate their skills and secure their place on the team.",
+            "dates-title": "Important dates",
+            "dates-text": "The application process opens on September 16 and closes on October 1. The pre-selection results will be announced on October 5. Dates for the technical challenge will be announced in due course after pre-selection, and candidates will need to choose from the available slots. The start date for the internship will depend on the completion of the technical challenge and will be announced afterward.",
             "sectors-title": "Sectors",
             "mechanical": "Mechanical",
-            "mechanical-text": "The sectors related to mechanics are responsible for developing the chassis, suspension, steering, transmission, and aerodynamics of the car. These sectors work tirelessly to ensure that each of these components is perfectly designed and integrated, providing performance, safety, and innovation.",
+            "mechanical-text": "The sectors related to mechanics develop the car's chassis, suspension, steering, transmission, and aerodynamics. In Chassis and Aerodynamics, you'll design the car's structure, focusing on mechanical resistance, cockpit ergonomics, and system integration. In Suspension and Steering, you'll optimize suspension and steering systems, concentrating on geometry, kinematics, vehicle dynamics, and component design. The Drivetrain sector develops the kinematic chain for power transmission and battery cooling, working on speed, acceleration, fluid flow, and component dimensioning.",
             "electrical": "Electrical",
-            "electrical-text": "The sectors related to electronics are responsible for developing the car's electrical system, including the battery, electric motor, telemetry system, and safety system. These sectors work together to ensure the car is safe, efficient, and fast.",
+            "electrical-text": "The electronics sectors develop the car’s electrical systems, including the battery, motor, telemetry, and safety systems. In Powertrain, you'll work on high-voltage components and safety systems, focusing on hardware, programming, and documentation. In Electronics and software, you'll handle safety system simulation, sensor data, microcontroller programming, and telemetry, with roles in hardware testing, C programming, application development, and GitHub management.",
             "management": "Management",
-            "management-text": "The management sector is responsible for managing the team, raising funds, managing partnerships, marketing, and communication. This sector is essential to ensure that the team operates efficiently and effectively, meeting the established goals.",
+            "management-text": "The management sector is responsible for team management, fundraising, partnerships, marketing, and communication, ensuring the team's efficiency and effectiveness. Partnership management establishes beneficial relationships with sponsors and suppliers. Marketing increases the team's visibility and reputation, while also conveying the team's values to the public and potential sponsors. These components work together to ensure the necessary resources and support to achieve the objectives.",
             "apply": "Apply",
             "faqs-title": "Frequently Asked Questions",
             "question1": "Who can apply?",
@@ -129,7 +132,9 @@
             "question4": "Do I need to be fluent in English?",
             "answer4": "FSUMinho is an international project, and the working language is English. Participation in competitions involves interacting with foreign judges, and all technical documentation is written in English. Being fluent is not a requirement, but it is something we value.",
             "question5": "Do you accept ERASMUS students?",
-            "answer5": "Yes, we accept ERASMUS students. FSUMinho is an inclusive project, and we are open to receiving students of all nationalities. For these students, speaking Portuguese or English is a requirement."
+            "answer5": "Yes, we accept ERASMUS students. FSUMinho is an inclusive project, and we are open to receiving students of all nationalities. For these students, speaking Portuguese or English is a requirement.",
+            "question6": "Do you only accept students from Guimarães?",
+            "answer6": "No, we accept students from all campuses of the University of Minho. Most of our meetings are online to be more accessible to all members. However, part of our meetings are held in person in Guimarães."
         }
     }
 }

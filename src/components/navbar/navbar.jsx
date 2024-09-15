@@ -118,11 +118,11 @@ const NavBar = () => {
                     </Link>
                 </li>
 
-                {/*<li className='navLink'>
+                <li className='navLink'>
                     <Link to="/recruitment" className="link">
                         {t('navbar.recruitment')}
                     </Link>
-                </li>*/}
+                </li>
 
                 {/*<li className="navLink mobile-link">
                     <Link to="/cars" className="link">
