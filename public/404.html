@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Page Not Found</title>
+  <script type="text/javascript">
+    // This script redirects to the correct SPA route
+    (function() {
+      var path = window.location.pathname;
+      var query = window.location.search;
+      var hash = window.location.hash;
+      var newPath = '/' + (path + query + hash).replace(/^\//, '');
+      window.location.replace(newPath);
+    })();
+  </script>
+</head>
+<body>
+</body>
+</html>
