@@ -4,16 +4,15 @@
   <meta charset="utf-8">
   <title>Page Not Found</title>
   <script type="text/javascript">
-    // This script redirects to the correct SPA route
+    // This script redirects to the correct SPA route using HashRouter
     (function() {
-      var path = window.location.pathname;
-      var query = window.location.search;
-      var hash = window.location.hash;
-      var newPath = '/' + (path + query + hash).replace(/^\//, '');
-      window.location.replace(newPath);
+      var redirectTo = '/#' + window.location.pathname + window.location.search;
+      window.location.replace(redirectTo);
     })();
   </script>
 </head>
 <body>
+  <h1>Page Not Found</h1>
+  <p>Redirecting...</p>
 </body>
 </html>
