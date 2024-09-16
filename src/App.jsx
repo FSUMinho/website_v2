@@ -1,6 +1,5 @@
-// App.jsx
 import React, { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom'; // Remove BrowserRouter import
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import './App.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -21,6 +20,7 @@ import Recruitment from './pages/recruitment/recruitment';
 
 const App = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const updateTitle = (path) => {
@@ -55,6 +55,13 @@ const App = () => {
       }
     };
 
+    // Check if there is a query parameter and navigate to the path if exists
+    const queryParams = new URLSearchParams(window.location.search);
+    const redirectTo = queryParams.get('path');
+    if (redirectTo) {
+      navigate(redirectTo);
+    }
+
     updateTitle(location.pathname);
 
     AOS.init({
@@ -66,7 +73,7 @@ const App = () => {
       duration: 300,
       easing: "ease-out-cubic",
     });
-  }, [location]);
+  }, [location, navigate]);
 
   return (
     <div style={appContainerStyle}>
