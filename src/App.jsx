@@ -17,6 +17,7 @@ import Competitions from './pages/team_archive/competitons/competitions';
 import Invest from './pages/invest/invest';
 import Cars from './pages/cars/cars';
 import Recruitment from './pages/recruitment/recruitment';
+import Maintenance from './pages/maintenance/maintenance';
 
 const App = () => {
   const location = useLocation();
@@ -76,7 +77,7 @@ const App = () => {
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/team" element={<Team />} />
           <Route path="/sponsors" element={<Sponsors />} />
-          <Route path="/invest" element={<Invest />} />
+          <Route path="/invest" element={<Maintenance />} />
           <Route path="/competitions" element={<Competitions />} />
           <Route path="/cars" element={<Cars />} />
           {/*<Route path="/recruitment" element={<Recruitment />} />*/}
