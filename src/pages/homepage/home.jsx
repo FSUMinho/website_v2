@@ -52,7 +52,9 @@ const Home = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await fetch('https://feeds.behold.so/1IdZpnDvhFXL2pgpNuA0');
+                const behold_api = import.meta.env.VITE_BEHOLD_API;
+
+                const response = await fetch(behold_api);
 
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
