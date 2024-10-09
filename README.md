@@ -20,14 +20,14 @@
 
 ## Setup
 
-1. Install the dependencies:
+**1.** Install the dependencies:
  ```shel
   npm install
  ```
 
-2. Create a `.env` file with the necessary keys
+**2.** Create a `.env` file with the necessary keys (check `.env.example`)
 
-3. Running the dev preview:
+**3.** Running the dev preview:
 ```shell
 npm run dev
 ```
