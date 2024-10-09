@@ -1,0 +1,12 @@
+.maintenance-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.maintenance-img {
+    width: 100%;
+    max-width: 150px;
+}
