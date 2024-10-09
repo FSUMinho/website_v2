@@ -1,27 +1,29 @@
 import './invest.css';
 import { useTranslation } from 'react-i18next';
 import hand from '../../assets/invest/hand.png';
+import handshake from '../../assets/invest/handshake.png';
 import membrane from '../../assets/invest/membrane.png';
 import thought from '../../assets/invest/thought.png';
 import diamond from '../../assets/sponsors/diamond.png';
 import gold from '../../assets/sponsors/gold-medal.png';
 import silver from '../../assets/sponsors/silver-medal.png';
 import bronze from '../../assets/sponsors/bronze-medal.png';
+import SponsorTier from '../../components/sposnsor_tier/sponsor_tier';
 
 const Invest = () => {
     const { t } = useTranslation();
 
     return (
         <div className="invest-container">
-            <h1>{t('invest.title')}</h1>
+            <h1 data-aos="fade">{t('invest.title')}</h1>
 
-            <h2>{t('invest.why-title')}</h2>
+            <h2 data-aos="fade">{t('invest.why-title')}</h2>
 
-            <p className='why-invest-text'>{t('invest.why-text')}</p>
+            <p className='why-invest-text' data-aos="fade">{t('invest.why-text')}</p>
 
-            <h2>{t('invest.forms-title')}</h2>
+            <h2 data-aos="fade">{t('invest.forms-title')}</h2>
 
-            <div className='invest-forms-container'>
+            <div className='invest-forms-container' data-aos="fade">
                 <div className='invest-form'>
                     <h3>{t('invest.monetary-title')}</h3>
 
@@ -47,56 +49,82 @@ const Invest = () => {
                 </div>
             </div>
 
-            <h2>{t('invest.tiers-title')}</h2>
+            <h2 data-aos="fade">{t('invest.tiers-title')}</h2>
 
-            <div className='tiers-container'>
-                <div className='tier'>
-                    <h3>Diamond</h3>
+            <div className='tiers-container' data-aos="fade">
+                <SponsorTier 
+                    name="Diamond"
+                    icon={diamond}
+                    benefits={[
+                        t('invest.social'),
+                        t('invest.website'),
+                        t('invest.car'),
+                        t('invest.banner'),
+                        t('invest.kit'),
+                        t('invest.rollout'),
+                        t('invest.team_events'),
+                        t('invest.cv'),
+                        t('invest.open_days'),
+                        t('invest.uni'),
+                    ]}
+                    value="8000€"
+                />
 
-                    <img src={diamond} className='tier-image' />
+                <SponsorTier 
+                    name="Gold"
+                    icon={gold}
+                    benefits={[
+                        t('invest.social'),
+                        t('invest.website'),
+                        t('invest.car'),
+                        t('invest.banner'),
+                        t('invest.kit'),
+                        t('invest.rollout'),
+                        t('invest.team_events'),
+                        t('invest.cv'),
+                        t('invest.open_days')
+                    ]}
+                    value="6000€"
+                />
 
-                    <p className='tier-description'>{t('invest.diamond-text')}</p>
+                <SponsorTier 
+                    name="Silver"
+                    icon={silver}
+                    benefits={[
+                        t('invest.social'),
+                        t('invest.website'),
+                        t('invest.car'),
+                        t('invest.banner'),
+                        t('invest.kit'),
+                        t('invest.rollout'),
+                        t('invest.team_events')
+                    ]}
+                    value="4000€"
+                />
 
-                    <p className='tier-value'>{t('invest.diamond-value')}</p>
-                </div>
+                <SponsorTier 
+                    name="Bronze"
+                    icon={bronze}
+                    benefits={[
+                        t('invest.social'),
+                        t('invest.website'),
+                        t('invest.car'),
+                        t('invest.banner'),
+                        t('invest.kit'),
+                        t('invest.rollout')
+                    ]}
+                    value="2000€"
+                />    
 
-                <div className='tier'>
-                    <h3>Gold</h3>
-
-                    <img src={gold} className='tier-image' />
-
-                    <p className='tier-description'>{t('invest.gold-text')}</p>
-
-                    <p className='tier-value'>{t('invest.gold-value')}</p>
-                </div>
-
-                <div className='tier'>
-                    <h3>Silver</h3>
-
-                    <img src={silver} className='tier-image' />
-
-                    <p className='tier-description'>{t('invest.silver-text')}</p>
-
-                    <p className='tier-value'>{t('invest.silver-value')}</p>
-                </div>
-
-                <div className='tier'>
-                    <h3>Bronze</h3>
-
-                    <img src={bronze} className='tier-image' />
-
-                    <p className='tier-description'>{t('invest.bronze-text')}</p>
-
-                    <p className='tier-value'>{t('invest.bronze-value')}</p>
-                </div>
-
-                <div className='tier'>
-                    <h3>{t('invest.partner-title')}</h3>
-
-                    <p className='tier-description'>{t('invest.partner-text')}</p>
-
-                    <p className='tier-value'>{t('invest.partner-value')}</p>
-                </div>
+                <SponsorTier 
+                    name={t('invest.partner-title')}
+                    icon={handshake}
+                    benefits={[
+                        t('invest.social'),
+                        t('invest.website')
+                    ]}
+                    value="500€"
+                />             
             </div>
         </div>
     );

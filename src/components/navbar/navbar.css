@@ -106,7 +106,7 @@
     .hamburger {
         cursor: pointer;
         display: block;
-        margin-right: 1%;
+        margin-right: 2%;
     }
 
     .hamburger.active .bar:nth-child(2) {
