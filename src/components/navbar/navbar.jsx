@@ -193,7 +193,7 @@ const container = {
 };
 
 const navBranding = {
-    marginLeft: "1%"
+    marginLeft: "2%"
 }
 
 const logo = {
@@ -205,7 +205,7 @@ const logo = {
 const navLinks = {
     display: "flex",
     gap: "10px",
-    marginRight: "1%",
+    marginRight: "2%",
     alignItems: "center"
 };
 
