@@ -1,0 +1,27 @@
+@keyframes fadeInOut {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+}
+  
+.loading-container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #fff;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 9999;
+}
+
+.loading-image {
+width: 200px;
+animation: fadeInOut 2s infinite; 
+}  

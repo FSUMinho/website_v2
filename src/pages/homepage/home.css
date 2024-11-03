@@ -21,6 +21,7 @@
         ), url(../../assets/fspt_group_photo.jpg);
     background-position: 0% 5%;
     background-size: cover;
+    width: 100%;
 }
 
 .logo-white {
