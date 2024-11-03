@@ -55,7 +55,7 @@ const Sponsors = () => {
 
                     <a href='https://www.instagram.com/alwelding/'><img src={alwelding} className='sponsor-logo' /></a>
 
-                    <a href='https://www.donelab.pt/'><img src={donelab} className='sponsor-logo' /></a>
+                    <a href='https://www.donelab.pt/'><img src={donelab} className='sponsor-logo' style={{width: '8vw'}} /></a>
                 </div>
 
                 <h2 className='tier-title'>{t('sponsors.partner')}</h2>
