@@ -17,7 +17,7 @@ import Competitions from './pages/team_archive/competitons/competitions';
 import Invest from './pages/invest/invest';
 import Cars from './pages/cars/cars';
 import Recruitment from './pages/recruitment/recruitment';
-import Loading from './components/loading/Loading'; // Import the Loading component
+import Loading from './components/loading/loading';
 
 const App = () => {
   const location = useLocation();
