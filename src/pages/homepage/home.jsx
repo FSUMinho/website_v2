@@ -95,7 +95,7 @@ const Home = () => {
                     <StatsCard 
                         image={team_icon} 
                         stat={t('about_us.members')}
-                        value={23}
+                        value={43}
                         orientation="1"
                     />
 

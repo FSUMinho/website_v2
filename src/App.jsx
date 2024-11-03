@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -17,10 +17,11 @@ import Competitions from './pages/team_archive/competitons/competitions';
 import Invest from './pages/invest/invest';
 import Cars from './pages/cars/cars';
 import Recruitment from './pages/recruitment/recruitment';
-import Maintenance from './pages/maintenance/maintenance';
+import Loading from './components/loading/Loading'; // Import the Loading component
 
 const App = () => {
   const location = useLocation();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const updateTitle = (path) => {
@@ -66,7 +67,17 @@ const App = () => {
       duration: 300,
       easing: 'ease-out-cubic',
     });
+
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }, [location]);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <div style={appContainerStyle}>
