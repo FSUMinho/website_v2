@@ -1,5 +1,5 @@
 import React from 'react';
-import './Loading.css';
+import './loading.css';
 import logo_red from '../../assets/logo_red.png'; 
 
 const Loading = () => {
