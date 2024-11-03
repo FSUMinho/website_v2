@@ -18,6 +18,7 @@ import mais_rent from '../../assets/sponsors/mais_rent.png'
 import moura_laser from '../../assets/sponsors/moura-laser.png'
 import gepe from '../../assets/sponsors/gepe.png'
 import shapetek from '../../assets/sponsors/shapetek.png'
+import donelab from '../../assets/sponsors/donelab.png'
 
 const Sponsors = () => {
     const { t } = useTranslation();
@@ -53,6 +54,8 @@ const Sponsors = () => {
                     <a href='https://www.bender.de/en/'><img src={bender} className='sponsor-logo' /></a>
 
                     <a href='https://www.instagram.com/alwelding/'><img src={alwelding} className='sponsor-logo' /></a>
+
+                    <a href='https://www.donelab.pt/'><img src={donelab} className='sponsor-logo' /></a>
                 </div>
 
                 <h2 className='tier-title'>{t('sponsors.partner')}</h2>
