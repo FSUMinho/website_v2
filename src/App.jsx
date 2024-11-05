@@ -75,10 +75,6 @@ const App = () => {
     return () => clearTimeout(timer);
   }, [location]);
 
-  if (isLoading) {
-    return <Loading />;
-  }
-
   return (
     <div style={appContainerStyle}>
       <NavBar />
