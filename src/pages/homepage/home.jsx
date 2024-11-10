@@ -52,7 +52,7 @@ const Home = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const behold_api = import.meta.env.VITE_BEHOLD_API;
+                const behold_api = 'https://feeds.behold.so/1IdZpnDvhFXL2pgpNuA0';
 
                 const response = await fetch(behold_api);
 
