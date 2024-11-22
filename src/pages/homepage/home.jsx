@@ -14,6 +14,9 @@ import self_driving from '../../assets/self-driving.png'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import FSPT_2023_group_photo from '../../assets/fspt_group_photo.jpg';
+import fspt24 from '../../assets/archive_assets/fspt24.jpg';
+import fspt24_2 from '../../assets/fspt24_2.jpg';
 
 const Home = () => {
     const { t } = useTranslation();
@@ -71,11 +74,34 @@ const Home = () => {
         fetchPosts();
     }, []);
 
+    const [currentImage, setCurrentImage] = useState(0);
+    const images = [FSPT_2023_group_photo, fspt24, fspt24_2];
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+        }, 5000);
+
+        return () => clearInterval(intervalId);
+    }, []);
+
     return (
         <div className='homepage-container'>
             <div className="home-container">
+                {images.map((image, index) => (
+                    <div
+                        key={index}
+                        className={`background-image ${index === currentImage ? 'visible' : ''}`}
+                        style={{
+                            backgroundImage: `linear-gradient(
+                                rgba(0, 0, 0, 0.5),
+                                rgba(0, 0, 0, 0.5)
+                            ), url(${image})`
+                        }}
+                    ></div>
+                ))}
                 <div data-aos="fade-up">
-                    <img className='logo-white' src={logo_white}/>
+                    <img className='logo-white' src={logo_white} alt="Logo White" />
                     <h3>Engineering at high speed</h3>
                 </div>
             </div>
