@@ -56,6 +56,8 @@ const Sponsors = () => {
                     <a href='https://www.instagram.com/alwelding/'><img src={alwelding} className='sponsor-logo' /></a>
 
                     <a href='https://www.donelab.pt/'><img src={donelab} className='sponsor-logo' style={{width: '8vw'}} /></a>
+
+                    <a href='https://www.piep.pt/'><img src={piep} className='sponsor-logo' /></a>
                 </div>
 
                 <h2 className='tier-title'>{t('sponsors.partner')}</h2>
@@ -66,8 +68,6 @@ const Sponsors = () => {
                     <a href='https://www.isabellenhuette.de/en/'><img src={ihh} className='sponsor-logo' /></a>
 
                     <a href='https://vlb-group.com/pt-pt/'><img src={vlb} className='sponsor-logo' /></a>
-
-                    <a href='https://www.piep.pt/'><img src={piep} className='sponsor-logo' /></a>
 
                     <a href='https://norelem.es/pt/?gad_source=1&gclid=CjwKCAjwtNi0BhA1EiwAWZaANIudrdWOgR9PyGX5LAQIqMXnHsQe5d_NNs3-VgJ_p_E8_JpR-dpOdhoCa34QAvD_BwE'><img src={norelem} className='sponsor-logo' /></a>
 
