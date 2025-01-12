@@ -19,6 +19,7 @@ import moura_laser from '../../assets/sponsors/moura-laser.png'
 import gepe from '../../assets/sponsors/gepe.png'
 import shapetek from '../../assets/sponsors/shapetek.png'
 import donelab from '../../assets/sponsors/donelab.png'
+import santander from '../../assets/sponsors/santander.svg'
 
 const Sponsors = () => {
     const { t } = useTranslation();
@@ -28,6 +29,12 @@ const Sponsors = () => {
             <h1>{t('sponsors.title')}</h1>
 
             <div className='sponsors-container'>
+                <h2 className='tier-title'>Diamond</h2>
+
+                <div className='sponsor-tier'>
+                    <a href='https://www.fundacaosantanderportugal.pt/'><img src={santander} className='sponsor-logo' /></a>
+                </div>
+
                 <h2 className='tier-title'>Gold</h2>
 
                 <div className='sponsor-tier'>
