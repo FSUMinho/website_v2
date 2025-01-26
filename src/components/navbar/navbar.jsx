@@ -118,17 +118,17 @@ const NavBar = () => {
                     </Link>
                 </li>
 
-                {/*<li className='navLink'>
+                <li className='navLink'>
                     <Link to="/recruitment" className="link">
                         {t('navbar.recruitment')}
                     </Link>
-                </li>*/}
+                </li>
 
-                {/*<li className="navLink mobile-link">
+                <li className="navLink mobile-link">
                     <Link to="/cars" className="link">
                         {t('navbar.cars')}
                     </Link>
-                </li>*/}
+                </li>
 
                 <li className='navLink desktop-contact'>
                     <a href="https://www.instagram.com/fsuminho/">

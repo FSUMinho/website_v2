@@ -51,21 +51,21 @@ const Recruitment = () => {
                     <h3>{t('recruitment.mechanical')}</h3>
                     <img src={system} className='sector-icon' />
                     <p className='option-text'>{t('recruitment.mechanical-text')}</p>
-                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSdansITc3mfeKt4CHom2aDCy90qye9nzIu86JoZMaPWfbj6Nw/viewform?usp=sf_link' className='apply-button'>{t('recruitment.apply')}</a>
+                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSeLkUS7CGCfpZke5zjdW2hqaAjIqXxHhIHu-Jy3csdv1jXJTA/viewform?usp=dialog' className='apply-button'>{t('recruitment.apply')}</a>
                 </div>
 
                 <div className='sector-form-container'>
                     <h3>{t('recruitment.electrical')}</h3>
                     <img src={lightning} className='sector-icon' />
                     <p className='option-text'>{t('recruitment.electrical-text')}</p>
-                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSfgoudXjd4YlJa7FzXSi5qVcCIrVU5GA8Fb2tPMdPOzIZ8aKQ/viewform?usp=sf_link' className='apply-button'>{t('recruitment.apply')}</a>
+                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSexeoeZcVlvuQ7ufbrayDfkt8tuNsO5TqQUGPVadFVIcNhqDA/viewform?usp=dialog' className='apply-button'>{t('recruitment.apply')}</a>
                 </div>
 
                 <div className='sector-form-container'>
                     <h3>{t('recruitment.management')}</h3>
                     <img src={mnt} className='sector-icon' />
                     <p className='option-text'>{t('recruitment.management-text')}</p>
-                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSek0nZWYaW_ENBDzls9fv9wQHinuhjz8Y4-cE8rEh9GvwLURA/viewform?usp=sf_link' className='apply-button'>{t('recruitment.apply')}</a>
+                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSdbR2nxJS2SdIE1-lCVs5nK3c_1t7BaDecbpT1JWfwQgOKS_g/viewform?usp=dialog' className='apply-button'>{t('recruitment.apply')}</a>
                 </div>
             </div>
 
