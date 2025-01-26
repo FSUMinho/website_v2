@@ -20,6 +20,7 @@ import gepe from '../../assets/sponsors/gepe.png'
 import shapetek from '../../assets/sponsors/shapetek.png'
 import donelab from '../../assets/sponsors/donelab.png'
 import santander from '../../assets/sponsors/santander.svg'
+import cnc4a from '../../assets/sponsors/cnc4a.png'
 
 const Sponsors = () => {
     const { t } = useTranslation();
@@ -65,6 +66,8 @@ const Sponsors = () => {
                     <a href='https://www.donelab.pt/'><img src={donelab} className='sponsor-logo' style={{width: '8vw'}} /></a>
 
                     <a href='https://www.piep.pt/'><img src={piep} className='sponsor-logo' /></a>
+
+                    <a href='https://www.cnc4a.com/'><img src={cnc4a} className='sponsor-logo' /></a>
                 </div>
 
                 <h2 className='tier-title'>{t('sponsors.partner')}</h2>
