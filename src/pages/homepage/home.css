@@ -183,6 +183,55 @@
     cursor: pointer;
 }
 
+.santander-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 40%;
+}
+
+.santander-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: 20px; 
+}
+
+.image-wrapper:hover .overlay {
+    opacity: 1;
+}  
+
 /* Mobile Responsiveness */
 @media (max-width: 800px) {
     .home-container {
@@ -228,6 +277,10 @@
     .fs-class {
         width: 80%;
         height: 180px;
+    }
+
+    .image-wrapper {
+        width: 80%;
     }
 }
 

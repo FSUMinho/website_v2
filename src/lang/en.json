@@ -13,6 +13,11 @@
 
         "news": "Latest news",
 
+        "santander": {
+            "title": "Santander Universities",
+            "more": "Learn more"
+        },
+
         "about_us": {
             "title": "About us",
             "description": "We are a technology company that develops solutions for the insurance market.",
