@@ -17,6 +17,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import FSPT_2023_group_photo from '../../assets/fspt_group_photo.jpg';
 import fspt24 from '../../assets/archive_assets/fspt24.jpg';
 import fspt24_2 from '../../assets/fspt24_2.jpg';
+import santander_home from '../../assets/santander_home.png';
 
 const Home = () => {
     const { t } = useTranslation();
@@ -189,6 +190,21 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="santander-container">
+                <h1>{t('santander.title')}</h1>
+
+                <div class="image-wrapper">
+                    <a href="https://www.santander.pt/universitarios?utm_campaign=BN_ACC_ACST_SU_PAS0_CCO_Matriculas0225_Universidade_Minho_NA_NGAL&utm_source=siteuniversidades&utm_medium=banner&utm_content=NA&utm_term=NA">
+                        <img
+                            src={santander_home}
+                            className="santander-image"
+                        />
+                    </a>
+
+                    <div class="overlay">{t('santander.more')}</div>
                 </div>
             </div>
 
