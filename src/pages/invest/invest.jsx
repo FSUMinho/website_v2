@@ -1,13 +1,5 @@
 import './invest.css';
 import { useTranslation } from 'react-i18next';
-import hand from '../../assets/invest/hand.png';
-import handshake from '../../assets/invest/handshake.png';
-import membrane from '../../assets/invest/membrane.png';
-import thought from '../../assets/invest/thought.png';
-import diamond from '../../assets/sponsors/diamond.png';
-import gold from '../../assets/sponsors/gold-medal.png';
-import silver from '../../assets/sponsors/silver-medal.png';
-import bronze from '../../assets/sponsors/bronze-medal.png';
 import SponsorTier from '../../components/sposnsor_tier/sponsor_tier';
 
 const Invest = () => {
@@ -27,7 +19,7 @@ const Invest = () => {
                 <div className='invest-form'>
                     <h3>{t('invest.monetary-title')}</h3>
 
-                    <img src={hand} className='invest-form-image' />
+                    <img src="/invest/hand.png" className='invest-form-image' />
 
                     <p className='invest-form-text'>{t('invest.monetary-text')}</p>
                 </div>
@@ -35,7 +27,7 @@ const Invest = () => {
                 <div className='invest-form'>
                     <h3>{t('invest.material-title')}</h3>
 
-                    <img src={membrane} className='invest-form-image' />
+                    <img src="/invest/membrane.png" className='invest-form-image' />
 
                     <p className='invest-form-text'>{t('invest.material-text')}</p>
                 </div>
@@ -43,7 +35,7 @@ const Invest = () => {
                 <div className='invest-form'>
                     <h3>{t('invest.knowledge-title')}</h3>
 
-                    <img src={thought} className='invest-form-image' />
+                    <img src="/invest/thought.png" className='invest-form-image' />
 
                     <p className='invest-form-text'>{t('invest.knowledge-text')}</p>
                 </div>
@@ -54,7 +46,7 @@ const Invest = () => {
             <div className='tiers-container' data-aos="fade">
                 <SponsorTier 
                     name="Diamond"
-                    icon={diamond}
+                    icon="/sponsors/diamond.png"
                     benefits={[
                         t('invest.social'),
                         t('invest.website'),
@@ -72,7 +64,7 @@ const Invest = () => {
 
                 <SponsorTier 
                     name="Gold"
-                    icon={gold}
+                    icon="/sponsors/gold-medal.png"
                     benefits={[
                         t('invest.social'),
                         t('invest.website'),
@@ -89,7 +81,7 @@ const Invest = () => {
 
                 <SponsorTier 
                     name="Silver"
-                    icon={silver}
+                    icon="/sponsors/silver-medal.png"
                     benefits={[
                         t('invest.social'),
                         t('invest.website'),
@@ -104,7 +96,7 @@ const Invest = () => {
 
                 <SponsorTier 
                     name="Bronze"
-                    icon={bronze}
+                    icon="/sponsors/bronze-medal.png"
                     benefits={[
                         t('invest.social'),
                         t('invest.website'),
@@ -118,7 +110,7 @@ const Invest = () => {
 
                 <SponsorTier 
                     name={t('invest.partner-title')}
-                    icon={handshake}
+                    icon="/invest/handshake.png"
                     benefits={[
                         t('invest.social'),
                         t('invest.website')
@@ -131,4 +123,3 @@ const Invest = () => {
 }
 
 export default Invest;
-        

@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import './competition.css';
-import arrow from '../../assets/archive_assets/arrow.png';
 import { useTranslation } from 'react-i18next';
-import gold from '../../assets/sponsors/gold-medal.png';
-import silver from '../../assets/sponsors/silver-medal.png';
-import bronze from '../../assets/sponsors/bronze-medal.png'
 
 const Competition = ({ background, logo, year, country, city, circuit, class_, overall, results }) => {
     const containerStyle = {
@@ -32,17 +28,17 @@ const Competition = ({ background, logo, year, country, city, circuit, class_, o
     return (
         <div className='component-container'>  
             <div className='competition-container' style={containerStyle}>
-                <img src={logo} className='logo' />
+                <img src={logo} className='logo' alt="Competition logo" />
 
                 <h1>{year}</h1>
 
                 <button onClick={toggleTable} className={arrowRotation ? 'rotate' : 'reverse-rotate'}>
-                    <img src={arrow} alt="Arrow" /> 
+                    <img src="/archive_assets/arrow.png" alt="Arrow" /> 
                 </button>
             </div>
 
             <div className='competiton-info-container'>
-            {showTable && (
+                {showTable && (
                     <table className='event-info' data-aos="fade-down">
                         <tbody>
                             <tr className='info'>
@@ -70,11 +66,9 @@ const Competition = ({ background, logo, year, country, city, circuit, class_, o
                                 <td className='result'>
                                     P{overall}
 
-                                    {overall==="1" && <img className='medal' src={gold} />}
-
-                                    {overall==="2" && <img className='medal' src={silver} />}
-
-                                    {overall==="3" && <img className='medal' src={bronze} />}
+                                    {overall === "1" && <img className='medal' src="/sponsors/gold-medal.png" alt="Gold medal" />}
+                                    {overall === "2" && <img className='medal' src="/sponsors/silver-medal.png" alt="Silver medal" />}
+                                    {overall === "3" && <img className='medal' src="/sponsors/bronze-medal.png" alt="Bronze medal" />}
                                 </td>
                             </tr>
 
@@ -84,11 +78,9 @@ const Competition = ({ background, logo, year, country, city, circuit, class_, o
                                     <td className='result'>
                                         P{value}
 
-                                        {value==="1" && <img className='medal' src={gold} />}
-
-                                        {value==="2" && <img className='medal' src={silver} />}
-
-                                        {value==="3" && <img className='medal' src={bronze} />}
+                                        {value === "1" && <img className='medal' src="/sponsors/gold-medal.png" alt="Gold medal" />}
+                                        {value === "2" && <img className='medal' src="/sponsors/silver-medal.png" alt="Silver medal" />}
+                                        {value === "3" && <img className='medal' src="/sponsors/bronze-medal.png" alt="Bronze medal" />}
                                     </td>
                                 </tr>
                             ))}

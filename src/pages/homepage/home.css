@@ -164,7 +164,7 @@
     border-radius: 20px;
 }
 
-.slick-slide {
+.slick-slide > div {
     display: flex !important;
     justify-content: center;
     align-items: center;

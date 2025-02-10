@@ -1,99 +1,80 @@
-import './sponsors.css'
+import './sponsors.css';
 import { useTranslation } from 'react-i18next';
-import bosch from '../../assets/sponsors/bosch.png'
-import cepra from '../../assets/sponsors/cepra.png'
-import coficab from '../../assets/sponsors/COFICAB.png'
-import ihh from '../../assets/sponsors/IHH.jpg'
-import kroftools from '../../assets/sponsors/kroftools.png'
-import piep from '../../assets/sponsors/piep.png'
-import tesla from '../../assets/sponsors/tesla.jpg'
-import tracopower from '../../assets/sponsors/tracopower.jpg'
-import vlb from '../../assets/sponsors/vlb.png'
-import norelem from '../../assets/sponsors/norelem.png'
-import printeca from '../../assets/sponsors/printeca.png'
-import haas from '../../assets/sponsors/geen-haas.jpg'
-import bender from '../../assets/sponsors/bender.png'
-import alwelding from '../../assets/sponsors/alwelding.png'
-import mais_rent from '../../assets/sponsors/mais_rent.png'
-import moura_laser from '../../assets/sponsors/moura-laser.png'
-import gepe from '../../assets/sponsors/gepe.png'
-import shapetek from '../../assets/sponsors/shapetek.png'
-import donelab from '../../assets/sponsors/donelab.png'
-import santander from '../../assets/sponsors/santander.svg'
-import cnc4a from '../../assets/sponsors/cnc4a.png'
+
+const sponsors = {
+    Diamond: [
+        { name: "Santander", img: "/sponsors/santander.svg", url: "https://www.fundacaosantanderportugal.pt/" }
+    ],
+    Gold: [
+        { name: "Bosch", img: "/sponsors/bosch.png", url: "https://www.bosch.pt/" }
+    ],
+    Silver: [
+        { name: "Kroftools", img: "/sponsors/kroftools.png", url: "https://www.kroftools.com/en/" },
+        { name: "Tesla", img: "/sponsors/tesla.jpg", url: "https://www.tesla.com/pt_pt" }
+    ],
+    Bronze: [
+        { name: "Coficab", img: "/sponsors/COFICAB.png", url: "https://www.coficab.pt/" },
+        { name: "Cepra", img: "/sponsors/cepra.png", url: "https://www.cepra.pt/" },
+        { name: "Haas", img: "/sponsors/geen-haas.jpg", url: "https://www.haascnc.com/content/ghf/en/home.html" },
+        { name: "Bender", img: "/sponsors/bender.png", url: "https://www.bender.de/en/" },
+        { name: "Alwelding", img: "/sponsors/alwelding.png", url: "https://www.instagram.com/alwelding/" },
+        { name: "Donelab", img: "/sponsors/donelab.png", url: "https://www.donelab.pt/" },
+        { name: "Piep", img: "/sponsors/piep.png", url: "https://www.piep.pt/" },
+        { name: "CNC4A", img: "/sponsors/cnc4a.png", url: "https://www.cnc4a.com/" }
+    ],
+    partners: [
+        { name: "Tracopower", img: "/sponsors/tracopower.jpg", url: "https://www.tracopower.com/int" },
+        { name: "IHH", img: "/sponsors/IHH.jpg", url: "https://www.isabellenhuette.de/en/" },
+        { name: "VLB", img: "/sponsors/vlb.png", url: "https://vlb-group.com/pt-pt/" },
+        { name: "Norelem", img: "/sponsors/norelem.png", url: "https://norelem.es/pt" },
+        { name: "Printeca", img: "/sponsors/printeca.png", url: "https://printeca3d.com/" },
+        { name: "Mais Rent", img: "/sponsors/mais_rent.png", url: "https://maisrent.pt/pt" },
+        { name: "Moura Laser", img: "/sponsors/moura-laser.png", url: "https://www.mouralaser.pt/pt/" },
+        { name: "Shapetek", img: "/sponsors/shapetek.png", url: "https://shapetek.pt/" },
+        { name: "Poliamol", img: "/sponsors/poliamol.png", url: "https://www.poliamol.pt/" },
+    ],
+    institutions: [
+        { name: "EEUM", img: "/sponsors/eeum.png", url: "https://www.eng.uminho.pt/pt" },
+        { name: "GEPE", img: "/sponsors/gepe.png", url: "https://www.gepe.dei.uminho.pt/" },
+        { name: "DEM", img: "/sponsors/dem.png", url: "https://dem.uminho.pt/" }
+    ]
+};
 
 const Sponsors = () => {
     const { t } = useTranslation();
 
     return (
-        <div>
-            <h1>{t('sponsors.title')}</h1>
-
-            <div className='sponsors-container'>
-                <h2 className='tier-title'>Diamond</h2>
-
-                <div className='sponsor-tier'>
-                    <a href='https://www.fundacaosantanderportugal.pt/'><img src={santander} className='sponsor-logo' /></a>
-                </div>
-
-                <h2 className='tier-title'>Gold</h2>
-
-                <div className='sponsor-tier'>
-                    <a href='https://www.bosch.pt/'><img src={bosch} className='sponsor-logo' /></a>
-                </div>
-
-                <h2 className='tier-title'>Silver</h2>
-
-                <div className='sponsor-tier'>
-                    <a href='https://www.kroftools.com/en/'><img src={kroftools} className='sponsor-logo' /></a>
-
-                    <a href='https://www.tesla.com/pt_pt'><img src={tesla} className='sponsor-logo' /></a>
-                </div>
-
-                <h2 className='tier-title'>Bronze</h2>
-
-                <div className='sponsor-tier'>
-                    <a href='https://www.coficab.pt/'><img src={coficab} className='sponsor-logo' /></a>
-                    
-                    <a href='https://www.cepra.pt/'><img src={cepra} className='sponsor-logo' /></a>
-
-                    <a href='https://www.haascnc.com/content/ghf/en/home.html'><img src={haas} className='sponsor-logo' /></a>
-
-                    <a href='https://www.bender.de/en/'><img src={bender} className='sponsor-logo' /></a>
-
-                    <a href='https://www.instagram.com/alwelding/'><img src={alwelding} className='sponsor-logo' /></a>
-
-                    <a href='https://www.donelab.pt/'><img src={donelab} className='sponsor-logo' style={{width: '8vw'}} /></a>
-
-                    <a href='https://www.piep.pt/'><img src={piep} className='sponsor-logo' /></a>
-
-                    <a href='https://www.cnc4a.com/'><img src={cnc4a} className='sponsor-logo' /></a>
-                </div>
-
-                <h2 className='tier-title'>{t('sponsors.partner')}</h2>
-
-                <div className='sponsor-tier'>
-                    <a href='https://www.tracopower.com/int'><img src={tracopower} className='sponsor-logo' /></a>
-                    
-                    <a href='https://www.isabellenhuette.de/en/'><img src={ihh} className='sponsor-logo' /></a>
-
-                    <a href='https://vlb-group.com/pt-pt/'><img src={vlb} className='sponsor-logo' /></a>
-
-                    <a href='https://norelem.es/pt/?gad_source=1&gclid=CjwKCAjwtNi0BhA1EiwAWZaANIudrdWOgR9PyGX5LAQIqMXnHsQe5d_NNs3-VgJ_p_E8_JpR-dpOdhoCa34QAvD_BwE'><img src={norelem} className='sponsor-logo' /></a>
-
-                    <a href='https://printeca3d.com/'><img src={printeca} className='sponsor-logo' /></a>
-
-                    <a href='https://maisrent.pt/pt'><img src={mais_rent} className='sponsor-logo' /></a>
-
-                    <a href='https://www.mouralaser.pt/pt/'><img src={moura_laser} className='sponsor-logo' /></a>
-
-                    <a href='https://www.gepe.dei.uminho.pt/'><img src={gepe} className='sponsor-logo' /></a>
-                    
-                    <a href='https://shapetek.pt/'><img src={shapetek} className='sponsor-logo' /></a>
-                </div>
+        <div className="sponsors-page">
+            <h1 className="page-title">{t('sponsors.title')}</h1>
+            <div className="sponsors-container">
+                {Object.entries(sponsors).map(([tier, sponsorsList]) => (
+                    <div key={tier} className="sponsor-tier-container">
+                        <h2 className="tier-title">
+                            {tier === "Diamond" ? "Diamond" :
+                            tier === "Gold" ? "Gold" :
+                            tier === "Silver" ? "Silver" :
+                            tier === "Bronze" ? "Bronze" :
+                            tier === "partners" ? t("sponsors.partner") :
+                            tier === "institutions" ? t("sponsors.inst") : `${tier}`}
+                        </h2>
+                        
+                        <div className="sponsor-tier">
+                            {sponsorsList.map(({ name, img, url, style }) => (
+                                <a key={name} href={url} target="_blank" rel="noopener noreferrer">
+                                    <img 
+                                        src={img} 
+                                        alt={name} 
+                                        className="sponsor-logo" 
+                                        style={style || {}} 
+                                    />
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );
-}
+};
 
 export default Sponsors;
