@@ -3,9 +3,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import NavBar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
 import No_Page from './pages/no_page/no_page';
@@ -15,7 +12,6 @@ import Team from './pages/team/team';
 import Sponsors from './pages/sponsors/sponsors';
 import Competitions from './pages/team_archive/competitons/competitions';
 import Invest from './pages/invest/invest';
-import Cars from './pages/cars/cars';
 import Recruitment from './pages/recruitment/recruitment';
 import Loading from './components/loading/loading';
 
@@ -86,7 +82,6 @@ const App = () => {
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/invest" element={<Invest />} />
           <Route path="/competitions" element={<Competitions />} />
-          <Route path="/cars" element={<Cars />} />
           <Route path="/recruitment" element={<Recruitment />} />
           <Route path="*" element={<No_Page />} />
         </Routes>

@@ -1,11 +1,10 @@
 import React from 'react';
 import './loading.css';
-import logo_red from '../../assets/logo_red.png'; 
 
 const Loading = () => {
   return (
     <div className="loading-container">
-      <img src={logo_red} alt="Loading..." className="loading-image" />
+      <img src='/logo_red.png' alt="Loading..." className="loading-image" />
     </div>
   );
 };

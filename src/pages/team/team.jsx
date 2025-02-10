@@ -1,15 +1,42 @@
-import './team.css'
-import React, { useEffect, useState } from 'react';
+import './team.css';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import mnt from '../../assets/team/mnt.png';
-import pwrt from '../../assets/team/pwrt.png';
-import ecu from '../../assets/team/ecu.png';
-import dvrt from '../../assets/team/dvrt.png';
-import chassi from '../../assets/team/chassis_aero.png';
-import susp_str from '../../assets/team/suspension_steering.png';
 
 const Team = () => {
     const { t } = useTranslation();
+
+    const sectors = [
+        {
+            title: 'Management',
+            icon: '/team/mnt.png',
+            description: t('team.management'),
+        },
+        {
+            title: 'Powertrain',
+            icon: '/team/pwrt.png',
+            description: t('team.powertrain'),
+        },
+        {
+            title: 'Electronics & Software',
+            icon: '/team/ecu.png',
+            description: t('team.esw'),
+        },
+        {
+            title: 'Drivetrain',
+            icon: '/team/dvrt.png',
+            description: t('team.drivetrain'),
+        },
+        {
+            title: 'Chassis & Aero',
+            icon: '/team/chassis_aero.png',
+            description: t('team.chassiaero'),
+        },
+        {
+            title: 'Suspension & Steering',
+            icon: '/team/suspension_steering.png',
+            description: t('team.suspension'),
+        },
+    ];
 
     return (
         <div>
@@ -20,65 +47,17 @@ const Team = () => {
             <h1 data-aos="fade">{t('team.sectors-title')}</h1>
 
             <div className='sectors-container'>
-                <div className='sector' data-aos="fade">
-                    <div className="sector-content">
-                        <div className="sector-background">
-                            <span className="sector-title">Management</span>
-                            <img className="sector-icon" src={mnt} />
+                {sectors.map((sector, index) => (
+                    <div className='sector' data-aos="fade" key={index}>
+                        <div className="sector-content">
+                            <div className="sector-background">
+                                <span className="sector-title">{sector.title}</span>
+                                <img className="sector-icon" src={sector.icon} alt={sector.title} />
+                            </div>
+                            <p className="sector-text">{sector.description}</p>
                         </div>
-                        <p className="sector-text">{t('team.management')}</p>
                     </div>
-                </div>
-
-                <div className='sector' data-aos="fade">
-                    <div className="sector-content">
-                        <div className="sector-background">
-                            <span className="sector-title">Powertrain</span>
-                            <img className="sector-icon" src={pwrt} />
-                        </div>
-                        <p className="sector-text">{t('team.powertrain')}</p>
-                    </div>
-                </div>
-
-                <div className='sector' data-aos="fade">
-                    <div className="sector-content">
-                        <div className="sector-background">
-                            <span className="sector-title">Electronics & Software</span>
-                            <img className="sector-icon" src={ecu} />
-                        </div>
-                        <p className="sector-text">{t('team.esw')}</p>
-                    </div>
-                </div>
-
-                <div className='sector' data-aos="fade">
-                    <div className="sector-content">
-                        <div className="sector-background">
-                            <span className="sector-title">Drivetrain</span>
-                            <img className="sector-icon" src={dvrt} />
-                        </div>
-                        <p className="sector-text">{t('team.drivetrain')}</p>
-                    </div>
-                </div>
-
-                <div className='sector' data-aos="fade">
-                    <div className="sector-content">
-                        <div className="sector-background">
-                            <span className="sector-title">Chassis & Aero</span>
-                            <img className="sector-icon" src={chassi} />
-                        </div>
-                        <p className="sector-text">{t('team.chassiaero')}</p>
-                    </div>
-                </div>
-
-                <div className='sector' data-aos="fade">
-                    <div className="sector-content">
-                        <div className="sector-background">
-                            <span className="sector-title">Suspension & Steering</span>
-                            <img className="sector-icon" src={susp_str} />
-                        </div>
-                        <p className="sector-text">{t('team.suspension')}</p>
-                    </div>
-                </div>
+                ))}
             </div>
         </div>
     );

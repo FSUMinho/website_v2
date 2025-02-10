@@ -2,19 +2,12 @@ import './navbar.css';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useTranslation } from 'react-i18next';
-import logo_white from '../../assets/logo_white.png';
-import insta_logo from '../../assets/navbar/insta.png';
-import linkedin_logo from '../../assets/navbar/linkedin.png';
-import email_logo from '../../assets/navbar/email.png';
-import enFlag from '../../assets/navbar/en.png';
-import ptFlag from '../../assets/navbar/pt.png';
 import { useState } from 'react';
-import arrow from '../../assets/archive_assets/arrow.png';
 
 const NavBar = () => {
     const { t } = useTranslation();
     const { currentLanguage, handleChangeLanguage } = useLanguage();
-    const flagImage = currentLanguage === 'en' ? enFlag : ptFlag;
+    const flagImage = currentLanguage === 'en' ? '/navbar/en.png' : '/navbar/pt.png';
 
     const [sponsorsDropdownOpen, setDropdownOpen] = useState(false);
     const [archiveDropdownOpen, setArchiveDropdownOpen] = useState(false);
@@ -35,18 +28,16 @@ const NavBar = () => {
         if (hamburgerOpen) {
             hamburger.classList.add('active');
             navLinks.classList.add('active');
-        }
-
-        else {
+        } else {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
         }
-    }
+    };
 
     return (
         <nav style={container}>
             <Link style={navBranding} to="/">
-                <img src={logo_white} style={logo} alt="FSUMinho Logo" />
+                <img src="/logo_white.png" style={logo} alt="FSUMinho Logo" />
             </Link>
 
             <div className='hamburger' onClick={toggleHamburger}>
@@ -72,7 +63,7 @@ const NavBar = () => {
                     <Link to="#" className="link">
                         <div className='sponsors-link'>
                             {t('navbar.sponsors')}
-                            <img src={arrow} className={sponsorsDropdownOpen ? 'arrow rotate' : 'arrow'} />
+                            <img src='/archive_assets/arrow.png' className={sponsorsDropdownOpen ? 'arrow rotate' : 'arrow'} />
                         </div>
                     </Link>
                     
@@ -83,22 +74,6 @@ const NavBar = () => {
                         </ul>
                     )}
                 </li>
-
-                {/*<li className="navLink dropdown" onClick={toggleArchiveDropdown}>
-                    <Link to="#" className="link">
-                        <div className='sponsors-link'>
-                            {t('navbar.archive')}
-                            <img src={arrow} className={archiveDropdownOpen ? 'arrow rotate' : 'arrow'} />
-                        </div>
-                    </Link>
-                    
-                    {archiveDropdownOpen && (
-                        <ul className="dropdown-menu">
-                            <li><Link to="/competitions" className="dropdown-link">{t('navbar.competitions')}</Link></li>
-                            <li><Link to="/cars" className="dropdown-link">{t('navbar.cars')}</Link></li>
-                        </ul>
-                    )}
-                </li>*/}
 
                 <li className="navLink mobile-link">
                     <Link to="/sponsors" className="link">
@@ -124,28 +99,22 @@ const NavBar = () => {
                     </Link>
                 </li>
 
-                {/*<li className="navLink mobile-link">
-                    <Link to="/cars" className="link">
-                        {t('navbar.cars')}
-                    </Link>
-                </li>*/}
-
                 <li className='navLink desktop-contact'>
                     <a href="https://www.instagram.com/fsuminho/">
-                        <img src={insta_logo} style={navIcons} alt="Instagram" />
+                        <img src="/navbar/insta.png" style={navIcons} alt="Instagram" />
                     </a>
                 </li>
 
                 <li className='navLink desktop-contact'>
                     <a href="https://pt.linkedin.com/company/fsuminho">
-                        <img src={linkedin_logo} style={navIcons} alt="LinkedIn" />
+                        <img src="/navbar/linkedin.png" style={navIcons} alt="LinkedIn" />
                     </a>
                 </li>
 
                 <li className='navLink desktop-contact'>
                     <Link to="/contact">
                         <button>
-                            <img src={email_logo} style={navIcons} alt="Email" />
+                            <img src="/navbar/email.png" style={navIcons} alt="Email" />
                         </button>
                     </Link>
                 </li>
@@ -154,20 +123,20 @@ const NavBar = () => {
                     <ul className='mobile-contact-list'>
                         <li style={navLink}>
                             <a href="https://www.instagram.com/fsuminho/">
-                                <img src={insta_logo} style={navIcons} alt="Instagram" />
+                                <img src="/navbar/insta.png" style={navIcons} alt="Instagram" />
                             </a>
                         </li>
 
                         <li style={navLink}>
                             <a href="https://pt.linkedin.com/company/fsuminho">
-                                <img src={linkedin_logo} style={navIcons} alt="LinkedIn" />
+                                <img src="/linkedin.png" style={navIcons} alt="LinkedIn" />
                             </a>
                         </li>
 
                         <li style={navLink}>
                             <Link to="/contact">
                                 <button>
-                                    <img src={email_logo} style={navIcons} alt="Email" />
+                                    <img src="/navbar/email.png" style={navIcons} alt="Email" />
                                 </button>
                             </Link>
                         </li>
@@ -194,7 +163,7 @@ const container = {
 
 const navBranding = {
     marginLeft: "2%"
-}
+};
 
 const logo = {
     height: "40px",
@@ -215,7 +184,7 @@ const navLink = {
     justifyContent: "center",
     cursor: "pointer",
     position: "relative"
-}
+};
 
 const navIcons = {
     height: "auto",
@@ -229,4 +198,4 @@ const langSelect = {
     padding: "1px",
     borderRadius: "50%",
     backgroundColor: "white"
-}
+};

@@ -2,9 +2,6 @@ import './competitions.css';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Competition from '../../../components/competition/competition';
-import FSPT_2023_group_photo from '../../../assets/fspt_group_photo.jpg';
-import FSPT_logo from '../../../assets/archive_assets/FSPT_Logo_White_Square.svg';
-import fspt24 from '../../../assets/archive_assets/fspt24.jpg';
 
 const Archive = () => {
     const { t } = useTranslation();
@@ -15,8 +12,8 @@ const Archive = () => {
 
             <div className='competitions-container' data-aos="fade-up">
                 <Competition
-                    background={FSPT_2023_group_photo}
-                    logo={FSPT_logo}
+                    background="/fspt_group_photo.jpg"
+                    logo="/archive_assets/FSPT_Logo_White_Square.svg"
                     year='2023'
                     country='Portugal'
                     city='Castelo Branco'
@@ -31,8 +28,8 @@ const Archive = () => {
                 />
 
                 <Competition
-                    background={fspt24}
-                    logo={FSPT_logo}
+                    background="/archive_assets/fspt24.jpg"
+                    logo="/archive_assets/FSPT_Logo_White_Square.svg"
                     year='2024'
                     country='Portugal'
                     city='Castelo Branco'

@@ -1,27 +1,14 @@
-import './home.css'
+import './home.css';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import StatsCard from '../../components/stats_card/stats_card'
-import eeum_logo from '../../assets/EEUMLOGO.png';
-import calendar_icon from '../../assets/calendar.png';
-import hat_icon from '../../assets/graduation-hat.png';
-import car_icon from '../../assets/race-car.png';
-import team_icon from '../../assets/team.png';
-import logo_white from '../../assets/logo_white.png'
-import lightning from '../../assets/lightning.png'
-import petrol from '../../assets/petrol.png'
-import self_driving from '../../assets/self-driving.png'
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import FSPT_2023_group_photo from '../../assets/fspt_group_photo.jpg';
-import fspt24 from '../../assets/archive_assets/fspt24.jpg';
-import fspt24_2 from '../../assets/fspt24_2.jpg';
-import santander_home from '../../assets/santander_home.png';
+import StatsCard from '../../components/stats_card/stats_card';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
     const { t } = useTranslation();
-    const current_date = new Date;
+    const current_date = new Date();
     const current_year = current_date.getFullYear();
     const years_stat = current_year - 2021;
 
@@ -76,7 +63,11 @@ const Home = () => {
     }, []);
 
     const [currentImage, setCurrentImage] = useState(0);
-    const images = [FSPT_2023_group_photo, fspt24, fspt24_2];
+    const images = [
+        '/fspt_group_photo.jpg', 
+        '/archive_assets/fspt24.jpg', 
+        '/fspt24_2.jpg'
+    ];
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -102,7 +93,7 @@ const Home = () => {
                     ></div>
                 ))}
                 <div data-aos="fade-up">
-                    <img className='logo-white' src={logo_white} alt="Logo White" />
+                    <img className='logo-white' src='/logo_white.png' alt="Logo White" />
                     <h3>Engineering at high speed</h3>
                 </div>
             </div>
@@ -115,33 +106,33 @@ const Home = () => {
                         <p className='who-are-we-text'>{t('about_us.text')}</p>
                     </div>
 
-                    <img data-aos="fade-left" src={ eeum_logo } className='eeum-logo' />
+                    <img data-aos="fade-left" src='/EEUMLOGO.png' className='eeum-logo' />
                 </div>
 
                 <div className='stats-container' data-aos="fade">
                     <StatsCard 
-                        image={team_icon} 
+                        image='/team.png' 
                         stat={t('about_us.members')}
                         value={43}
                         orientation="1"
                     />
 
                     <StatsCard
-                        image={calendar_icon}
+                        image='/calendar.png'
                         stat={t('about_us.years')}
                         value={years_stat}
                         orientation="2"
                     />
 
                     <StatsCard 
-                        image={hat_icon}
+                        image='/graduation-hat.png'
                         stat={t('about_us.courses')}
                         value={8}
                         orientation="1"
                     />
 
                     <StatsCard
-                        image={car_icon}
+                        image='/race-car.png'
                         stat={t('about_us.cars')}
                         value={1}
                         orientation="2"
@@ -163,7 +154,7 @@ const Home = () => {
                         <div className="fs-class">
                             <div className="class-content">
                                 <div className="class-background">
-                                    <img className="class-icon" src={petrol} alt="Petrol Icon"/>
+                                    <img className="class-icon" src='/petrol.png' alt="Petrol Icon"/>
                                     <span className="class-title">CV</span>
                                 </div>
                                 <p className="class-text">{t('fs.classes.cv-description')}</p>
@@ -173,7 +164,7 @@ const Home = () => {
                         <div className="fs-class">
                             <div className="class-content">
                                 <div className="class-background">
-                                    <img className="class-icon" src={lightning} alt="Lightning Icon"/>
+                                    <img className="class-icon" src='/lightning.png' alt="Lightning Icon"/>
                                     <span className="class-title">EV</span>
                                 </div>
                                 <p className="class-text">{t('fs.classes.ev-description')}</p>
@@ -183,7 +174,7 @@ const Home = () => {
                         <div className="fs-class">
                             <div className="class-content">
                                 <div className="class-background">
-                                    <img className="class-icon" src={self_driving} alt="Self Driving Icon"/>
+                                    <img className="class-icon" src='/self-driving.png' alt="Self Driving Icon"/>
                                     <span className="class-title">DV</span>
                                 </div>
                                 <p className="class-text">{t('fs.classes.dv-description')}</p>
@@ -193,18 +184,18 @@ const Home = () => {
                 </div>
             </div>
 
-            <div class="santander-container">
+            <div className="santander-container">
                 <h1>{t('santander.title')}</h1>
 
-                <div class="image-wrapper">
+                <div className="image-wrapper">
                     <a href="https://www.santander.pt/universitarios?utm_campaign=BN_ACC_ACST_SU_PAS0_CCO_Matriculas0225_Universidade_Minho_NA_NGAL&utm_source=siteuniversidades&utm_medium=banner&utm_content=NA&utm_term=NA">
                         <img
-                            src={santander_home}
+                            src='/santander_home.png'
                             className="santander-image"
                         />
                     </a>
 
-                    <div class="overlay">{t('santander.more')}</div>
+                    <div className="overlay">{t('santander.more')}</div>
                 </div>
             </div>
 
@@ -225,7 +216,7 @@ const Home = () => {
                 </Slider>
             </div>
         </div>
-    )
+    );
 };
 
 export default Home;
