@@ -129,7 +129,7 @@ const NavBar = () => {
 
                         <li style={navLink}>
                             <a href="https://pt.linkedin.com/company/fsuminho">
-                                <img src="/linkedin.png" style={navIcons} alt="LinkedIn" />
+                                <img src="navbar/linkedin.png" style={navIcons} alt="LinkedIn" />
                             </a>
                         </li>
 
