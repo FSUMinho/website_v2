@@ -21,7 +21,11 @@ const sponsors = {
         { name: "Donelab", img: "/sponsors/donelab.png", url: "https://www.donelab.pt/" },
         { name: "Piep", img: "/sponsors/piep.png", url: "https://www.piep.pt/" },
         { name: "CNC4A", img: "/sponsors/cnc4a.png", url: "https://www.cnc4a.com/" },
-        {name: "Etma Metal Parts", img: "/sponsors/etma.png", url: "https://www.etma.pt/"}
+        {name: "Etma Metal Parts", img: "/sponsors/etma.png", url: "https://www.etma.pt/"},
+        {name: "Einhell", img: "/sponsors/einhell.png", url: "https://www.einhell.pt/"},
+        {name: "Bontaz", img: "/sponsors/bontaz.png", url: "https://www.bontaz.com/en/"},
+        {name: "Quantal", img: "/sponsors/quantal.png", url: "https://www.quantal.pt/"},
+        {name: "Inegi", img: "/sponsors/inegi.png", url: "https://www.inegi.pt/pt/"},
     ],
     partners: [
         { name: "Tracopower", img: "/sponsors/tracopower.jpg", url: "https://www.tracopower.com/int" },
@@ -33,6 +37,8 @@ const sponsors = {
         { name: "Moura Laser", img: "/sponsors/moura-laser.png", url: "https://www.mouralaser.pt/pt/" },
         { name: "Shapetek", img: "/sponsors/shapetek.png", url: "https://shapetek.pt/" },
         { name: "Poliamol", img: "/sponsors/poliamol.png", url: "https://www.poliamol.pt/" },
+        {name: "JMartins & Dias", img: "/sponsors/jmd.svg", url: "https://www.jmartinsdias.pt/home"},
+        {name: "Placa Nobre", img: "/sponsors/placa_nobre.jpg", url: "https://www.palcanobre.pt/"},
     ],
     institutions: [
         { name: "EEUM", img: "/sponsors/eeum.png", url: "https://www.eng.uminho.pt/pt" },
