@@ -40,6 +40,11 @@
             }
         },
 
+        "car": {
+            "title": "Construir um sonho",
+            "description": "Construir um carro de Fórmula Student é transformar um projeto em realidade. Desde o primeiro desenho até o último ajuste, cada etapa exige dedicação e trabalho em equipa. A cada peça montada, o sonho torna-se mais tangível, e, no final, o carro pronto reflete o esforço coletivo de transformar ideias em desempenho real."
+        },
+
         "team": {
             "title": "Equipa",
             "description": "Atualmente a equipa é composta por 6 setores, cada um dedicado a uma área específica do carro. Cada setor é composto por um head e vários membros, que trabalham em conjunto para desenvolver o melhor carro possível. A equipa é liderada por um Team Leader, que coordena o trabalho de todos os setores. Existem ainda dois diretores técnicos, supervisionando cada um os setores da parte elétrica e mecânica do carro.",
