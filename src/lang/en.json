@@ -40,6 +40,11 @@
             }
         },
 
+        "car": {
+            "title": "Building a Dream",
+            "description": "Building a Formula Student car is about turning a project into reality. From the first sketch to the final adjustment, every step requires dedication and teamwork. With each assembled part, the dream becomes more tangible, and in the end, the finished car reflects the collective effort of transforming ideas into real performance."
+        },
+
         "team": {
             "title": "Team",
             "description": "The team is currently composed of 6 sectors, each dedicated to a specific area of the car. Each sector is composed of a head and several members, who work together to develop the best possible car. The team is led by a Team Leader, who coordinates the work of all sectors. There are also two technical directors, each overseeing the sectors of the car's electrical and mechanical parts.",

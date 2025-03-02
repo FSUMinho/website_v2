@@ -232,6 +232,28 @@ h1 {
     opacity: 1;
 }  
 
+.car-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10%;
+    gap: 10vh;
+}
+
+.car-title {
+    text-align: left;
+}
+
+.car-description {
+    text-align: justify;
+}
+
+.car-image {
+    width: 40%;
+    height: auto;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 800px) {
     .home-container {

@@ -184,6 +184,16 @@ const Home = () => {
                 </div>
             </div>
 
+            <div className='car-container'>
+                <div className='car-text' data-aos="fade-right">
+                    <h1 className='car-title'>{t('car.title')}</h1>
+
+                    <p className='car-description'>{t('car.description')}</p>
+                </div>
+
+                <img src='/fsum_24.png' className='car-image' data-aos="fade-left" />
+            </div>
+
             <div className="santander-container">
                 <h1>{t('santander.title')}</h1>
 
