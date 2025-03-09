@@ -40,6 +40,9 @@ const sponsors = {
         {name: "JMartins & Dias", img: "/sponsors/jmd.svg", url: "https://www.jmartinsdias.pt/home"},
         {name: "Placa Nobre", img: "/sponsors/placa_nobre.jpg", url: "https://www.palcanobre.pt/"},
     ],
+    software: [
+        { name: "RapidHarness", img: "/sponsors/rapidharness.png", url: "https://rapidharness.com/" },
+    ],
     institutions: [
         { name: "EEUM", img: "/sponsors/eeum.png", url: "https://www.eng.uminho.pt/pt" },
         { name: "GEPE", img: "/sponsors/gepe.png", url: "https://www.gepe.dei.uminho.pt/" },
@@ -62,6 +65,7 @@ const Sponsors = () => {
                             tier === "Silver" ? "Silver" :
                             tier === "Bronze" ? "Bronze" :
                             tier === "partners" ? t("sponsors.partner") :
+                            tier === "software" ? t("sponsors.software") :
                             tier === "institutions" ? t("sponsors.inst") : `${tier}`}
                         </h2>
                         
