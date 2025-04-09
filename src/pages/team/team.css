@@ -1,3 +1,14 @@
+.team-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 35vh;
+    background-size: cover;
+    background-position: 0% 20%;
+    color: white;
+}
+
 .team-description {
     margin-left: 10%;
     margin-right: 10%;
@@ -6,102 +17,135 @@
 
 .sectors-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.sector-selector-container {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px 10%;
-    margin-left: 10%;
-    margin-right: 10%;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 
-.sector {
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    background-color: #e52516;
+.sector-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e52526;
     color: white;
-    text-align: center;
-    transition: transform 0.3s ease;
-    width: 40%;
-    min-height: 250px;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.sector:hover {
-    transform: translateY(-10px);
+.sector-selector:hover {
+    background-color: #c51f20;
+    transform: translateY(-2px);
+}
+
+.sector-selector.selected {
+    background-color: white;
+    color: #e52526;
+    border: 2px solid #e52526;
+    transform: scale(1.05);
+}
+
+.sector-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 80%;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    text-align: justify;
+    min-height: 200px; 
 }
 
 .sector-content {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.sector-background {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.3s ease;
-}
-
-.sector-icon {
-    width: auto;
-    height: 150px;
+    flex: 1;
 }
 
 .sector-title {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
-.sector-text {
-    opacity: 0;
-    font-size: 1em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.3s ease;
-    text-align: justify;
-    padding: 10px;
-    width: 80%;
-    height: 100%;
+.sector-photo {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
-.sector:hover .sector-background {
-    opacity: 0;
+.sector-description-text {
+    font-size: 1.2em;
+    line-height: 1.5;
 }
 
-.sector:hover .sector-text {
+.fade-in {
     opacity: 1;
+    transition: opacity 0.4s ease-in;
 }
 
-/* Mobile Responsiveness */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
 @media (max-width: 800px) {
-    .sectors-container {
-        gap: 30px 5%;
+    .team-title-container {
+        height: 25vh;
+        background-position: 40% 20%;
     }
 
-    .sector {
-        width: 80%;
-        min-height: 200px;
+    .sectors-container {
+        gap: 40px;
+        padding: 0 5%;
+    }
+
+    .sector-selector-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .sector-selector {
+        width: 70%;
+        font-size: 1rem;
+        padding: 12px 16px;
+    }
+
+    .sector-description {
+        flex-direction: column;
+        width: 100%;
+        padding: 15px;
+        min-height: auto;
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .sector-photo {
+        width: 100%;
+        margin-top: 20px;
     }
 
     .sector-title {
-        font-size: 1.25em;
+        font-size: 1.4rem;
     }
 
-    .sector-icon {
-        height: 120px;
-    }
-
-    .sector-text {
-        font-size: 0.9em;
+    .sector-description-text {
+        font-size: 1rem;
     }
 }
 
@@ -110,26 +154,24 @@
         margin-left: 5%;
         margin-right: 5%;
         font-size: 1rem;
+        line-height: 1.5;
     }
 
-    .sectors-container {
-        gap: 20px;
-    }
-
-    .sector {
-        width: 100%;
-        min-height: 180px;
+    .sector-selector {
+        font-size: 0.95rem;
+        padding: 10px 14px;
     }
 
     .sector-title {
-        font-size: 1em;
+        font-size: 1.3rem;
     }
 
-    .sector-icon {
-        height: 100px;
+    .sector-description-text {
+        font-size: 0.95rem;
     }
 
-    .sector-text {
-        font-size: 0.8em;
+    .sector-description {
+        font-size: 0.9rem;
+        padding: 15px 10px;
     }
 }

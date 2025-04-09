@@ -1,5 +1,5 @@
 import './home.css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import StatsCard from '../../components/stats_card/stats_card';
 import Slider from "react-slick";
@@ -22,29 +22,32 @@ const Home = () => {
         adaptiveHeight: true,
         responsive: [
             {
-                breakpoint: 800,
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                 },
             },
             {
-                breakpoint: 500,
+                breakpoint: 576,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    arrows: false,
                 },
             },
         ],
     };
 
     const [instaData, setInstaData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchPosts = async () => {
+            setIsLoading(true);
             try {
                 const behold_api = 'https://feeds.behold.so/1IdZpnDvhFXL2pgpNuA0';
-
                 const response = await fetch(behold_api);
 
                 if (!response.ok) {
@@ -52,10 +55,14 @@ const Home = () => {
                 }
 
                 const data = await response.json();
-                setInstaData(data.posts);
-
+                const filetered_data = data.posts.filter((post) => post.mediaType !== 'VIDEO');
+                setInstaData(filetered_data);
+                setError(null);
             } catch (error) {
                 console.error('Error fetching posts:', error);
+                setError('Failed to load Instagram posts');
+            } finally {
+                setIsLoading(false);
             }
         };
 
@@ -66,7 +73,8 @@ const Home = () => {
     const images = [
         '/fspt_group_photo.jpg', 
         '/archive_assets/fspt24.jpg', 
-        '/fspt24_2.jpg'
+        '/fspt24_2.jpg',
+        '/team/team_photo.png',
     ];
 
     useEffect(() => {
@@ -75,6 +83,28 @@ const Home = () => {
         }, 5000);
 
         return () => clearInterval(intervalId);
+    }, [images.length]);
+
+    const handleTouchStart = useCallback((e) => {
+        const element = e.currentTarget;
+        const classBackground = element.querySelector('.class-background');
+        const classText = element.querySelector('.class-text');
+        
+        if (classBackground && classText) {
+            classBackground.style.opacity = 0;
+            classText.style.opacity = 1;
+        }
+    }, []);
+
+    const handleTouchEnd = useCallback((e) => {
+        const element = e.currentTarget;
+        const classBackground = element.querySelector('.class-background');
+        const classText = element.querySelector('.class-text');
+        
+        if (classBackground && classText) {
+            classBackground.style.opacity = 1;
+            classText.style.opacity = 0;
+        }
     }, []);
 
     return (
@@ -102,11 +132,10 @@ const Home = () => {
                 <div className='who-are-we-logo-container'>
                     <div data-aos="fade-right">
                         <h1 className='about-us-title'>{t('about_us.title')}</h1>
-
                         <p className='who-are-we-text'>{t('about_us.text')}</p>
                     </div>
 
-                    <img data-aos="fade-left" src='/EEUMLOGO.png' className='eeum-logo' />
+                    <img data-aos="fade-left" src='/EEUMLOGO.png' className='eeum-logo' alt="EEUM Logo" />
                 </div>
 
                 <div className='stats-container' data-aos="fade">
@@ -116,21 +145,18 @@ const Home = () => {
                         value={43}
                         orientation="1"
                     />
-
                     <StatsCard
                         image='/calendar.png'
                         stat={t('about_us.years')}
                         value={years_stat}
                         orientation="2"
                     />
-
                     <StatsCard 
                         image='/graduation-hat.png'
                         stat={t('about_us.courses')}
-                        value={8}
+                        value={10}
                         orientation="1"
                     />
-
                     <StatsCard
                         image='/race-car.png'
                         stat={t('about_us.cars')}
@@ -142,16 +168,18 @@ const Home = () => {
 
             <div className='fs-container' data-aos="fade">
                 <h1>{t('fs.title')}</h1>
-
                 <p className='fs-text'>{t('fs.description')}</p>
 
                 <div data-aos="fade">
                     <h3>{t('fs.classes.title')}</h3>
-
                     <p>{t('fs.classes.description')}</p>
 
                     <div className="classes-container">
-                        <div className="fs-class">
+                        <div 
+                            className="fs-class" 
+                            onTouchStart={handleTouchStart} 
+                            onTouchEnd={handleTouchEnd}
+                        >
                             <div className="class-content">
                                 <div className="class-background">
                                     <img className="class-icon" src='/petrol.png' alt="Petrol Icon"/>
@@ -161,7 +189,11 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="fs-class">
+                        <div 
+                            className="fs-class" 
+                            onTouchStart={handleTouchStart} 
+                            onTouchEnd={handleTouchEnd}
+                        >
                             <div className="class-content">
                                 <div className="class-background">
                                     <img className="class-icon" src='/lightning.png' alt="Lightning Icon"/>
@@ -171,7 +203,11 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="fs-class">
+                        <div 
+                            className="fs-class" 
+                            onTouchStart={handleTouchStart} 
+                            onTouchEnd={handleTouchEnd}
+                        >
                             <div className="class-content">
                                 <div className="class-background">
                                     <img className="class-icon" src='/self-driving.png' alt="Self Driving Icon"/>
@@ -187,11 +223,10 @@ const Home = () => {
             <div className='car-container'>
                 <div className='car-text' data-aos="fade-right">
                     <h1 className='car-title'>{t('car.title')}</h1>
-
                     <p className='car-description'>{t('car.description')}</p>
                 </div>
 
-                <img src='/fsum_24.png' className='car-image' data-aos="fade-left" />
+                <img src='/fsum_24.png' className='car-image' data-aos="fade-left" alt="FSUM 24 Car" />
             </div>
 
             <div className="santander-container">
@@ -202,6 +237,7 @@ const Home = () => {
                         <img
                             src='/santander_home.png'
                             className="santander-image"
+                            alt="Santander Banner"
                         />
                     </a>
 
@@ -212,18 +248,25 @@ const Home = () => {
             <div className="slider-container" data-aos="fade">
                 <h1>{t('news')}</h1>
 
-                <Slider {...slider_settings}>
-                    {Object.entries(instaData).map(([index, post]) => (
-                        <div key={index} className="slider-item">
-                            <a href={post.permalink}>
-                                <img
-                                    className="slider-image"
-                                    src={post.sizes.medium.mediaUrl}
-                                />
-                            </a>
-                        </div>
-                    ))}
-                </Slider>
+                {isLoading ? (
+                    <div style={{ textAlign: 'center', padding: '20px' }}>Loading...</div>
+                ) : error ? (
+                    <div style={{ textAlign: 'center', padding: '20px', color: 'red' }}>{error}</div>
+                ) : (
+                    <Slider {...slider_settings}>
+                        {Object.entries(instaData).map(([index, post]) => (
+                            <div key={index} className="slider-item">
+                                <a href={post.permalink}>
+                                    <img
+                                        className="slider-image"
+                                        src={post.sizes.medium.mediaUrl}
+                                        alt={`Instagram post ${index}`}
+                                    />
+                                </a>
+                            </div>
+                        ))}
+                    </Slider>
+                )}
             </div>
         </div>
     );
