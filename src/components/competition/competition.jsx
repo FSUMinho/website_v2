@@ -1,95 +1,91 @@
 import React, { useState } from 'react';
-import './competition.css';
 import { useTranslation } from 'react-i18next';
+import './competition.css';
 
 const Competition = ({ background, logo, year, country, city, circuit, class_, overall, results }) => {
-    const containerStyle = {
-        background: `
-            linear-gradient(
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-            ), 
-            url(${background})
-        `,
-        backgroundPosition: '0% 5%',
-        backgroundSize: 'cover'
-    };
-
     const { t } = useTranslation();
-
     const [showTable, setShowTable] = useState(false);
-    const [arrowRotation, setArrowRotation] = useState(false);
 
     const toggleTable = () => {
         setShowTable(!showTable);
-        setArrowRotation(!arrowRotation);
+    };
+
+    const renderMedal = (position) => {
+        if (position === "1") return <img className="medal" src="/sponsors/gold-medal.png" alt="" />;
+        if (position === "2") return <img className="medal" src="/sponsors/silver-medal.png" alt="" />;
+        if (position === "3") return <img className="medal" src="/sponsors/bronze-medal.png" alt="" />;
+        return null;
     };
 
     return (
-        <div className='component-container'>  
-            <div className='competition-container' style={containerStyle}>
-                <img src={logo} className='logo' alt="Competition logo" />
+        <div className="competition-wrapper">  
+            <div 
+                className="competition-card"
+                style={{
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(${background})`
+                }}
+            >
+                <div className="competition-header">
+                    {logo && <img src={logo} className="competition-logo" alt="" />}
+                    <h2 className="competition-year">{year}</h2>
+                </div>
 
-                <h1>{year}</h1>
-
-                <button onClick={toggleTable} className={arrowRotation ? 'rotate' : 'reverse-rotate'}>
-                    <img src="/archive_assets/arrow.png" alt="Arrow" /> 
+                <button 
+                    onClick={toggleTable} 
+                    className={`toggle-button ${showTable ? 'active' : ''}`}
+                    aria-label="Toggle competition details"
+                    aria-expanded={showTable}
+                >
+                    <img src="/archive_assets/arrow.png" alt="" />
                 </button>
             </div>
 
-            <div className='competiton-info-container'>
-                {showTable && (
-                    <table className='event-info' data-aos="fade-down">
+            <div className={`competition-details ${showTable ? 'visible' : ''}`}>
+                <div className="details-content">
+                    <table className="results-table">
                         <tbody>
-                            <tr className='info'>
+                            <tr>
                                 <th>{t('archive.country')}</th>
                                 <td>{country}</td>
                             </tr>
-
-                            <tr className='info'>
+                            <tr>
                                 <th>{t('archive.city')}</th>
                                 <td>{city}</td>
                             </tr>
-
-                            <tr className='info'>
+                            <tr>
                                 <th>{t('archive.circuit')}</th>
                                 <td>{circuit}</td>
                             </tr>
-
-                            <tr className='info'>
+                            <tr>
                                 <th>{t('archive.class_')}</th>
                                 <td>{class_}</td>
                             </tr>
-
-                            <tr className='info'>
+                            <tr className="overall-result">
                                 <th>{t('archive.result')}</th>
-                                <td className='result'>
-                                    P{overall}
-
-                                    {overall === "1" && <img className='medal' src="/sponsors/gold-medal.png" alt="Gold medal" />}
-                                    {overall === "2" && <img className='medal' src="/sponsors/silver-medal.png" alt="Silver medal" />}
-                                    {overall === "3" && <img className='medal' src="/sponsors/bronze-medal.png" alt="Bronze medal" />}
+                                <td>
+                                    <div className="result-display">
+                                        <span className="position">P{overall}</span>
+                                        {renderMedal(overall)}
+                                    </div>
                                 </td>
                             </tr>
-
                             {Object.entries(results).map(([key, value]) => (
-                                <tr key={key} className='info'>
+                                <tr key={key}>
                                     <th>{key}</th>
-                                    <td className='result'>
-                                        P{value}
-
-                                        {value === "1" && <img className='medal' src="/sponsors/gold-medal.png" alt="Gold medal" />}
-                                        {value === "2" && <img className='medal' src="/sponsors/silver-medal.png" alt="Silver medal" />}
-                                        {value === "3" && <img className='medal' src="/sponsors/bronze-medal.png" alt="Bronze medal" />}
+                                    <td>
+                                        <div className="result-display">
+                                            <span className="position">P{value}</span>
+                                            {renderMedal(value)}
+                                        </div>
                                     </td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
-                )}
+                </div>
             </div>
         </div>
     );
-}
+};
 
 export default Competition;
