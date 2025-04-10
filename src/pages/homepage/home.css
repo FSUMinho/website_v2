@@ -153,37 +153,133 @@
     opacity: 1;
 }
 
+/* Slider container styling */
 .slider-container {
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 30px;
     text-align: center;
+    position: relative;
 }
 
+/* Individual slider item */
+.slider-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Image styling */
 .slider-image {
-    width: 20vw;
-    height: 20vw;
+    width: 100%;
+    aspect-ratio: 1/1;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Set maximum image width for larger screens */
+@media (min-width: 1200px) {
+    .slider-image {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
+/* Slick overrides for proper spacing */
+.slick-list {
+    margin: 0 -10px;
 }
 
 .slick-slide > div {
     display: flex !important;
     justify-content: center;
-    align-items: center;
-}
-
-.slick-list {
-    margin: 0 -20px;
+    padding: 0 5px;
 }
 
 .slick-track {
     display: flex;
+    margin-left: 0;
+    margin-right: 0;
 }
 
-.slider-item {
-    cursor: pointer;
+/* Slick dots styling */
+.slick-dots {
+    bottom: -30px;
+}
+
+.slick-dots li button:before {
+    font-size: 8px;
+    color: #e52516;
+    opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #e52516;
+}
+
+/* Arrow styling */
+.slick-prev, .slick-next {
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+}
+
+.slick-prev {
+    left: 0;
+}
+
+.slick-next {
+    right: 0;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #e52516;
+    font-size: 24px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .slider-container {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 800px) {
+    .slider-container {
+        padding: 0 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider-item {
+        padding: 5px;
+    }
+    
+    .slider-container {
+        padding: 0 20px;
+    }
+    
+    .slider-image {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .slick-prev {
+        left: -5px;
+    }
+    
+    .slick-next {
+        right: -5px;
+    }
+}
+
+@media (max-width: 380px) {
+    .slider-container {
+        padding: 0 15px;
+    }
 }
 
 .santander-container {
