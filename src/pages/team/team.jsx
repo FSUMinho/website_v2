@@ -1,12 +1,6 @@
 import './team.css';
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import mnt from '../../assets/mnt_photo.png';
-import pwrt from '../../assets/powertrain_photo.png';
-import esw from '../../assets/esw_photo.png';
-import dvtn from '../../assets/drivetrain_photo.png';
-import chassis from '../../assets/chassis_photo.png';
-import suspension from '../../assets/suspension_photo.png';
 
 const Team = () => {
     const { t } = useTranslation();
@@ -17,42 +11,42 @@ const Team = () => {
             title: 'Management',
             icon: '/team/mnt.png',
             description: t('team.management'),
-            photo: mnt,
+            photo: '/team/mnt_photo.png',
         },
         {
             id: 'powertrain',
             title: 'Powertrain',
             icon: '/team/pwrt.png',
             description: t('team.powertrain'),
-            photo: pwrt,
+            photo: '/team/powertrain_photo.png',
         },
         {
             id: 'esw',
             title: 'Electronics & Software',
             icon: '/team/ecu.png',
             description: t('team.esw'),
-            photo: esw,
+            photo: '/team/esw_photo.png',
         },
         {
             id: 'drivetrain',
             title: 'Drivetrain',
             icon: '/team/dvrt.png',
             description: t('team.drivetrain'),
-            photo: dvtn,
+            photo: '/team/drivetrain_photo.png',
         },
         {
             id: 'chassisaero',
             title: 'Chassis & Aero',
             icon: '/team/chassis_aero.png',
             description: t('team.chassiaero'),
-            photo: chassis,
+            photo: '/team/chassis_photo.png',
         },
         {
             id: 'suspension',
             title: 'Suspension & Steering',
             icon: '/team/suspension_steering.png',
             description: t('team.suspension'),
-            photo: suspension,
+            photo: '/team/suspension_photo.png',
         },
     ];
 
