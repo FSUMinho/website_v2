@@ -55,6 +55,35 @@ const Team = () => {
     const [displayedSector, setDisplayedSector] = useState(sectors[0]);
 
     useEffect(() => {
+        const imagesToPreload = [
+            '/team/team_photo.png',
+            ...sectors.map(sector => sector.icon),
+            ...sectors.map(sector => sector.photo)
+        ];
+        
+        let loadedCount = 0;
+        const totalImages = imagesToPreload.length;
+        
+        imagesToPreload.forEach(src => {
+            const img = new Image();
+            img.src = src;
+            img.onload = () => {
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    setImagesLoaded(true);
+                }
+            };
+            img.onerror = () => {
+                console.error(`Failed to load image: ${src}`);
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    setImagesLoaded(true);
+                }
+            };
+        });
+    }, []);
+
+    useEffect(() => {
         if (selectedSectorId) {
             setIsTransitioning(true);
             
