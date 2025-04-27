@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './recruitment.css';
+import Title from '../../components/title/title.jsx';
 
 const Recruitment = () => {
     const { t } = useTranslation();
@@ -12,11 +13,11 @@ const Recruitment = () => {
 
     return (
         <div className='recruitment-container'>
-            <h1>{t('recruitment.title')}</h1>
+            <Title size="h1" title={t('recruitment.title')} />
 
             <p className='recruitment-text'>{t('recruitment.description')}</p>
 
-            <h2>{t('recruitment.steps-title')}</h2>
+            <Title size="h2" title={t('recruitment.steps-title')} />
 
             <div className='steps-list'>
                 <div className='step-item'>
@@ -37,11 +38,11 @@ const Recruitment = () => {
                 </div>
             </div>
 
-            <h2>{t('recruitment.dates-title')}</h2>
+            <Title size="h2" title={t('recruitment.dates-title')} />
 
             <p className='recruitment-text'>{t('recruitment.dates-text')}</p>
 
-            <h2>{t('recruitment.sectors-title')}</h2>
+            <Title size="h2" title={t('recruitment.sectors-title')} />
 
             <div className='options-container'>
                 <div className='sector-form-container'>
@@ -66,7 +67,7 @@ const Recruitment = () => {
                 </div>
             </div>
 
-            <h2>{t('recruitment.faqs-title')}</h2>
+            <Title size="h2" title={t('recruitment.faqs-title')} />
 
             <div className='faq-container'>
                 {[1, 2, 3, 4, 5, 6].map((index) => (

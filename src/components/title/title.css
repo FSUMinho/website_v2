@@ -1,0 +1,38 @@
+.section-title {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #e52516;
+}
+
+.primary-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #e52516;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .primary-title {
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .primary-title {
+        margin-bottom: 2rem;
+    }
+}

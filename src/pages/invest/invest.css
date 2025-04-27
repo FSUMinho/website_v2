@@ -1,58 +1,89 @@
+.invest-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.invest-section {
+    margin-bottom: 3rem; 
+    padding-top: 1rem; 
+}
+
+.invest-section:first-child {
+    padding-top: 0;
+}
+
+.invest-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .why-invest-text {
     text-align: justify;
-    margin-left: 10%;
-    margin-right: 10%;
+    line-height: 1.6;
+    margin-bottom: 0;
 }
 
 .invest-forms-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    column-gap: 50px;
-    row-gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .invest-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    text-align: justify;
+    text-align: center;
     color: white;
     background-color: #e52516;
-    height: 500px;
-    width: 40%;
-    padding: 20px 20px;
+    height: 100%;
+    padding: 2rem;
     border-radius: 20px;
-    margin: 5px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(229, 37, 22, 0.2);
 }
 
-.invest-form-text {
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 1.3rem;
+.invest-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(229, 37, 22, 0.3);
+}
+
+.invest-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
 }
 
 .invest-form-image {
     width: 100px;
     height: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.invest-form:hover .invest-form-image {
+    transform: scale(1.1);
+}
+
+.invest-form-text {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
 
 .tiers-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    gap: 50px;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .tier {
@@ -60,101 +91,126 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: justify;
-    width: 80%;
-    padding: 20px 20px;
+    text-align: left;
+    width: 100%;
+    padding: 2rem;
     border-radius: 20px;
-    border-style: solid;
-    border-color: #e52516;
+    border: 2px solid #e52516;
     transition: all 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tier:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .tier-description {
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 100%;
+    margin-bottom: 1.5rem;
 }
 
 .tier-value {
     font-weight: bold;
     background-color: #e52516;
     color: white;
-    padding: 20px 20px;
-    border-radius: 20px;
+    padding: 1rem 2rem;
+    border-radius: 10px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.tier:hover .tier-value {
+    transform: scale(1.05);
 }
 
 .tier-image {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.tier:hover .tier-image {
+    transform: rotate(10deg);
+}
+
+.benefits-list {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefits-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #444;
+}
+
+.benefits-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #e52516;
+    font-weight: bold;
+}
+
+.section-title-container {
+    margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
+    .invest-forms-container {
+        grid-template-columns: 1fr;
+    }
+    
     .invest-form {
-        width: 80%;
-        height: 400px;
+        padding: 1.5rem;
     }
-
+    
     .invest-form-text {
-        margin-left: 5%;
-        margin-right: 5%;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
-
-    .tiers-container {
-        margin-left: 5%;
-        margin-right: 5%;
-        gap: 20px;
-    }
-
-    .tier {
-        width: 95%;
-    }
-
-    .why-invest-text {
-        margin-left: 5%;
-        margin-right: 5%;
-        font-size: 0.85rem;
+    
+    .invest-section {
+        margin-bottom: 2.5rem; 
     }
 }
 
 @media (max-width: 480px) {
     .invest-form {
-        width: 100%;
-        height: auto;
-        padding: 20px 10px;
+        padding: 1rem;
     }
-
-    .invest-form-text {
-        margin-left: 5%;
-        margin-right: 5%;
-        font-size: .8rem;
+    
+    .invest-form h3 {
+        font-size: 1.25rem;
     }
-
+    
     .invest-form-image {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
     }
-
-    .tiers-container {
-        margin-left: 5%;
-        margin-right: 5%;
-        gap: 15px;
+    
+    .invest-form-text {
+        font-size: 0.9rem;
     }
-
+    
     .tier {
-        width: 100%;
-        padding: 20px 10px;
+        padding: 1.5rem 1rem;
     }
-
+    
     .tier-value {
-        padding: 15px 10px;
+        padding: 0.75rem 1.5rem;
+        font-size: 1.1rem;
     }
-
-    .why-invest-text {
-        margin-left: 5%;
-        margin-right: 5%;
-        font-size: 0.8rem;
+    
+    .invest-section {
+        margin-bottom: 2rem; 
     }
 }

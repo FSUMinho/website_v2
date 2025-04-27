@@ -5,6 +5,7 @@ import StatsCard from '../../components/stats_card/stats_card';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Title from '../../components/title/title';
 
 const Home = () => {
     const { t } = useTranslation();
@@ -131,8 +132,8 @@ const Home = () => {
             <div className='who-are-we-container'>
                 <div className='who-are-we-logo-container'>
                     <div data-aos="fade-right">
-                        <h1 className='about-us-title'>{t('about_us.title')}</h1>
-                        <p className='who-are-we-text'>{t('about_us.text')}</p>
+                        <Title size="h1" title={t('about_us.title')} />
+                        <p className='about-us-text'>{t('about_us.text')}</p>
                     </div>
 
                     <img data-aos="fade-left" src='/EEUMLOGO.png' className='eeum-logo' alt="EEUM Logo" />
@@ -166,8 +167,8 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='fs-container' data-aos="fade">
-                <h1>{t('fs.title')}</h1>
+            <div className='fs-container' data-aos="fade">~
+                <Title size="h1" title={t('fs.title')} />
                 <p className='fs-text'>{t('fs.description')}</p>
 
                 <div data-aos="fade">
@@ -222,7 +223,7 @@ const Home = () => {
 
             <div className='car-container'>
                 <div className='car-text' data-aos="fade-right">
-                    <h1 className='car-title'>{t('car.title')}</h1>
+                    <Title size="h1" title={t('car.title')} />
                     <p className='car-description'>{t('car.description')}</p>
                 </div>
 
@@ -230,7 +231,7 @@ const Home = () => {
             </div>
 
             <div className="santander-container">
-                <h1>{t('santander.title')}</h1>
+                <Title size="h1" title={t('santander.title')} />
 
                 <div className="image-wrapper">
                     <a href="https://www.santander.pt/universitarios?utm_campaign=BN_ACC_ACST_SU_PAS0_CCO_Matriculas0225_Universidade_Minho_NA_NGAL&utm_source=siteuniversidades&utm_medium=banner&utm_content=NA&utm_term=NA">
@@ -246,7 +247,7 @@ const Home = () => {
             </div>
 
             <div className="slider-container" data-aos="fade">
-                <h1>{t('news')}</h1>
+                <Title size="h1" title={t('news')} />
 
                 {isLoading ? (
                     <div style={{ textAlign: 'center', padding: '20px' }}>Loading...</div>
