@@ -1,18 +1,20 @@
 import './sponsors.css';
 import { useTranslation } from 'react-i18next';
+import Title from '../../components/title/title';
 
 const sponsors = {
     Diamond: [
         { name: "Santander", img: "/sponsors/santander.svg", url: "https://www.fundacaosantanderportugal.pt/" }
     ],
     Gold: [
-        { name: "Bosch", img: "/sponsors/bosch.png", url: "https://www.bosch.pt/" }
+        // Empty tier
     ],
     Silver: [
         { name: "Kroftools", img: "/sponsors/kroftools.png", url: "https://www.kroftools.com/en/" },
         { name: "Tesla", img: "/sponsors/tesla.jpg", url: "https://www.tesla.com/pt_pt" }
     ],
     Bronze: [
+        { name: "Bosch", img: "/sponsors/bosch.png", url: "https://www.bosch.pt/" },
         { name: "Coficab", img: "/sponsors/COFICAB.png", url: "https://www.coficab.pt/" },
         { name: "Cepra", img: "/sponsors/cepra.png", url: "https://www.cepra.pt/" },
         { name: "Haas", img: "/sponsors/geen-haas.jpg", url: "https://www.haascnc.com/content/ghf/en/home.html" },
@@ -39,6 +41,7 @@ const sponsors = {
         { name: "Poliamol", img: "/sponsors/poliamol.png", url: "https://www.poliamol.pt/" },
         {name: "JMartins & Dias", img: "/sponsors/jmd.svg", url: "https://www.jmartinsdias.pt/home"},
         {name: "Placa Nobre", img: "/sponsors/placa_nobre.jpg", url: "https://www.palcanobre.pt/"},
+        {name: "Cordex", img: "/sponsors/cordex.jpg", url: "https://cordex.com/pt/home-pt/"},
     ],
     software: [
         { name: "RapidHarness", img: "/sponsors/rapidharness.png", url: "https://rapidharness.com/" },
@@ -52,37 +55,52 @@ const sponsors = {
 
 const Sponsors = () => {
     const { t } = useTranslation();
+    
+    const translateTierName = (tier) => {
+        switch(tier) {
+            case "Diamond":
+            case "Gold":
+            case "Silver":
+            case "Bronze":
+                return tier;
+            case "partners":
+                return t("sponsors.partner");
+            case "software":
+                return t("sponsors.software");
+            case "institutions":
+                return t("sponsors.inst");
+            default:
+                return tier;
+        }
+    };
 
     return (
         <div className="sponsors-page">
-            <h1 className="page-title">{t('sponsors.title')}</h1>
+            <Title size="h1" title={t('sponsors.title')} />
             <div className="sponsors-container">
-                {Object.entries(sponsors).map(([tier, sponsorsList]) => (
-                    <div key={tier} className="sponsor-tier-container">
-                        <h2 className="tier-title">
-                            {tier === "Diamond" ? "Diamond" :
-                            tier === "Gold" ? "Gold" :
-                            tier === "Silver" ? "Silver" :
-                            tier === "Bronze" ? "Bronze" :
-                            tier === "partners" ? t("sponsors.partner") :
-                            tier === "software" ? t("sponsors.software") :
-                            tier === "institutions" ? t("sponsors.inst") : `${tier}`}
-                        </h2>
-                        
-                        <div className="sponsor-tier">
-                            {sponsorsList.map(({ name, img, url, style }) => (
-                                <a key={name} href={url} target="_blank" rel="noopener noreferrer">
-                                    <img 
-                                        src={img} 
-                                        alt={name} 
-                                        className="sponsor-logo" 
-                                        style={style || {}} 
-                                    />
-                                </a>
-                            ))}
+                {Object.entries(sponsors)
+                    .filter(([_, sponsorsList]) => sponsorsList && sponsorsList.length > 0)
+                    .map(([tier, sponsorsList]) => (
+                        <div key={tier} className="sponsor-tier-container">
+                            <h2 className="tier-title">
+                                {translateTierName(tier)}
+                            </h2>
+                            
+                            <div className="sponsor-tier">
+                                {sponsorsList.map(({ name, img, url, style }) => (
+                                    <a key={name} href={url} target="_blank" rel="noopener noreferrer">
+                                        <img 
+                                            src={img} 
+                                            alt={name} 
+                                            className="sponsor-logo"
+                                            loading="lazy" 
+                                            style={style || {}} 
+                                        />
+                                    </a>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
             </div>
         </div>
     );

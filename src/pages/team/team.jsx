@@ -1,9 +1,12 @@
 import './team.css';
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import Title from '../../components/title/title';
 
 const Team = () => {
     const { t } = useTranslation();
+    const [imagesLoaded, setImagesLoaded] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     const sectors = [
         {
@@ -55,33 +58,56 @@ const Team = () => {
     const [displayedSector, setDisplayedSector] = useState(sectors[0]);
 
     useEffect(() => {
-        const imagesToPreload = [
-            '/team/team_photo.png',
-            ...sectors.map(sector => sector.icon),
-            ...sectors.map(sector => sector.photo)
-        ];
+        const criticalImages = ['/team/team_photo.png', sectors[0].photo, sectors[0].icon];
         
-        let loadedCount = 0;
-        const totalImages = imagesToPreload.length;
-        
-        imagesToPreload.forEach(src => {
-            const img = new Image();
-            img.src = src;
-            img.onload = () => {
-                loadedCount++;
-                if (loadedCount === totalImages) {
-                    setImagesLoaded(true);
-                }
-            };
-            img.onerror = () => {
-                console.error(`Failed to load image: ${src}`);
-                loadedCount++;
-                if (loadedCount === totalImages) {
-                    setImagesLoaded(true);
-                }
-            };
+        Promise.all(
+            criticalImages.map(src => {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.src = src;
+                    img.onload = resolve;
+                    img.onerror = () => {
+                        console.error(`Failed to load image: ${src}`);
+                        resolve();
+                    };
+                });
+            })
+        ).then(() => {
+            setIsLoading(false);
         });
     }, []);
+    
+    useEffect(() => {
+        if (!isLoading) {
+            const remainingImages = sectors.slice(1).flatMap(sector => [sector.icon, sector.photo]);
+            
+            if ('IntersectionObserver' in window) {
+                const lazyLoadImages = () => {
+                    remainingImages.forEach(src => {
+                        const img = new Image();
+                        img.src = src;
+                    });
+                };
+                
+                const timer = setTimeout(lazyLoadImages, 100);
+                return () => clearTimeout(timer);
+            } else {
+                const loadRemainingImagesSequentially = async () => {
+                    for (const src of remainingImages) {
+                        await new Promise(resolve => {
+                            const img = new Image();
+                            img.src = src;
+                            img.onload = resolve;
+                            img.onerror = resolve;
+                        });
+                    }
+                    setImagesLoaded(true);
+                };
+                
+                loadRemainingImagesSequentially();
+            }
+        }
+    }, [isLoading]);
 
     useEffect(() => {
         if (selectedSectorId) {
@@ -96,10 +122,19 @@ const Team = () => {
         }
     }, [selectedSectorId]);
 
+    if (isLoading) {
+        return (
+            <div className="loading-container">
+                <div className="loading-spinner"></div>
+                <p>Loading team information...</p>
+            </div>
+        );
+    }
+
     return (
         <div>
             <div className='team-title-container'
-                 style={{
+                style={{
                     backgroundImage: `linear-gradient(
                         rgba(0, 0, 0, 0.5),
                         rgba(0, 0, 0, 0.5)
@@ -108,10 +143,10 @@ const Team = () => {
                 <h1 className='team-title' data-aos="fade">{t('team.title')}</h1>
             </div>
 
-            <p className='team-description' data-aos="fade">{t('team.description')}</p>
+            <p className='p1 team-description' data-aos="fade">{t('team.description')}</p>
 
             <div className='sectors-container' data-aos="fade">
-                <h1>{t('team.sectors-title')}</h1>
+                <Title size="h1" title={t('team.sectors-title')} />
 
                 <div className='sector-selector-container'>
                     {sectors.map((sector, index) => (
@@ -129,18 +164,19 @@ const Team = () => {
                 <div className={`sector-description ${isTransitioning ? 'fade-out' : 'fade-in'}`}>
                     <div className="sector-content">
                         <h3 className='sector-title'>{displayedSector.title}</h3>
-                        <p className='sector-description-text'>{displayedSector.description}</p>
+                        <p className='p1 sector-description-text'>{displayedSector.description}</p>
                     </div>
                     
                     <img 
                         src={displayedSector.photo}
                         alt={displayedSector.title} 
                         className='sector-photo' 
+                        loading="lazy"
                     />
                 </div>
             </div>
         </div>
     );
-}
+};
 
 export default Team;
