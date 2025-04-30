@@ -167,7 +167,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='fs-container' data-aos="fade">~
+            <div className='fs-container' data-aos="fade">
                 <Title size="h1" title={t('fs.title')} />
                 <p className='fs-text'>{t('fs.description')}</p>
 
