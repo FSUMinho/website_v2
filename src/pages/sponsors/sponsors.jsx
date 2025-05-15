@@ -22,7 +22,7 @@ const sponsors = {
         { name: "Alwelding", img: "/sponsors/alwelding.png", url: "https://www.instagram.com/alwelding/" },
         { name: "Donelab", img: "/sponsors/donelab.png", url: "https://www.donelab.pt/" },
         { name: "Piep", img: "/sponsors/piep.png", url: "https://www.piep.pt/" },
-        { name: "CNC4A", img: "/sponsors/cnc4a.png", url: "https://www.cnc4a.com/" },
+        { name: "CNC4A", img: "/sponsors/cnc4a.jpg", url: "https://www.cnc4a.com/" },
         {name: "Etma Metal Parts", img: "/sponsors/etma.png", url: "https://www.etma.pt/"},
         {name: "Einhell", img: "/sponsors/einhell.png", url: "https://www.einhell.pt/"},
         {name: "Bontaz", img: "/sponsors/bontaz.png", url: "https://www.bontaz.com/en/"},
