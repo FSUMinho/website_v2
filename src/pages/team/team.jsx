@@ -1,14 +1,15 @@
 import './team.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import Title from '../../components/title/title';
 
 const Team = () => {
     const { t } = useTranslation();
-    const [imagesLoaded, setImagesLoaded] = useState(false);
+    const [imagesLoaded, setImagesLoaded] = useState(new Set());
     const [isLoading, setIsLoading] = useState(true);
+    const [preloadedImages, setPreloadedImages] = useState(new Set());
 
-    const sectors = [
+    const sectors = useMemo(() => [
         {
             id: 'management',
             title: 'Management',
@@ -51,76 +52,136 @@ const Team = () => {
             description: t('team.suspension'),
             photo: '/team/suspension_photo.png',
         },
-    ];
+    ], [t]);
 
     const [selectedSectorId, setSelectedSectorId] = useState(sectors[0].id);
     const [isTransitioning, setIsTransitioning] = useState(false);
     const [displayedSector, setDisplayedSector] = useState(sectors[0]);
 
-    useEffect(() => {
-        const criticalImages = ['/team/team_photo.png', sectors[0].photo, sectors[0].icon];
-        
-        Promise.all(
-            criticalImages.map(src => {
-                return new Promise((resolve, reject) => {
-                    const img = new Image();
-                    img.src = src;
-                    img.onload = resolve;
-                    img.onerror = () => {
-                        console.error(`Failed to load image: ${src}`);
-                        resolve();
-                    };
-                });
-            })
-        ).then(() => {
-            setIsLoading(false);
-        });
-    }, []);
-    
-    useEffect(() => {
-        if (!isLoading) {
-            const remainingImages = sectors.slice(1).flatMap(sector => [sector.icon, sector.photo]);
-            
-            if ('IntersectionObserver' in window) {
-                const lazyLoadImages = () => {
-                    remainingImages.forEach(src => {
-                        const img = new Image();
-                        img.src = src;
-                    });
-                };
-                
-                const timer = setTimeout(lazyLoadImages, 100);
-                return () => clearTimeout(timer);
-            } else {
-                const loadRemainingImagesSequentially = async () => {
-                    for (const src of remainingImages) {
-                        await new Promise(resolve => {
-                            const img = new Image();
-                            img.src = src;
-                            img.onload = resolve;
-                            img.onerror = resolve;
-                        });
-                    }
-                    setImagesLoaded(true);
-                };
-                
-                loadRemainingImagesSequentially();
+    const preloadImage = useCallback((src, priority = 'low') => {
+        return new Promise((resolve) => {
+            if (preloadedImages.has(src)) {
+                resolve(true);
+                return;
             }
-        }
-    }, [isLoading]);
+
+            const img = new Image();
+            
+            if ('loading' in img) {
+                img.loading = priority === 'high' ? 'eager' : 'lazy';
+            }
+            
+            if ('decoding' in img) {
+                img.decoding = 'async';
+            }
+
+            const handleLoad = () => {
+                setPreloadedImages(prev => new Set([...prev, src]));
+                setImagesLoaded(prev => new Set([...prev, src]));
+                resolve(true);
+            };
+
+            const handleError = () => {
+                console.warn(`Failed to load image: ${src}`);
+                setPreloadedImages(prev => new Set([...prev, src]));
+                resolve(false);
+            };
+
+            img.onload = handleLoad;
+            img.onerror = handleError;
+            img.src = src;
+
+            setTimeout(() => {
+                if (!preloadedImages.has(src)) {
+                    handleError();
+                }
+            }, 10000);
+        });
+    }, [preloadedImages]);
 
     useEffect(() => {
-        if (selectedSectorId) {
-            setIsTransitioning(true);
-            
+        const criticalImages = [
+            '/team/team_photo.png',
+            sectors[0].photo,
+            sectors[0].icon
+        ];
+        
+        const loadCriticalImages = async () => {
+            const promises = criticalImages.map(src => preloadImage(src, 'high'));
+            await Promise.allSettled(promises);
+            setIsLoading(false);
+        };
+
+        loadCriticalImages();
+    }, [sectors, preloadImage]);
+
+    useEffect(() => {
+        if (isLoading) return;
+
+        const remainingImages = sectors
+            .slice(1)
+            .flatMap(sector => [sector.icon, sector.photo])
+            .filter(src => !preloadedImages.has(src));
+
+        if (remainingImages.length === 0) return;
+
+        if ('IntersectionObserver' in window && 'requestIdleCallback' in window) {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            requestIdleCallback(() => {
+                                remainingImages.forEach(src => preloadImage(src, 'low'));
+                            });
+                            observer.disconnect();
+                        }
+                    });
+                },
+                { rootMargin: '50px' }
+            );
+
+            const sectorContainer = document.querySelector('.sectors-container');
+            if (sectorContainer) {
+                observer.observe(sectorContainer);
+            }
+
+            return () => observer.disconnect();
+        } else {
             const timer = setTimeout(() => {
-                setDisplayedSector(sectors.find(sector => sector.id === selectedSectorId));
-                setIsTransitioning(false);
-            }, 200);
+                remainingImages.forEach(src => preloadImage(src, 'low'));
+            }, 500);
             
             return () => clearTimeout(timer);
         }
-    }, [selectedSectorId]);
+    }, [isLoading, sectors, preloadedImages, preloadImage]);
+
+    const handleSectorHover = useCallback((hoveredSectorId) => {
+        const hoveredSector = sectors.find(s => s.id === hoveredSectorId);
+        if (hoveredSector && !preloadedImages.has(hoveredSector.photo)) {
+            preloadImage(hoveredSector.photo, 'high');
+        }
+    }, [sectors, preloadedImages, preloadImage]);
+
+    useEffect(() => {
+        if (selectedSectorId) {
+            const newSector = sectors.find(sector => sector.id === selectedSectorId);
+            
+            if (newSector) {
+                setIsTransitioning(true);
+                
+                if (!preloadedImages.has(newSector.photo)) {
+                    preloadImage(newSector.photo, 'high');
+                }
+                
+                const timer = setTimeout(() => {
+                    setDisplayedSector(newSector);
+                    setIsTransitioning(false);
+                }, 150);
+                
+                return () => clearTimeout(timer);
+            }
+        }
+    }, [selectedSectorId, sectors, preloadedImages, preloadImage]);
 
     if (isLoading) {
         return (
@@ -152,9 +213,11 @@ const Team = () => {
                     {sectors.map((sector, index) => (
                         <button 
                             className={`sector-selector ${selectedSectorId === sector.id ? 'selected' : ''}`} 
-                            key={index} 
+                            key={sector.id}
                             type='button'
                             onClick={() => setSelectedSectorId(sector.id)}
+                            onMouseEnter={() => handleSectorHover(sector.id)}
+                            onFocus={() => handleSectorHover(sector.id)}
                         >
                             {sector.title}
                         </button>
@@ -172,6 +235,11 @@ const Team = () => {
                         alt={displayedSector.title} 
                         className='sector-photo' 
                         loading="lazy"
+                        decoding="async"
+                        style={{
+                            opacity: preloadedImages.has(displayedSector.photo) ? 1 : 0.7,
+                            transition: 'opacity 0.3s ease'
+                        }}
                     />
                 </div>
             </div>
