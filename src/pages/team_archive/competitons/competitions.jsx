@@ -43,6 +43,22 @@ const Archive = () => {
                         "Cost of Manufacturing": "2"
                     }}
                 />
+
+                <Competition
+                    background="/archive_assets/fspt_25.jpg"
+                    logo="/archive_assets/FSPT_Logo_White_Square.svg"
+                    year='2025'
+                    country='Portugal'
+                    city='Castelo Branco'
+                    circuit='Kartódromo de Castelo Branco'
+                    class_="2"
+                    overall="3"
+                    results={{
+                        "Business Plan Presentation": "3", 
+                        "Engineering Design": "5", 
+                        "Cost of Manufacturing": "1"
+                    }}
+                />
             </div>
         </div>
     );

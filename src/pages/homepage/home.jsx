@@ -2,9 +2,9 @@ import './home.css';
 import React, { useEffect, useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import StatsCard from '../../components/stats_card/stats_card';
-import Slider from "react-slick"; // REMOVE THIS IMPORT
-import "slick-carousel/slick/slick.css"; // REMOVE THIS IMPORT
-import "slick-carousel/slick/slick-theme.css"; // REMOVE THIS IMPORT
+import Slider from "react-slick"; 
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import Title from '../../components/title/title';
 import { sponsors } from '../sponsors/sponsors';
 
@@ -81,6 +81,7 @@ const Home = () => {
 
     const [currentImage, setCurrentImage] = useState(0);
     const images = [
+        './archive_assets/fspt_25.jpg',
         '/fspt_group_photo.jpg',
         '/archive_assets/fspt24.jpg',
         '/fspt24_2.jpg',
