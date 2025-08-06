@@ -6,9 +6,14 @@ import Title from '../../components/title/title.jsx';
 const Recruitment = () => {
     const { t } = useTranslation();
     const [faqVisibility, setFaqVisibility] = useState(Array(6).fill(false));
+    const [expandedTimeline, setExpandedTimeline] = useState(Array(4).fill(false));
 
     const toggleFaq = (index) => {
         setFaqVisibility(faqVisibility.map((visible, i) => (i === index ? !visible : visible)));
+    };
+
+    const toggleTimelineCard = (index) => {
+        setExpandedTimeline(expandedTimeline.map((expanded, i) => (i === index ? !expanded : expanded)));
     };
 
     return (
@@ -19,23 +24,30 @@ const Recruitment = () => {
 
             <Title size="h2" title={t('recruitment.steps-title')} />
 
-            <div className='steps-list'>
-                <div className='step-item'>
-                    <div className='step-number'>1</div>
-                    <p className='step-text'>{t('recruitment.step1')}</p>
-                </div>
-                <div className='step-item'>
-                    <div className='step-number'>2</div>
-                    <p className='step-text'>{t('recruitment.step2')}</p>
-                </div>
-                <div className='step-item'>
-                    <div className='step-number'>3</div>
-                    <p className='step-text'>{t('recruitment.step3')}</p>
-                </div>
-                <div className='step-item'>
-                    <div className='step-number'>4</div>
-                    <p className='step-text'>{t('recruitment.step4')}</p>
-                </div>
+            <div className='timeline-container'>
+                <div className='timeline-line'></div>
+                
+                {[1, 2, 3, 4].map((stepNumber, index) => (
+                    <div key={stepNumber} className='timeline-step'>
+                        <div className='timeline-number'>{stepNumber}</div>
+                        <div className={`timeline-card ${expandedTimeline[index] ? 'expanded' : ''}`}>
+                            <div className='timeline-content'>
+                                <h3 className='timeline-title'>{t(`recruitment.step${stepNumber}-title`)}</h3>
+                                <p className='timeline-summary'>{t(`recruitment.step${stepNumber}-summary`)}</p>
+                                <div className={`timeline-details ${expandedTimeline[index] ? 'expanded' : ''}`}>
+                                    <p>{t(`recruitment.step${stepNumber}-details`)}</p>
+                                </div>
+                            </div>
+                            <button 
+                                className={`timeline-expand-btn ${expandedTimeline[index] ? 'expanded' : ''}`}
+                                onClick={() => toggleTimelineCard(index)}
+                                aria-label={expandedTimeline[index] ? 'Collapse details' : 'Expand details'}
+                            >
+                                {expandedTimeline[index] ? '−' : '+'}
+                            </button>
+                        </div>
+                    </div>
+                ))}
             </div>
 
             <Title size="h2" title={t('recruitment.dates-title')} />
@@ -47,23 +59,23 @@ const Recruitment = () => {
             <div className='options-container'>
                 <div className='sector-form-container'>
                     <h3>{t('recruitment.mechanical')}</h3>
-                    <img src="/system.png" className='sector-icon' />
+                    <img src="/system.png" className='sector-icon' alt="Mechanical sector" />
                     <p className='option-text'>{t('recruitment.mechanical-text')}</p>
-                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSeLkUS7CGCfpZke5zjdW2hqaAjIqXxHhIHu-Jy3csdv1jXJTA/viewform?usp=dialog' className='apply-button'>{t('recruitment.apply')}</a>
+                    <a href='' className='apply-button'>{t('recruitment.not-open')}</a>
                 </div>
 
                 <div className='sector-form-container'>
                     <h3>{t('recruitment.electrical')}</h3>
-                    <img src="/lightning.png" className='sector-icon' />
+                    <img src="/lightning.png" className='sector-icon' alt="Electrical sector" />
                     <p className='option-text'>{t('recruitment.electrical-text')}</p>
-                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSexeoeZcVlvuQ7ufbrayDfkt8tuNsO5TqQUGPVadFVIcNhqDA/viewform?usp=dialog' className='apply-button'>{t('recruitment.apply')}</a>
+                    <a href='' className='apply-button'>{t('recruitment.not-open')}</a>
                 </div>
 
                 <div className='sector-form-container'>
                     <h3>{t('recruitment.management')}</h3>
-                    <img src="/team/mnt.png" className='sector-icon' />
+                    <img src="/team/mnt.png" className='sector-icon' alt="Management sector" />
                     <p className='option-text'>{t('recruitment.management-text')}</p>
-                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSdbR2nxJS2SdIE1-lCVs5nK3c_1t7BaDecbpT1JWfwQgOKS_g/viewform?usp=dialog' className='apply-button'>{t('recruitment.apply')}</a>
+                    <a href='' className='apply-button'>{t('recruitment.not-open')}</a>
                 </div>
             </div>
 

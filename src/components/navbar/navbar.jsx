@@ -2,7 +2,7 @@ import './navbar.css';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const NavBar = () => {
     const { t } = useTranslation();
@@ -13,6 +13,63 @@ const NavBar = () => {
     const [archiveDropdownOpen, setArchiveDropdownOpen] = useState(false);
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
+    const sponsorsDropdownRef = useRef(null);
+    const archiveDropdownRef = useRef(null);
+    const navRef = useRef(null);
+    const hamburgerRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (hamburgerOpen) {
+                const hamburgerButton = hamburgerRef.current;
+                const navLinksElement = document.querySelector('.nav-links');
+                
+                if (hamburgerButton && !hamburgerButton.contains(event.target) && 
+                    navLinksElement && !navLinksElement.contains(event.target)) {
+                    console.log('Fechando hamburger menu por clique fora'); // Debug
+                    setHamburgerOpen(false);
+                    const hamburger = document.querySelector('.hamburger');
+                    const navLinks = document.querySelector('.nav-links');
+                    if (hamburger) hamburger.classList.remove('active');
+                    if (navLinks) navLinks.classList.remove('active');
+                    return;
+                }
+            }
+
+            if (sponsorsDropdownOpen && sponsorsDropdownRef.current && 
+                !sponsorsDropdownRef.current.contains(event.target)) {
+                setDropdownOpen(false);
+            }
+            
+            if (archiveDropdownOpen && archiveDropdownRef.current && 
+                !archiveDropdownRef.current.contains(event.target)) {
+                setArchiveDropdownOpen(false);
+            }
+        };
+
+        if (sponsorsDropdownOpen || archiveDropdownOpen || hamburgerOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+            document.addEventListener('touchstart', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('touchstart', handleClickOutside);
+        };
+    }, [sponsorsDropdownOpen, archiveDropdownOpen, hamburgerOpen]);
+
+    useEffect(() => {
+        if (hamburgerOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [hamburgerOpen]);
+
     const toggleDropdown = () => {
         setDropdownOpen(!sponsorsDropdownOpen);
     };
@@ -21,26 +78,52 @@ const NavBar = () => {
         setArchiveDropdownOpen(!archiveDropdownOpen);
     };
 
-    const toggleHamburger = () => {
-        setHamburgerOpen(!hamburgerOpen);
-        const hamburger = document.querySelector('.hamburger');
+    const closeAllDropdowns = () => {
+        setDropdownOpen(false);
+        setArchiveDropdownOpen(false);
+    };
+
+    const closeHamburgerMenu = () => {
+        setHamburgerOpen(false);
+        const hamburger = hamburgerRef.current;
         const navLinks = document.querySelector('.nav-links');
-        if (hamburgerOpen) {
-            hamburger.classList.add('active');
-            navLinks.classList.add('active');
-        } else {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
+        if (hamburger) hamburger.classList.remove('active');
+        if (navLinks) navLinks.classList.remove('active');
+    };
+
+    const closeAllMenus = () => {
+        closeAllDropdowns();
+        closeHamburgerMenu();
+    };
+
+    const toggleHamburger = () => {
+        const newHamburgerState = !hamburgerOpen;
+        setHamburgerOpen(newHamburgerState);
+        
+        setDropdownOpen(false);
+        setArchiveDropdownOpen(false);
+        
+        const hamburger = hamburgerRef.current;
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (hamburger && navLinks) {
+            if (newHamburgerState) {
+                hamburger.classList.add('active');
+                navLinks.classList.add('active');
+            } else {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
         }
     };
 
     return (
-        <nav style={container}>
+        <nav style={container} ref={navRef}>
             <Link style={navBranding} to="/">
                 <img src="/logo_white.png" style={logo} alt="FSUMinho Logo" />
             </Link>
 
-            <div className='hamburger' onClick={toggleHamburger}>
+            <div className='hamburger' ref={hamburgerRef} onClick={toggleHamburger}>
                 <div className='bar'></div>
                 <div className='bar'></div>
                 <div className='bar'></div>
@@ -54,12 +137,12 @@ const NavBar = () => {
                 </li>
 
                 <li className="navLink">
-                    <Link to="/team" className="link">
+                    <Link to="/team" className="link" onClick={closeHamburgerMenu}>
                         {t('navbar.team')}
                     </Link>
                 </li>
 
-                <li className="navLink dropdown desktop-link" onClick={toggleDropdown}>
+                <li className="navLink dropdown desktop-link" ref={sponsorsDropdownRef} onClick={toggleDropdown}>
                     <Link to="#" className="link">
                         <div className='sponsors-link'>
                             {t('navbar.sponsors')}
@@ -69,35 +152,35 @@ const NavBar = () => {
                     
                     {sponsorsDropdownOpen && (
                         <ul className="dropdown-menu">
-                            <li><Link to="/sponsors" className="dropdown-link">{t('navbar.companies')}</Link></li>
-                            <li><Link to="/invest" className="dropdown-link">{t('navbar.invest')}</Link></li>
+                            <li><Link to="/sponsors" className="dropdown-link" onClick={closeAllMenus}>{t('navbar.companies')}</Link></li>
+                            <li><Link to="/invest" className="dropdown-link" onClick={closeAllMenus}>{t('navbar.invest')}</Link></li>
                         </ul>
                     )}
                 </li>
 
                 <li className="navLink mobile-link">
-                    <Link to="/sponsors" className="link">
+                    <Link to="/sponsors" className="link" onClick={closeHamburgerMenu}>
                         {t('navbar.sponsors')}
                     </Link>
                 </li>
 
                 <li className="navLink mobile-link">
-                    <Link to="/invest" className="link">
+                    <Link to="/invest" className="link" onClick={closeHamburgerMenu}>
                         {t('navbar.invest')}
                     </Link> 
                 </li>
 
                 <li className="navLink">
-                    <Link to="/competitions" className="link">
+                    <Link to="/competitions" className="link" onClick={closeHamburgerMenu}>
                         {t('navbar.competitions')}
                     </Link>
                 </li>
 
-                {/*<li className='navLink'>
-                    <Link to="/recruitment" className="link">
+                <li className='navLink'>
+                    <Link to="/recruitment" className="link" onClick={closeHamburgerMenu}>
                         {t('navbar.recruitment')}
                     </Link>
-                </li>*/}
+                </li>
 
                 <li className='navLink desktop-contact'>
                     <a href="https://www.instagram.com/fsuminho/">
@@ -112,7 +195,7 @@ const NavBar = () => {
                 </li>
 
                 <li className='navLink desktop-contact'>
-                    <Link to="/contact">
+                    <Link to="/contact" onClick={closeHamburgerMenu}>
                         <button>
                             <img src="/navbar/email.png" style={navIcons} alt="Email" />
                         </button>
@@ -134,7 +217,7 @@ const NavBar = () => {
                         </li>
 
                         <li style={navLink}>
-                            <Link to="/contact">
+                            <Link to="/contact" onClick={closeHamburgerMenu}>
                                 <button>
                                     <img src="/navbar/email.png" style={navIcons} alt="Email" />
                                 </button>
