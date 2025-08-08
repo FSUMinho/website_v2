@@ -15,42 +15,42 @@ const Team = () => {
             title: 'Management',
             icon: '/team/mnt.png',
             description: t('team.management'),
-            photo: '/team/mnt_photo.webp',
+            photo: '/team/mnt_photo.jpg',
         },
         {
             id: 'powertrain',
             title: 'Powertrain',
             icon: '/team/pwrt.png',
             description: t('team.powertrain'),
-            photo: '/team/powertrain_photo.webp',
+            photo: '/team/powertrain_photo.jpg',
         },
         {
             id: 'esw',
             title: 'Electronics & Software',
             icon: '/team/ecu.png',
             description: t('team.esw'),
-            photo: '/team/esw_photo.webp',
+            photo: '/team/esw_photo.jpg',
         },
         {
             id: 'drivetrain',
             title: 'Drivetrain',
             icon: '/team/dvrt.png',
             description: t('team.drivetrain'),
-            photo: '/team/drivetrain_photo.webp',
+            photo: '/team/drivetrain_photo.jpg',
         },
         {
             id: 'chassisaero',
             title: 'Chassis & Aero',
             icon: '/team/chassis_aero.png',
             description: t('team.chassiaero'),
-            photo: '/team/chassis_photo.webp',
+            photo: '/team/chassis_photo.jpg',
         },
         {
             id: 'suspension',
             title: 'Suspension & Steering',
             icon: '/team/suspension_steering.png',
             description: t('team.suspension'),
-            photo: '/team/suspension_photo.webp',
+            photo: '/team/suspension_photo.jpg',
         },
     ], [t]);
 
@@ -101,7 +101,7 @@ const Team = () => {
 
     useEffect(() => {
         const criticalImages = [
-            '/team/team_photo.png',
+            '/team/team_photo.jpg',
             sectors[0].photo,
             sectors[0].icon
         ];
@@ -199,7 +199,7 @@ const Team = () => {
                     backgroundImage: `linear-gradient(
                         rgba(0, 0, 0, 0.5),
                         rgba(0, 0, 0, 0.5)
-                    ), url('/team/team_photo.png')`,
+                    ), url('/team/team_photo.jpg')`,
                 }}>
                 <h1 className='team-title' data-aos="fade">{t('team.title')}</h1>
             </div>
