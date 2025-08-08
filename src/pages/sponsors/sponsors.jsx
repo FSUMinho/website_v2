@@ -8,9 +8,9 @@ export const sponsors = {
     ],
     Gold: [
         { name: "BorgWarner", img: "/sponsors/borgwarner.png", url: "https://www.borgwarner.com/" },
+        { name: "Kroftools", img: "/sponsors/kroftools.png", url: "https://www.kroftools.com/en/" },
     ],
     Silver: [
-        { name: "Kroftools", img: "/sponsors/kroftools.png", url: "https://www.kroftools.com/en/" },
         { name: "Tesla", img: "/sponsors/tesla.png", url: "https://www.tesla.com/pt_pt" },
         { name: "Cadflow", img: "/sponsors/cadflow.png", url: "https://www.cadflow.pt/" },
     ],
@@ -31,18 +31,19 @@ export const sponsors = {
         { name: "Catim", img: "/sponsors/catim.png", url: "https://www.catim.pt/" },
         { name: "Norelem", img: "/sponsors/norelem.png", url: "https://norelem.es/pt" },
         { name: "Subic Group", img: "/sponsors/subic.png", url: "https://subic.pt/" },
+        { name: "Moura Laser", img: "/sponsors/moura-laser.png", url: "https://www.mouralaser.pt/pt/" },
+        { name: "Tufama", img: "/sponsors/tufama.png", url: "https://www.tufama.pt/" },
     ],
     partners: [
         { name: "Tracopower", img: "/sponsors/tracopower.png", url: "https://www.tracopower.com/int" },
         { name: "IHH", img: "/sponsors/IHH.png", url: "https://www.isabellenhuette.de/en/" },
         { name: "VLB", img: "/sponsors/vlb.png", url: "https://vlb-group.com/pt-pt/" },
         { name: "Mais Rent", img: "/sponsors/mais_rent.png", url: "https://maisrent.pt/pt" },
-        { name: "Moura Laser", img: "/sponsors/moura-laser.png", url: "https://www.mouralaser.pt/pt/" },
         { name: "Poliamol", img: "/sponsors/poliamol.png", url: "https://www.poliamol.pt/" },
         { name: "JMartins & Dias", img: "/sponsors/jmd.svg", url: "https://www.jmartinsdias.pt/home"},
         { name: "Placa Nobre", img: "/sponsors/placa_nobre.png", url: "https://www.palcanobre.pt/"},
         { name: "Cordex", img: "/sponsors/cordex.png", url: "https://cordex.com/pt/home-pt/"},
-        { name: "Tufama", img: "/sponsors/tufama.png", url: "https://www.tufama.pt/" },
+        { name: "Metalotrofa", img: "/sponsors/metalotrofa.jpeg", url: "https://www.metalotrofa.com/" },
     ],
     software: [
         { name: "RapidHarness", img: "/sponsors/rapidharness.png", url: "https://rapidharness.com/" },
