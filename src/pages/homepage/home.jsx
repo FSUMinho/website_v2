@@ -85,7 +85,7 @@ const Home = () => {
         '/fspt_group_photo.jpg',
         '/archive_assets/fspt24.jpg',
         '/fspt24_2.jpg',
-        '/team/team_photo.png',
+        '/team/team_photo.jpg',
     ];
 
     useEffect(() => {
