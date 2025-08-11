@@ -71,9 +71,25 @@ const App = () => {
     return () => clearTimeout(timer);
   }, [location]);
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://www.fsuminho.com/",
+    "name": "FSUMinho",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.fsuminho.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <div style={appContainerStyle}>
       <NavBar />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <div style={contentStyle}>
         <Routes>
           <Route path="/" element={<Home />} />
