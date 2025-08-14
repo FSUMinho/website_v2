@@ -358,6 +358,7 @@
 }
 
 .faq-question {
+    text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -563,6 +564,10 @@
     .timeline-expand-btn {
         display: none;
     }
+
+    .faq-question {
+        font-size: 1.1em;
+    }
 }
 
 @media (max-width: 480px) {
@@ -575,7 +580,7 @@
     }
 
     .timeline-card {
-        width: calc(100% - 60px);
+        width: calc(100% - 10px);
         margin-left: 50px;
         padding: 15px;
     }

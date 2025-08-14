@@ -120,7 +120,7 @@ const NavBar = () => {
     return (
         <nav style={container} ref={navRef}>
             <Link style={navBranding} to="/">
-                <img src="/logo_white.png" style={logo} alt="FSUMinho Logo" />
+                <img className="nav-logo" src="/logo_white.png" style={logo} alt="FSUMinho Logo" />
             </Link>
 
             <div className='hamburger' ref={hamburgerRef} onClick={toggleHamburger}>
@@ -245,7 +245,9 @@ const container = {
 };
 
 const navBranding = {
-    marginLeft: "2%"
+    marginLeft: "2%",
+    display: "flex",
+    alignItems: "center"
 };
 
 const logo = {
@@ -258,7 +260,8 @@ const navLinks = {
     display: "flex",
     gap: "10px",
     marginRight: "2%",
-    alignItems: "center"
+    alignItems: "center",
+    flexWrap: "nowrap"
 };
 
 const navLink = {

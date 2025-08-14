@@ -1,0 +1,74 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.fsuminho.pt/#organization",
+      "name": "FSUMinho",
+      "url": "https://www.fsuminho.pt/",
+      "sameAs": [
+        "https://www.instagram.com/fsuminho",
+        "https://twitter.com/fsuminho"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "info@fsuminho.pt",
+          "url": "https://www.fsuminho.pt/contact"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.fsuminho.pt/#website",
+      "url": "https://www.fsuminho.pt/",
+      "name": "FSUMinho - Formula Student Team",
+      "description": "FSUMinho Formula Student team from University of Minho.",
+      "publisher": {
+        "@id": "https://www.fsuminho.pt/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.fsuminho.pt/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.fsuminho.pt/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.fsuminho.pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Team",
+          "item": "https://www.fsuminho.pt/team"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sponsors",
+          "item": "https://www.fsuminho.pt/sponsors"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Competitions",
+          "item": "https://www.fsuminho.pt/competitions"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Contact",
+          "item": "https://www.fsuminho.pt/contact"
+        }
+      ]
+    }
+  ]
+}
