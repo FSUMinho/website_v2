@@ -35,7 +35,7 @@ const Recruitment = () => {
                                 <h3 className='timeline-title'>{t(`recruitment.step${stepNumber}-title`)}</h3>
                                 <p className='timeline-summary'>{t(`recruitment.step${stepNumber}-summary`)}</p>
                                 <div className={`timeline-details ${expandedTimeline[index] ? 'expanded' : ''}`}>
-                                    <p>{t(`recruitment.step${stepNumber}-details`)}</p>
+                                    <p className='step-details'>{t(`recruitment.step${stepNumber}-details`)}</p>
                                 </div>
                             </div>
                             <button 

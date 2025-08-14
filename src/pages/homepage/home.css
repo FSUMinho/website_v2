@@ -5,6 +5,7 @@
     justify-content: center;
     gap: 10vh;
     z-index: 1;
+    overflow-x: hidden;
 }
 
 .home-container {
@@ -69,6 +70,7 @@
 }
 
 .fs-container {
+    width: 100%;
     color: white;
     display: flex;
     flex-direction: column;
@@ -91,8 +93,8 @@
 }
 
 .fs-class {
-    width: 30%;
-    height: 200px;
+    width: 40%;
+    height: 150px;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
@@ -228,7 +230,7 @@
 }
 
 .slider-container {
-    width: 100%;
+    width: 80%;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 30px;
@@ -306,14 +308,11 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 20px 0;
     overflow: hidden;
 }
 
 .sponsors-scroll-wrapper {
     width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
     position: relative;
 }
 
@@ -321,6 +320,12 @@
     display: inline-flex; 
     animation: scroll-sponsors 150s linear infinite;
     animation-play-state: running;
+    white-space: nowrap;
+}
+
+.sponsors-scroll-wrapper:hover .sponsors-track,
+.sponsors-scroll-wrapper:active .sponsors-track {
+    animation-play-state: paused;
 }
 
 .infinite-slider-sponsor-logo {
@@ -369,9 +374,13 @@ h1 {
     }
     
     .infinite-slider-sponsor-logo {
-        width: 100px;
+        width: 120px;
         height: 50px;
-        margin: 0 15px;
+        margin: 0 10px;
+    }
+
+    .sponsors-track {
+        animation: scroll-sponsors 200s linear infinite;
     }
     
     .slider-container {
@@ -433,7 +442,7 @@ h1 {
     
     .fs-class {
         width: 80%;
-        height: 180px;
+        height: 150px;
     }
     
     .fs-class:hover {
@@ -502,7 +511,7 @@ h1 {
     }
     
     .fs-class {
-        width: 100%;
+        width: 80%;
         height: 150px;
     }
     
@@ -520,15 +529,6 @@ h1 {
     
     .car-image {
         width: 95%;
-    }
-    
-    h1 {
-        font-size: 1.6rem;
-    }
-    
-    h3 {
-        font-size: 1.2rem;
-        text-align: center;
     }
     
     .slider-container {
@@ -555,7 +555,11 @@ h1 {
     .infinite-slider-sponsor-logo {
         width: 80px;
         height: 40px;
-        margin: 0 8px;
+        margin: 0 5px;
+    }
+
+    .sponsors-track {
+        animation: scroll-sponsors 300s linear infinite;
     }
 }
 
