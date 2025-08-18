@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async'; 
 import './App.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -14,38 +13,6 @@ import Sponsors from './pages/sponsors/sponsors';
 import Competitions from './pages/team_archive/competitons/competitions';
 import Invest from './pages/invest/invest';
 import Recruitment from './pages/recruitment/recruitment';
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://www.fsuminho.pt/#organization",
-      "name": "FSUMinho",
-      "url": "https://www.fsuminho.pt/",
-      "description": "The team representing the University of Minho in Formula Student competitions.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Campus de Azurém",
-        "addressLocality": "Guimarães",
-        "postalCode": "4800-058",
-        "addressCountry": "PT"
-      },
-      "sameAs": [
-        "https://www.instagram.com/fsuminho",
-        "https://twitter.com/fsuminho"
-      ],
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "contactType": "customer support",
-          "email": "info@fsuminho.pt",
-          "url": "https://www.fsuminho.pt/#/contact"
-        }
-      ]
-    }
-  ]
-};
 
 const pageMeta = {
   '/': {
@@ -112,13 +79,6 @@ const App = () => {
 
   return (
     <div style={appContainerStyle}>
-      <Helmet>
-        <title>{meta.title}</title>
-        <meta name="description" content={meta.description} />
-        <meta name="keywords" content={meta.keywords} />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
-
       <NavBar />
       <div style={contentStyle}>
         <Routes>
