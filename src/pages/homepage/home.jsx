@@ -123,15 +123,60 @@ const Home = () => {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "FSUMinho",
+        "alternateName": "FSUMinho Formula Student Team",
         "url": "https://fsuminho.com/",
         "logo": "https://fsuminho.com/logo_red.png",
-        "description": "FSUMinho Formula Student team from University of Minho.",
+        "image": "https://fsuminho.com/logo_red.png",
+        "description": "Official website of FSUMinho, the team representing the University of Minho in Formula Student competitions. We are a group of engineering students from the University of Minho based in the city of Guimarães (Azurém Campus) with a passion for motorsport.",
+        "foundingDate": "2021",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Guimarães",
+            "addressRegion": "Braga",
+            "addressCountry": "PT"
+        },
+        "parentOrganization": {
+            "@type": "EducationalOrganization",
+            "name": "University of Minho",
+            "url": "https://www.uminho.pt/"
+        },
+        "sameAs": [
+            "https://www.instagram.com/fsuminho/",
+            "https://www.linkedin.com/company/fsuminho/"
+        ]
+    };
+
+    const websiteSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "FSUMinho",
+        "url": "https://fsuminho.com/",
+        "description": "Official website of FSUMinho Formula Student Team",
+        "publisher": {
+            "@type": "Organization",
+            "name": "FSUMinho"
+        }
     };
 
     return (
         <div className='homepage-container'>
             <Helmet>
+                <title>FSUMinho - Formula Student Team | University of Minho</title>
+                <meta name="description" content="Official website of FSUMinho, the Formula Student team representing the University of Minho." />
+                <meta name="keywords" content="FSUMinho, Formula Student, University of Minho, motorsport, engineering, students, Guimarães, Portugal, racing team, automotive engineering" />
+                
+                <meta property="og:description" content="We are a group of students from the University of Minho with a passion for motorsport. Official FSUMinho Formula Student Team website." />
+                <meta property="og:image" content="https://fsuminho.com/logo_red.png" />
+                <meta property="og:url" content="https://fsuminho.com/" />
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="FSUMinho" />
+                
+                <meta name="author" content="FSUMinho" />
+                <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+                <link rel="canonical" href="https://fsuminho.com/" />
+                
                 <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+                <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
             </Helmet>
 
             <div className="home-container">
