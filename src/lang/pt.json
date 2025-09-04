@@ -93,10 +93,21 @@
             "banner": "Logo presente no banner dos patrocinadores",
             "kit": "Logo presente no uniforme da equipa usado nas competições",
             "rollout": "Referência ao patrocinador no roll-out do carro",
-            "team_events": "Presença do patrocinador nos eventos organizados pela equipa",
+            "job-fair": "Presença do patrocinador na feira de emprego da FSUMinho",
             "cv": "Acesso a uma coleção de CVs gerida pela equipa",
             "open_days": "Colaboração na organização de dias abertos na empresa",
-            "uni": "Presença da empresa em outros eventos na Universidade do Minho"
+            "uni": "Presença da empresa em outros eventos na Universidade do Minho",
+            "co-creation1": "1 post anual lançado em colaboração entre a FSUMinho e o patrocinador",
+            "co-creation2": "2 posts anuais lançados em colaboração entre a FSUMinho e o patrocinador",
+            "co-creation3": "3 posts anuais lançados em colaboração entre a FSUMinho e o patrocinador",
+            "co-creation4": "4 posts anuais lançados em colaboração entre a FSUMinho e o patrocinador",
+            "events": "Participação em jornadas organizados pela equipa",
+            "car-events": "Exposição do carro em eventos da empresa",
+            "tests": "Teste de produtos da empresa",
+            "sectorial": "Exclusividade setorial",
+            "unique-banner": "Banners únicos para o patrocinador",
+            "activations": "Prioridade na ativação de benefícios", 
+            "speach": "Discurso no roll-out do carro"
         },
 
         "contact": {
