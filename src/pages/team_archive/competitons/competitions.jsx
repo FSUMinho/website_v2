@@ -3,12 +3,25 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Competition from '../../../components/competition/competition';
 import Title from '../../../components/title/title';
+import { Helmet } from 'react-helmet';
 
 const Archive = () => {
     const { t } = useTranslation();
 
+    const pageData = {
+        title: "Competitions Archive",
+        description: "FSUMinho competition history and achievements",
+        keywords: "competitions, archive, history, FSUMinho, Formula Student"
+    };
+
     return (
         <div className='arquive-container'>
+            <Helmet>
+                <title>{pageData.title}</title>
+                <meta name="description" content={pageData.description} />
+                <meta name="keywords" content={pageData.keywords} />
+            </Helmet>
+
             <Title size="h1" title={t('archive.title')} />
 
             <div className='competitions-container' data-aos="fade-up">

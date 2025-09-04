@@ -109,18 +109,18 @@ const ContactForm = () => {
         setFormErrors({});
     };
 
-    const organizationSchema = {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "FSUMinho",
-        "url": "https://fsuminho.com/contact",
-        "description": "Get in touch with us.",
+    const pageData = {
+        title: "Contact Us",
+        description: "Get in touch with FSUMinho. We'd love to hear from you! Whether you have questions, feedback, or want to learn more about our Formula Student team, reach out to us.",
+        keywords: "contact, email, support, FSUMinho, Formula Student, University of Minho, questions, feedback"
     };
 
     return (
         <div className="contact-container">
             <Helmet>
-                <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+                <title>{pageData.title}</title>
+                <meta name="description" content={pageData.description} />
+                <meta name="keywords" content={pageData.keywords} />
             </Helmet>
             
             <div className="contact-box" data-aos="fade-up">

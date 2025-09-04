@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './recruitment.css';
 import Title from '../../components/title/title.jsx';
+import { Helmet } from 'react-helmet';
 
 const Recruitment = () => {
     const { t } = useTranslation();
@@ -16,8 +17,20 @@ const Recruitment = () => {
         setExpandedTimeline(expandedTimeline.map((expanded, i) => (i === index ? !expanded : expanded)));
     };
 
+    const pageData = {
+        title: "Join Our Team - Recruitment Opportunities at FSUMinho",
+        description: "Explore recruitment opportunities at FSUMinho. Join our Formula Student team and be part of an exciting journey in engineering and motorsport.",
+        keywords: "recruitment, join, careers, FSUMinho, Formula Student, University of Minho, engineering, motorsport"
+    };
+
     return (
         <div className='recruitment-container'>
+            <Helmet>
+                <title>{pageData.title}</title>
+                <meta name="description" content={pageData.description} />
+                <meta name="keywords" content={pageData.keywords} />
+            </Helmet>
+            
             <Title size="h1" title={t('recruitment.title')} />
 
             <p className='recruitment-text'>{t('recruitment.description')}</p>
