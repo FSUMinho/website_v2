@@ -54,7 +54,6 @@ const pageMeta = {
 
 const App = () => {
   const location = useLocation();
-  // Fixed: Use location.pathname instead of location.hash for BrowserRouter
   const currentPath = location.pathname;
   const [isLoading, setIsLoading] = useState(true);
 
@@ -73,11 +72,15 @@ const App = () => {
       metaDescription.setAttribute('content', meta.description);
     }
 
-    // Update meta keywords (if you have one)
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', meta.keywords);
+    // Update meta keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      // Create keywords meta tag if it doesn't exist
+      metaKeywords = document.createElement('meta');
+      metaKeywords.name = 'keywords';
+      document.head.appendChild(metaKeywords);
     }
+    metaKeywords.setAttribute('content', meta.keywords);
 
     AOS.init({
       once: true,
@@ -88,7 +91,7 @@ const App = () => {
 
     const timer = setTimeout(() => setIsLoading(false), 2000);
     return () => clearTimeout(timer);
-  }, [location.pathname, meta.title, meta.description, meta.keywords]); // Fixed dependency
+  }, [location.pathname, meta.title, meta.description, meta.keywords]);
 
   return (
     <div style={appContainerStyle}>
