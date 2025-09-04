@@ -4,72 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Official website of FSUMinho, the team representing the University of Minho in Formula Student competitions." />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <meta name="googlebot" content="index, follow" />
-  <meta property="og:image" content="https://fsuminho.com/logo_red.png" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <title>FSUMinho Formula Student Team</title>
+  <script>
+    // Simple redirect to home page with hash routing
+    window.location.replace('/#/');
+  </script>
   <style>
     body { 
       font-family: Arial, sans-serif; 
       text-align: center; 
       padding: 50px; 
       background: #f8f8f8; 
-      margin: 0;
     }
-    h1 { 
-      color: #e52526; 
-      margin-bottom: 20px;
-    }
-    .debug-info {
-      background: #fff;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 500px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      text-align: left;
-    }
-    .spinner {
-      border: 4px solid #f3f3f3;
-      border-top: 4px solid #e52526;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1s linear infinite;
-      margin: 20px auto;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+    h1 { color: #e52526; }
   </style>
 </head>
 <body>
   <h1>FSUMinho</h1>
-  <div class="debug-info">
-    <h3>Debug Info:</h3>
-    <p><strong>Current URL:</strong> <span id="current-url"></span></p>
-    <p><strong>Will redirect to:</strong> <span id="redirect-url"></span></p>
-    <p><strong>Storing in sessionStorage:</strong> <span id="session-data"></span></p>
-  </div>
-  <div class="spinner"></div>
-  <p>Redirecionando para a página principal...</p>
-
-  <script>
-    // Debug: Show current URL info
-    document.getElementById('current-url').textContent = location.href;
-    document.getElementById('redirect-url').textContent = '/';
-    document.getElementById('session-data').textContent = location.href;
-
-    // Store the current URL in sessionStorage for the main app to handle
-    sessionStorage.redirect = location.href;
-    
-    // Add a small delay so you can see the debug info
-    setTimeout(function() {
-      // Redirect to the main page
-      location.replace('/');
-    }, 2000); // 2 second delay for debugging
-  </script>
+  <p>Redirecionando...</p>
 </body>
 </html>

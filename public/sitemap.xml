@@ -5,27 +5,27 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://fsuminho.com/team</loc>
+    <loc>https://fsuminho.com/#/team</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fsuminho.com/sponsors</loc>
+    <loc>https://fsuminho.com/#/sponsors</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fsuminho.com/competitions</loc>
+    <loc>https://fsuminho.com/#/competitions</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fsuminho.com/invest</loc>
+    <loc>https://fsuminho.com/#/invest</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fsuminho.com/recruitment</loc>
+    <loc>https://fsuminho.com/#/recruitment</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fsuminho.com/contact</loc>
+    <loc>https://fsuminho.com/#/contact</loc>
     <priority>0.6</priority>
   </url>
 </urlset>
