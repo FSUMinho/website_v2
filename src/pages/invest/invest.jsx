@@ -54,8 +54,11 @@ const Invest = () => {
             icon: "/sponsors/diamond.png",
             benefits: [
                 'invest.social', 'invest.website', 'invest.car', 'invest.banner', 
-                'invest.kit', 'invest.rollout', 'invest.team_events', 'invest.cv', 
-                'invest.open_days', 'invest.uni'
+                'invest.kit', 'invest.rollout', 'invest.job-fair', 'invest.cv', 
+                'invest.open_days', 'invest.uni', 'invest.co-creation4',
+                'invest.events', 'invest.car-events', 'invest.tests',
+                'invest.sectorial', 'invest.unique-banner', 'invest.activations',
+                'invest.speach'
             ],
             value: "8000€"
         },
@@ -64,8 +67,9 @@ const Invest = () => {
             icon: "/sponsors/gold-medal.png",
             benefits: [
                 'invest.social', 'invest.website', 'invest.car', 'invest.banner', 
-                'invest.kit', 'invest.rollout', 'invest.team_events', 'invest.cv', 
-                'invest.open_days'
+                'invest.kit', 'invest.rollout', 'invest.job-fair', 'invest.cv', 
+                'invest.open_days', 'invest.co-creation3', 'invest.events',
+                'invest.car-events', 'invest.tests'
             ],
             value: "6000€"
         },
@@ -74,7 +78,8 @@ const Invest = () => {
             icon: "/sponsors/silver-medal.png",
             benefits: [
                 'invest.social', 'invest.website', 'invest.car', 'invest.banner', 
-                'invest.kit', 'invest.rollout', 'invest.team_events'
+                'invest.kit', 'invest.rollout', 'invest.job-fair', 'invest.co-creation2',
+                'invest.events', 'invest.cv'
             ],
             value: "4000€"
         },
@@ -83,7 +88,7 @@ const Invest = () => {
             icon: "/sponsors/bronze-medal.png",
             benefits: [
                 'invest.social', 'invest.website', 'invest.car', 'invest.banner', 
-                'invest.kit', 'invest.rollout'
+                'invest.kit', 'invest.rollout', 'invest.co-creation1'
             ],
             value: "2000€"
         },
