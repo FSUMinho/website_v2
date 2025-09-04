@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import SponsorTier from '../../components/sposnsor_tier/sponsor_tier';
 import { useEffect, useState } from 'react';
 import Title from '../../components/title/title';
+import { Helmet } from 'react-helmet';
 
 const InvestForm = ({ title, image, description }) => (
   <div className="invest-form" data-aos="fade-up">
@@ -112,8 +113,20 @@ const Invest = () => {
         }
     ];
 
+    const pageData = {
+        title: "Invest in Us",
+        description: "Support FSUMinho, the Formula Student team. Discover sponsorship opportunities and invest in our journey to engineering excellence.",
+        keywords: "invest, sponsorship, support, FSUMinho, Formula Student, University of Minho, engineering, team, opportunities"
+    };
+
     return (
         <div className="invest-container">
+            <Helmet>
+                <title>{pageData.title}</title>
+                <meta name="description" content={pageData.description} />
+                <meta name="keywords" content={pageData.keywords} />
+            </Helmet>
+            
             <section className="invest-section">
                 <Title size="h1" title={t('invest.title')} primary={true} />
                 

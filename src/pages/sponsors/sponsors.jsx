@@ -1,6 +1,7 @@
 import './sponsors.css';
 import { useTranslation } from 'react-i18next';
 import Title from '../../components/title/title';
+import { Helmet } from 'react-helmet';
 
 export const sponsors = {
     Diamond: [
@@ -77,8 +78,20 @@ const Sponsors = () => {
         }
     };
 
+    const pageData = {
+        title: "Our Sponsors",
+        description: "Discover the sponsors and partners who support FSUMinho, the Formula Student team from the University of Minho.",
+        keywords: "sponsors, partners, FSUMinho, Formula Student, University of Minho, support, engineering, motorsport"
+    };
+
     return (
         <div className="sponsors-page">
+            <Helmet>
+                <title>{pageData.title}</title>
+                <meta name="description" content={pageData.description} />
+                <meta name="keywords" content={pageData.keywords} />
+            </Helmet>
+            
             <Title size="h1" title={t('sponsors.title')} />
             <div className="sponsors-container">
                 {Object.entries(sponsors)
