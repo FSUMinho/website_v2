@@ -5,7 +5,7 @@
   <title>FSUMinho - Página não encontrada</title>
   <meta name="robots" content="noindex">
   <script>
-    var path = window.location.pathname;
+    var path = window.location.pathname + window.location.search + window.location.hash;
     if (path !== '/' && !path.startsWith('/index.html')) {
       window.location.replace('/?redirect=' + encodeURIComponent(path));
     }
