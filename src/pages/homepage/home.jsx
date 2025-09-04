@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Title from '../../components/title/title';
 import { sponsors } from '../sponsors/sponsors';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
     const { t } = useTranslation();
@@ -118,8 +119,21 @@ const Home = () => {
         }
     }, []);
 
+    const organizationSchema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FSUMinho",
+        "url": "https://fsuminho.com/",
+        "logo": "https://fsuminho.com/logo_red.png",
+        "description": "FSUMinho Formula Student team from University of Minho.",
+    };
+
     return (
         <div className='homepage-container'>
+            <Helmet>
+                <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+            </Helmet>
+
             <div className="home-container">
                 {images.map((image, index) => (
                     <div
