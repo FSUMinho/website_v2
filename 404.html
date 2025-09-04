@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FSUMinho - Página não encontrada</title>
+  <meta name="robots" content="noindex">
+  <script>
+    var path = window.location.pathname;
+    if (path !== '/' && !path.startsWith('/index.html')) {
+      window.location.replace('/?redirect=' + encodeURIComponent(path));
+    }
+  </script>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f8f8f8; }
+    h1 { color: #e52526; }
+  </style>
+</head>
+<body>
+  <h1>FSUMinho</h1>
+  <p>Redirecionando para a página principal...</p>
+</body>
+</html>
