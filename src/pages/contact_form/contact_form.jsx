@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import "./contact_form.css";
+import { Helmet } from 'react-helmet';
 
 const ContactForm = () => {
     const { t } = useTranslation();
@@ -108,8 +109,20 @@ const ContactForm = () => {
         setFormErrors({});
     };
 
+    const organizationSchema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FSUMinho",
+        "url": "https://fsuminho.com/contact",
+        "description": "Get in touch with us.",
+    };
+
     return (
         <div className="contact-container">
+            <Helmet>
+                <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+            </Helmet>
+            
             <div className="contact-box" data-aos="fade-up">
                 <form ref={form} onSubmit={sendEmail}>
                     <h1 className="form-title">{t('contact.title')}</h1>
