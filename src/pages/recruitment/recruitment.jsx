@@ -74,21 +74,21 @@ const Recruitment = () => {
                     <h3>{t('recruitment.mechanical')}</h3>
                     <img src="/system.png" className='sector-icon' alt="Mechanical sector" />
                     <p className='option-text'>{t('recruitment.mechanical-text')}</p>
-                    <a href='' className='apply-button'>{t('recruitment.not-open')}</a>
+                    <a href='https://forms.gle/tBnmoUVp8H8JX5E46' className='apply-button'>{t('recruitment.apply')}</a>
                 </div>
 
                 <div className='sector-form-container'>
                     <h3>{t('recruitment.electrical')}</h3>
                     <img src="/lightning.png" className='sector-icon' alt="Electrical sector" />
                     <p className='option-text'>{t('recruitment.electrical-text')}</p>
-                    <a href='' className='apply-button'>{t('recruitment.not-open')}</a>
+                    <a href='https://forms.gle/Lzg3Z8wKjsn5jUYe7' className='apply-button'>{t('recruitment.apply')}</a>
                 </div>
 
                 <div className='sector-form-container'>
                     <h3>{t('recruitment.management')}</h3>
                     <img src="/team/mnt.png" className='sector-icon' alt="Management sector" />
                     <p className='option-text'>{t('recruitment.management-text')}</p>
-                    <a href='' className='apply-button'>{t('recruitment.not-open')}</a>
+                    <a href='https://forms.gle/BwDVs4GvgBCWZxe2A' className='apply-button'>{t('recruitment.apply')}</a>
                 </div>
             </div>
 
