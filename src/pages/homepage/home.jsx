@@ -276,7 +276,7 @@ const Home = () => {
                 <img src='/fsum_24.png' className='car-image' data-aos="fade-left" alt="FSUM 24 Car" />
             </div>
 
-            <div className="santander-container">
+            {/*<div className="santander-container">
                 <Title size="h1" title={t('santander.title')} />
 
                 <div className="image-wrapper">
@@ -290,7 +290,7 @@ const Home = () => {
 
                     <div className="overlay">{t('santander.more')}</div>
                 </div>
-            </div>
+            </div>*/}
 
             <div className="slider-container" data-aos="fade">
                 <Title size="h1" title={t('news')} />
