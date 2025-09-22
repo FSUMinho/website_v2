@@ -19,9 +19,9 @@ const SponsorTier = ({ name, icon, benefits, value }) => {
             <div className="package-header">
                 <img src={icon} alt={`${name} icon`} className="package-icon" />
                 <h3 className="package-title">{name}</h3>
-                <div className="package-value">
+                {/*<div className="package-value">
                     {value}
-                </div>
+                </div>*/}
             </div>
 
             <button className="details-button" onClick={toggleBenefits}>
