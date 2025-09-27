@@ -115,14 +115,15 @@
             "name": "Nome completo",
             "message": "Mensagem",
             "send": "Enviar",
-            "thanks": "Obrigado pelo seu contacto!"
+            "thanks": "Obrigado pelo seu contacto!",
+            "important_contacts": "Contactos"
         },
 
         "footer": {
             "contact": "Contacte-nos",
             "social": "Redes sociais",
             "team": "Equipa",
-            "sponsors": "Patrocinadores",
+            "sponsors": "Parceiros",
             "invest": "Como investir",
             "competitions": "Competições",
             "cars": "Carros"
