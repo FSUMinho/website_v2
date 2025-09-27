@@ -39,6 +39,13 @@ const Footer = () => {
                         {/*<li><Link to="/cars">{t('footer.cars')}</Link></li>*/}
                     </ul>
                 </div>
+
+                <div className="footer-section">
+                    <h4>Faculty Advisors</h4>
+                    <ul>
+                        <li><a href='https://www.linkedin.com/in/h%C3%A9lder-puga-8b6b4243/'>Hélder Puga (puga@dem.uminho.pt)</a></li>
+                    </ul>
+                </div>
             </div>
         </footer>
     );

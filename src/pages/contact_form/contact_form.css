@@ -3,6 +3,8 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-box {
@@ -190,6 +192,63 @@ textarea {
 .reset-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contacts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin: 32px 0 0 0;
+    padding: 0;
+}
+
+.contact-item {
+    background: #fff;
+    color: #e52516;
+    border-radius: 18px;
+    padding: 28px 24px;
+    margin: 0;
+    flex: 1 1 320px;
+    max-width: 400px;
+    min-width: 260px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 24px rgba(229, 37, 22, 0.10), 0 1.5px 4px rgba(0,0,0,0.04);
+    transition: box-shadow 0.25s, transform 0.25s;
+    border: 1.5px solid #f5f5f5;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item:hover {
+    box-shadow: 0 12px 32px rgba(229, 37, 22, 0.18), 0 2px 8px rgba(0,0,0,0.06);
+    border-color: #f13a2d;
+}
+
+.contact-item strong,
+.contact-item b {
+    color: #e52516;
+    font-weight: 700;
+}
+
+.contact-item h3 {
+    margin: 0 0 12px 0;
+}
+
+.contact-item p {
+    margin: 0 0 8px 0;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 /* Mobile Responsiveness */

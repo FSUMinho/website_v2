@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import "./contact_form.css";
 import { Helmet } from 'react-helmet';
+import Title from '../../components/title/title';
 
 const ContactForm = () => {
     const { t } = useTranslation();
@@ -201,6 +202,30 @@ const ContactForm = () => {
                         </div>
                     )}
                 </form>
+            </div>
+
+            <div className='important-contacts-container'>
+                <Title title={t('contact.important_contacts')} size="h2" />
+
+                <div className='contacts-list'>
+                    <div className='contact-item'>
+                        <h3>Team Leader</h3>
+                        <p className='contact-name'><a href='https://www.linkedin.com/in/nuno-costa-57346b281/'>Nuno Costa</a></p>
+                        <p>Phone: (+351) 934 195 938</p>
+                    </div>
+
+                    <div className='contact-item'>
+                        <h3>Head of Management</h3>
+                        <p className='contact-name'><a href='https://www.linkedin.com/in/pedro-ribeiro-sousa/'>Pedro Ribeiro</a></p>
+                        <p>Phone: (+351) 910 955 836</p>
+                    </div>
+
+                    <div className='contact-item'>
+                        <h3>Faculty Advisor</h3>
+                        <p className='contact-name'><a href='https://www.linkedin.com/in/h%C3%A9lder-puga-8b6b4243/'>Hélder Puga</a></p>
+                        <p>Email: puga@dem.uminho.pt</p>
+                    </div>
+                </div>
             </div>
         </div>
     );

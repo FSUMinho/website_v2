@@ -115,14 +115,15 @@
             "name": "Full name",
             "message": "Message",
             "send": "Send",
-            "thanks": "Thank you for contacting us!"
+            "thanks": "Thank you for contacting us!",
+            "important_contacts": "contacts"
         },
 
         "footer": {
             "contact": "Contact Us",
             "social": "Social Media",
             "team": "Team",
-            "sponsors": "Sponsors",
+            "sponsors": "Partners",
             "invest": "How to invest",
             "competitions": "Competitions",
             "cars": "Cars"
