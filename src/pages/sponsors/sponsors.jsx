@@ -34,6 +34,7 @@ export const sponsors = {
         { name: "Subic Group", img: "/sponsors/subic.png", url: "https://subic.pt/" },
         { name: "Moura Laser", img: "/sponsors/moura-laser.png", url: "https://www.mouralaser.pt/pt/" },
         { name: "Tufama", img: "/sponsors/tufama.png", url: "https://www.tufama.pt/" },
+        { name: "Henkel", img: "/sponsors/henkel.png", url: "https://www.henkel.pt/"}
     ],
     partners: [
         { name: "Tracopower", img: "/sponsors/tracopower.png", url: "https://www.tracopower.com/int" },
