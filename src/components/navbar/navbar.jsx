@@ -251,7 +251,7 @@ const navBranding = {
 };
 
 const logo = {
-    height: "40px",
+    height: "30px",
     width: "auto",
     cursor: "pointer"
 };

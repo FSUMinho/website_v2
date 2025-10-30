@@ -193,7 +193,7 @@ const Home = () => {
                     <StatsCard
                         image='/graduation-hat.png'
                         stat={t('about_us.courses')}
-                        value={15}
+                        value={21}
                         orientation="1"
                     />
                     <StatsCard

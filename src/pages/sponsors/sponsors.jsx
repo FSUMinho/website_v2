@@ -46,7 +46,8 @@ export const sponsors = {
         { name: "Placa Nobre", img: "/sponsors/placa_nobre.png", url: "https://www.palcanobre.pt/"},
         { name: "Cordex", img: "/sponsors/cordex.png", url: "https://cordex.com/pt/home-pt/"},
         { name: "Metalotrofa", img: "/sponsors/metalotrofa.jpeg", url: "https://www.metalotrofa.com/" },
-        { name: "Satus Aluminio", img: "/sponsors/status_aluminio.png", url: "https://www.statusaluminio.com/"}
+        { name: "Satus Aluminio", img: "/sponsors/status_aluminio.png", url: "https://www.statusaluminio.com/"},
+        { name: "Clube Automóvel do Minho", img: "/sponsors/cam.jpg", url: "https://www.facebook.com/clubeautomovelminho/?locale=pt_PT"}
     ],
     software: [
         { name: "RapidHarness", img: "/sponsors/rapidharness.png", url: "https://rapidharness.com/" },
