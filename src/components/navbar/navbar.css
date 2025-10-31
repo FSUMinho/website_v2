@@ -1,3 +1,9 @@
+.nav-logo {
+    height: 30px;
+    width: auto;
+    cursor: pointer
+}
+
 .navLink {
     display: flex;
     align-items: center;
@@ -91,6 +97,10 @@
 }
 
 @media (max-width: 800px) {
+    .nav-logo {
+        height: 25px;
+    }
+
     .mobile-link {
         display: block;
     }
@@ -169,13 +179,11 @@
         display: none;
     }
     
-    /* Melhorar o comportamento de toque em dispositivos móveis */
     .link, .dropdown-link, button {
         padding: 8px;
         margin: 5px 0;
     }
     
-    /* Garantir que não haja overflow horizontal nos elementos */
     .navLink, .mobile-link, .link, .sponsors-link {
         width: auto;
         max-width: 100%;

@@ -133,9 +133,8 @@ const Invest = () => {
             </Helmet>
             
             <section className="invest-section">
-                <Title size="h1" title={t('invest.title')} primary={true} />
+                <Title size="h1" title={t('invest.why-title')} />
                 
-                <Title size="h2" title={t('invest.why-title')} />
                 <div className="content-wrapper">
                     <p className="why-invest-text">{t('invest.why-text')}</p>
                 </div>
