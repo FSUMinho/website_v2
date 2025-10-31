@@ -35,9 +35,11 @@ const Recruitment = () => {
 
             <p className='recruitment-text'>{t('recruitment.description')}</p>
 
-            <Title size="h2" title={t('recruitment.steps-title')} />
+            <div style={{display: "none"}}>
+                <Title size="h2" title={t('recruitment.steps-title')} />
+            </div>
 
-            <div className='timeline-container'>
+            <div className='timeline-container' style={{display: "none"}}>
                 <div className='timeline-line'></div>
                 
                 {[1, 2, 3, 4].map((stepNumber, index) => (
@@ -63,32 +65,34 @@ const Recruitment = () => {
                 ))}
             </div>
 
-            <Title size="h2" title={t('recruitment.dates-title')} />
+            <div style={{display: "none"}}>
+                <Title size="h2" title={t('recruitment.dates-title')} />
+            </div>
 
-            <p className='recruitment-text'>{t('recruitment.dates-text')}</p>
+            <p className='recruitment-text' style={{display: "none"}}>{t('recruitment.dates-text')}</p>
 
-            <Title size="h2" title={t('recruitment.sectors-title')} />
+            <Title size="h2" title={t('recruitment.expo')} />
 
             <div className='options-container'>
                 <div className='sector-form-container'>
                     <h3>{t('recruitment.mechanical')}</h3>
                     <img src="/system.png" className='sector-icon' alt="Mechanical sector" />
                     <p className='option-text'>{t('recruitment.mechanical-text')}</p>
-                    <a href='https://forms.gle/tBnmoUVp8H8JX5E46' className='apply-button'>{t('recruitment.not-open')}</a>
+                    <a href='https://forms.gle/tBnmoUVp8H8JX5E46' className='apply-button'>{t('recruitment.expo')}</a>
                 </div>
 
                 <div className='sector-form-container'>
                     <h3>{t('recruitment.electrical')}</h3>
                     <img src="/lightning.png" className='sector-icon' alt="Electrical sector" />
                     <p className='option-text'>{t('recruitment.electrical-text')}</p>
-                    <a href='https://forms.gle/Lzg3Z8wKjsn5jUYe7' className='apply-button'>{t('recruitment.not-open')}</a>
+                    <a href='https://forms.gle/Lzg3Z8wKjsn5jUYe7' className='apply-button'>{t('recruitment.expo')}</a>
                 </div>
 
                 <div className='sector-form-container'>
                     <h3>{t('recruitment.management')}</h3>
                     <img src="/team/mnt.png" className='sector-icon' alt="Management sector" />
                     <p className='option-text'>{t('recruitment.management-text')}</p>
-                    <a href='https://forms.gle/BwDVs4GvgBCWZxe2A' className='apply-button'>{t('recruitment.not-open')}</a>
+                    <a href='https://forms.gle/BwDVs4GvgBCWZxe2A' className='apply-button'>{t('recruitment.expo')}</a>
                 </div>
             </div>
 
