@@ -8,7 +8,8 @@
             "archive": "Arquivo",
             "competitions": "Competições",
             "cars": "Carros",
-            "recruitment": "Recrutamento"
+            "recruitment": "Recrutamento",
+            "lang": "Mudar linguagem"
         },
 
         "news": "Últimas notícias",
@@ -170,6 +171,67 @@
             "answer5": "Sim, aceitamos estudantes de ERASMUS. A FSUMinho é um projeto inclusivo e estamos abertos a receber estudantes de todas as nacionalidades. Para estes estudantes, falar português ou inglês é um requisito.",
             "question6": "Apenas se aceitam estudantes de Guimarães?",
             "answer6": "Não, aceitamos estudantes de todos os campi da Universidade do Minho. A maioria das reuniões são feitas online para serem acessíveis a todos os membros. No entanto, uma fração das reuniões são presenciais e realizadas em Guimarães."
+        },
+
+        "talent": {
+            "description": "A FSUM Talent Connect é a plataforma que aproxima as empresas parceiras da FSUMinho da comunidade académica da Universidade do Minho. Através dela, são divulgadas oportunidades de estágios, projetos e dissertações, promovendo uma ligação direta entre o mercado e os futuros engenheiros e profissionais da universidade.",
+            "oportunities-title": "Oportunidades",
+            "internships-filter": "Estágios",
+            "projects-filter": "Projetos",
+            "thesis-filter": "Temas de tese",
+            "jobs-filter": "Empregos",
+            "search-placeholder": "Pesquisar por organização ou titulo",
+            "details": "Ver detalhes",
+            "requirements": "Requisitos",
+            "benefits": "Benefícios",
+            "contact-info": "Contactos"
+        },
+
+        "falperra": {
+            "title": "Cartaz da Rampa da Falperra",
+            "description": "A Rampa Internacional da Falperra é uma das provas de montanha mais prestigiadas e históricas da Europa, atraindo pilotos e fãs de todo o mundo às curvas emblemáticas de Braga, Portugal. Para celebrar a sua 45.ª edição, convidamos artistas, designers e entusiastas do desporto motorizado a criar o cartaz oficial do evento — uma peça visual que capte a emoção, a velocidade e o espírito da Falperra. O teu design pode tornar-se a imagem de uma lenda do automobilismo internacional. Deixa a tua criatividade subir até ao topo!",
+            "subtitle1": "Condições de participação",
+            "participation0": "Os concorrentes devem frequentar a Universidade do Minho;",
+            "participation1": "A participação pode ser feita individualmente ou em equipas de até 3 elementos;",
+            "participation2": "Cada participante ou equipa pode submeter apenas uma proposta",
+            "participation3": "O cartaz deve ser uma criação original e inédita, não podendo incluir elementos protegidos por direitos de autor;",
+            "participation4": "A proposta deve ser elaborada em formato A3 vertical, com resolução mínima de 300 dpi, e enviada em PDF, JPG ou PNG;",
+            "participation5": "O ficheiro não deve ultrapassar 10 MB;",
+            "participation6": "Os logótipos fornecidos no ficheiro ZIP devem constar obrigatoriamente no rodapé do cartaz, sem qualquer alteração;",
+            "participation7": "As seguintes informações devem obrigatoriamente constar no cartaz:",
+            "participation-subitem0": "45ª Rampa Internacional da Falperra",
+            "participation-subitem1": "15, 16 e 17 de maio de 2026",
+            "participation-subitem2": "Campeonato Europeu de Montanha",
+            "participation-subitem3": "Taça Portugal de Montanha",
+            "participation-subitem4": "Logo do Clube Automóvel do Minho (CAM)",
+            "subtitle2": "Submissão de propostas",
+            "submission0": "As propostas devem ser enviadas entre 15 de novembro de 2025 e 5 de janeiro de 2026 para o email cartaz.fsuminho@gmail.com",
+            "submission1": "O email deve ter como assunto: “Concurso Cartaz Falperra – [Nome da Equipa ou Participante]”.",
+            "submission2": "No corpo do email deve constar:",
+            "submission-subitem0": "Nome completo de cada membro;",
+            "submission-subitem1": "Número mecanográfico de cada membro;",
+            "submission-subitem2": "Licenciatura/Mestrado de cada membro;",
+            "submission-subitem3": "Ano de frequência de cada membro.",
+            "submission3": "As propostas enviadas fora do prazo ou em formato diferente do solicitado não serão consideradas.",
+            "subtitle3": "Júri e Critérios de Avaliação",
+            "juri-description": "As propostas serão avaliadas por um júri composto por representantes do Clube Automóvel do Minho. Os critérios de avaliação serão os seguintes:",
+            "juri-item0": "Criatividade e originalidade",
+            "juri-item1": "Qualidade gráfica e estética",
+            "juri-item2": "Clareza e legibilidade da informação",
+            "juri-item3": "Adequação ao tema e identidade do evento",
+            "subtitle4": "Prémios",
+            "prize-description": "Serão atribuídos os seguintes prémios às três melhores propostas:",
+            "prize0": "1.º Prémio – 300 € e possibilidade de assinar o cartaz oficial da 45ª Rampa Internacional da Falperra;",
+            "prize1": "2.º Prémio – 150 €;",
+            "prize2": "3.º Prémio – 75 €",
+            "subtitle5": "Direitos de utilização",
+            "rights-description": "Ao participar no concurso, os autores das propostas autorizam a organização a utilizar, reproduzir e divulgar os cartazes submetidos, total ou parcialmente, em todos os suportes de comunicação associados ao evento, com referência à autoria, sem pagamento adicional além do prémio atribuído.",
+            "subtitle6": "Disposições Finais",
+            "finals0": "A participação no concurso implica a aceitação integral deste regulamento",
+            "finals1": "A organização reserva-se o direito de não atribuir prémios caso nenhuma proposta cumpra os critérios mínimos de qualidade",
+            "finals2": "Os casos omissos neste regulamento serão resolvidos pela organização do concurso",
+            "download-regulations": "Descarregar regulamento",
+            "download-assets": "Descarregar logos"
         }
     }
 }
