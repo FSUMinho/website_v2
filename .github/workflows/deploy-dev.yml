@@ -23,7 +23,7 @@ env:
 jobs:
   deploy:
     environment:
-      name: github-pages
+      name: gh-pages-dev
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
