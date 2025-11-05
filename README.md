@@ -34,4 +34,5 @@ npm run dev
 
 ## Build and Deployment
 
-Build and deployment automated with GitHub Actions. Just push the changes to the main branch.
+Build and deployment automated with GitHub Actions. Just push the changes to the main branch. <br>
+The developer builds for preview are made on Netify
