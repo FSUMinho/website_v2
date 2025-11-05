@@ -1,0 +1,257 @@
+.falperra-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 50vh;
+    min-height: 400px;
+    background-size: cover;
+    background-position: 0 120%;
+    background-attachment: fixed;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.75)
+    ), url("/falperra/prototype.jpg");
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.falperra-content-wrapper {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+}
+
+.falperra-content-wrapper > * {
+    margin-bottom: 30px;
+}
+
+.falperra-content-wrapper h2 {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    width: 100%;
+    text-align: justify;
+}
+
+.content-list {
+    list-style: none;
+    padding-left: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.primary-list {
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+
+.primary-list > li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 1.5rem;
+    display: block;
+    line-height: 1.6;
+}
+
+.primary-list > li::before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #e52526;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.secondary-list {
+    margin-left: 2rem;
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.secondary-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    display: block;
+    color: #555;
+}
+
+.secondary-list li:last-child {
+    margin-bottom: 0;
+}
+
+.secondary-list li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #999;
+    font-weight: bold;
+}
+
+.downloads-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin: 40px 0 50px 0;
+    padding: 20px 0;
+}
+
+.download-button {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 30px 40px;
+    background: linear-gradient(135deg, #e52526 0%, #c41e1f 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(229, 37, 38, 0.25);
+    min-width: 220px;
+    border: 2px solid transparent;
+}
+
+.download-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(229, 37, 38, 0.4);
+    background: linear-gradient(135deg, #ff2d2e 0%, #e52526 100%);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.download-button:active {
+    transform: translateY(-2px);
+}
+
+.download-icon {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.download-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+.criteria-chart-container {
+    width: 100%;
+    margin: 40px 0;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+    .criteria-chart-container {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        height: 40vh;
+        min-height: 300px;
+        background-attachment: scroll;
+        background-position: center;
+    }
+
+    .falperra-content-wrapper {
+        width: 90%;
+        padding: 0 15px 60px 15px;
+    }
+
+    .falperra-content-wrapper > * {
+        margin-bottom: 20px;
+    }
+
+    .falperra-content-wrapper h2 {
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .section-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .primary-list {
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+
+    .primary-list > li {
+        margin-bottom: 1.2rem;
+    }
+
+    .secondary-list {
+        font-size: 0.95rem;
+        margin-left: 1rem;
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .secondary-list li {
+        margin-bottom: 0.7rem;
+    }
+
+    .downloads-container {
+        flex-direction: column;
+        gap: 15px;
+        margin: 30px 0 40px 0;
+    }
+
+    .download-button {
+        width: 100%;
+        padding: 25px 30px;
+        min-width: unset;
+    }
+
+    .download-icon {
+        font-size: 2rem;
+    }
+
+    .download-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .falperra-content-wrapper {
+        width: 95%;
+        padding: 0 10px 50px 10px;
+    }
+
+    .secondary-list {
+        margin-left: 0.5rem;
+        padding: 12px;
+    }
+}

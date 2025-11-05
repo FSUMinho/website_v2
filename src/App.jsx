@@ -13,6 +13,8 @@ import Sponsors from './pages/sponsors/sponsors';
 import Competitions from './pages/team_archive/competitons/competitions';
 import Invest from './pages/invest/invest';
 import Recruitment from './pages/recruitment/recruitment';
+import TalentConnect from './pages/talent_connect/talent_connect'
+import Falperra  from './pages/falperra/falperra';
 
 const pageMeta = {
   '/': {
@@ -49,6 +51,18 @@ const pageMeta = {
     title: 'Recruitment - FSUMinho',
     description: 'Join FSUMinho Formula Student team - recruitment opportunities',
     keywords: 'recruitment, join, careers, fsuminho, formula student, opportunities'
+  },
+
+  '/talent_connect': {
+    title: "Talent Connect - FSUMinho",
+    description: "Find opportunities inside the FSUMinho network",
+    keywords: "recruitment, carrers, fsuminho, formula student"
+  },
+
+  '/falperra': {
+    title: "Falperra contest - FSUMinho",
+    description: "Design the poster for the 45th Falperra Hillclimb",
+    keywords: "recruitment, carrers, fsuminho, formula student"
   }
 };
 
@@ -66,21 +80,20 @@ const App = () => {
   useEffect(() => {
     document.title = meta.title;
     
-    // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', meta.description);
     }
 
-    // Update meta keywords
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
-      // Create keywords meta tag if it doesn't exist
       metaKeywords = document.createElement('meta');
       metaKeywords.name = 'keywords';
       document.head.appendChild(metaKeywords);
     }
     metaKeywords.setAttribute('content', meta.keywords);
+
+    window.scrollTo({ top: 0, behavior: 'instant' });
 
     AOS.init({
       once: true,
@@ -105,6 +118,8 @@ const App = () => {
           <Route path="/invest" element={<Invest />} />
           <Route path="/competitions" element={<Competitions />} />
           <Route path="/recruitment" element={<Recruitment />} />
+          <Route path="/talent_connect" element={<TalentConnect />} />
+          <Route path="/falperra" element={<Falperra />} />
           <Route path="*" element={<No_Page />} />
         </Routes>
       </div>
