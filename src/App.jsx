@@ -105,7 +105,7 @@ const App = () => {
     const timer = setTimeout(() => setIsLoading(false), 2000);
     return () => clearTimeout(timer);
   }, [location.pathname, meta.title, meta.description, meta.keywords]);
-
+ 
   return (
     <div style={appContainerStyle}>
       <NavBar />
