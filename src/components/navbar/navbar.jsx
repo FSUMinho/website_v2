@@ -26,7 +26,6 @@ const NavBar = () => {
                 
                 if (hamburgerButton && !hamburgerButton.contains(event.target) && 
                     navLinksElement && !navLinksElement.contains(event.target)) {
-                    console.log('Fechando hamburger menu por clique fora'); // Debug
                     setHamburgerOpen(false);
                     const hamburger = document.querySelector('.hamburger');
                     const navLinks = document.querySelector('.nav-links');
@@ -130,7 +129,7 @@ const NavBar = () => {
             </div>
 
             <ul style={navLinks} className='nav-links'>
-                <li style={navLink}>
+                <li style={navLink} title={t('navbar.lang')}>
                     <img src={flagImage} 
                     style={langSelect}
                     onClick={handleChangeLanguage} />
@@ -182,6 +181,18 @@ const NavBar = () => {
                     </Link>
                 </li>
 
+                <li className='navLink'>
+                    <Link to="/talent_connect" className="link" onClick={closeHamburgerMenu}>
+                        Talent Connect
+                    </Link>
+                </li>
+
+                <li className='navLink'>
+                    <Link to="/contact" className='link' onClick={closeHamburgerMenu}>
+                        {t('footer.contact')}
+                    </Link>
+                </li>
+
                 <li className='navLink desktop-contact'>
                     <a href="https://www.instagram.com/fsuminho/">
                         <img src="/navbar/insta.png" style={navIcons} alt="Instagram" />
@@ -192,14 +203,6 @@ const NavBar = () => {
                     <a href="https://pt.linkedin.com/company/fsuminho">
                         <img src="/navbar/linkedin.png" style={navIcons} alt="LinkedIn" />
                     </a>
-                </li>
-
-                <li className='navLink desktop-contact'>
-                    <Link to="/contact" onClick={closeHamburgerMenu}>
-                        <button>
-                            <img src="/navbar/email.png" style={navIcons} alt="Email" />
-                        </button>
-                    </Link>
                 </li>
 
                 <li className="navLink mobile-contacts">
@@ -214,14 +217,6 @@ const NavBar = () => {
                             <a href="https://pt.linkedin.com/company/fsuminho">
                                 <img src="navbar/linkedin.png" style={navIcons} alt="LinkedIn" />
                             </a>
-                        </li>
-
-                        <li style={navLink}>
-                            <Link to="/contact" onClick={closeHamburgerMenu}>
-                                <button>
-                                    <img src="/navbar/email.png" style={navIcons} alt="Email" />
-                                </button>
-                            </Link>
                         </li>
                     </ul>
                 </li>

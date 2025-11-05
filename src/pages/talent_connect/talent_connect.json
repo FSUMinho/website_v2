@@ -1,0 +1,140 @@
+{
+  "opportunities": [
+    {
+      "id": 2,
+      "company": "TechCorp",
+      "title": "Software Development Internship",
+      "filter": "internships",
+      "shortDescription": "6-month internship in web development",
+      "fullDescription": "Join our dynamic development team for a comprehensive 6-month internship program. You'll work on real-world projects using modern technologies including React, Node.js, and cloud platforms. This is an excellent opportunity to gain hands-on experience while learning from experienced developers in an agile environment.",
+      "requirements": [
+        "Currently pursuing a degree in Computer Science or related field",
+        "Basic knowledge of JavaScript and web technologies",
+        "Familiarity with Git version control",
+        "Strong problem-solving skills",
+        "Good communication in English"
+      ],
+      "benefits": [
+        "Monthly stipend of €800",
+        "Mentorship from senior developers",
+        "Possibility of full-time employment after internship",
+        "Flexible working hours",
+        "Modern office with latest equipment"
+      ],
+      "contact": {
+        "name": "Maria Santos",
+        "email": "hr@techcorp.com",
+        "phone": "+351 912 345 678"
+      }
+    },
+    {
+      "id": 3,
+      "company": "Research Lab",
+      "title": "AI Research Project",
+      "filter": "projects",
+      "shortDescription": "Collaborate on machine learning research",
+      "fullDescription": "We are seeking a motivated researcher to collaborate on an innovative AI project focusing on natural language processing and computer vision. This 12-month project involves developing novel algorithms, publishing research papers, and presenting findings at international conferences. Perfect for those looking to advance their research portfolio.",
+      "requirements": [
+        "Master's or PhD student in AI, Machine Learning, or related field",
+        "Strong programming skills in Python and deep learning frameworks (PyTorch/TensorFlow)",
+        "Experience with research methodology",
+        "Published papers (preferred but not required)",
+        "Ability to work independently and in teams"
+      ],
+      "benefits": [
+        "Research grant of €1,500/month",
+        "Access to high-performance computing resources",
+        "Opportunity to publish in top-tier conferences",
+        "Networking with international researchers",
+        "Flexible schedule"
+      ],
+      "contact": {
+        "name": "Dr. Pedro Costa",
+        "email": "pedro.costa@researchlab.pt",
+        "phone": "+351 253 987 654"
+      }
+    },
+    {
+      "id": 4,
+      "company": "University",
+      "title": "Master's Thesis Opportunity",
+      "filter": "thesis",
+      "shortDescription": "Data science thesis in healthcare",
+      "fullDescription": "Develop your master's thesis on applying data science and machine learning techniques to healthcare challenges. This thesis opportunity involves working with real clinical datasets, developing predictive models, and contributing to improving patient outcomes. You'll receive guidance from experienced supervisors and have access to university resources and healthcare industry partners.",
+      "requirements": [
+        "Enrolled in a Master's program in Data Science, Computer Science, or related field",
+        "Strong background in statistics and machine learning",
+        "Programming proficiency in Python or R",
+        "Interest in healthcare applications",
+        "Ability to handle sensitive data ethically"
+      ],
+      "benefits": [
+        "Expert supervision from faculty members",
+        "Access to real healthcare datasets",
+        "Potential for publication",
+        "Industry collaboration opportunities",
+        "University facilities and resources"
+      ],
+      "contact": {
+        "name": "Prof. Ana Rodrigues",
+        "email": "ana.rodrigues@university.pt",
+        "phone": "+351 253 456 789"
+      }
+    },
+    {
+      "id": 5,
+      "company": "StartupXYZ",
+      "title": "Full Stack Developer",
+      "filter": "jobs",
+      "shortDescription": "Join our growing team as a full stack developer",
+      "fullDescription": "We're looking for a talented Full Stack Developer to join our fast-growing startup. You'll be working on building scalable web applications, contributing to architectural decisions, and collaborating with a passionate team. This role offers significant growth potential and the opportunity to make a real impact on our product and company direction.",
+      "requirements": [
+        "3+ years of experience in full stack development",
+        "Proficiency in React, Node.js, and databases (SQL/NoSQL)",
+        "Experience with cloud platforms (AWS, Azure, or GCP)",
+        "Understanding of CI/CD and DevOps practices",
+        "Strong problem-solving and communication skills"
+      ],
+      "benefits": [
+        "Competitive salary (€35,000 - €50,000)",
+        "Equity/stock options",
+        "Remote work flexibility",
+        "Health insurance",
+        "Professional development budget",
+        "Modern tech stack"
+      ],
+      "contact": {
+        "name": "Carlos Mendes",
+        "email": "careers@startupxyz.com",
+        "phone": "+351 918 765 432"
+      }
+    },
+    {
+      "id": 6,
+      "company": "Innovation Hub",
+      "title": "UX Design Internship",
+      "filter": "internships",
+      "shortDescription": "Learn UX design in a fast-paced environment",
+      "fullDescription": "Kickstart your UX design career with our comprehensive internship program. You'll work on real client projects, learn industry-standard tools and methodologies, and develop a professional portfolio. Our experienced designers will mentor you through user research, wireframing, prototyping, and usability testing processes.",
+      "requirements": [
+        "Currently studying Design, HCI, or related field",
+        "Basic knowledge of Figma or similar design tools",
+        "Understanding of UX principles",
+        "Portfolio showcasing design work (academic projects accepted)",
+        "Creative thinking and attention to detail"
+      ],
+      "benefits": [
+        "Monthly stipend of €700",
+        "Mentorship from senior UX designers",
+        "Portfolio-building opportunities",
+        "Workshop and training sessions",
+        "Potential for permanent position"
+      ],
+      "contact": {
+        "name": "Sofia Almeida",
+        "email": "sofia@innovationhub.pt",
+        "phone": "+351 967 234 567"
+      }
+    }
+  ]
+}
