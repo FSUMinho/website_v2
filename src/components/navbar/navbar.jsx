@@ -180,7 +180,7 @@ const NavBar = () => {
                         {t('navbar.recruitment')}
                     </Link>
                 </li>
-
+ 
                 {/*<li className='navLink'>
                     <Link to="/talent_connect" className="link" onClick={closeHamburgerMenu}>
                         Talent Connect
