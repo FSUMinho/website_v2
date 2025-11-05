@@ -141,7 +141,7 @@ const NavBar = () => {
                         {t('navbar.team')}
                     </Link>
                 </li>
-
+   
                 <li className="navLink dropdown desktop-link" ref={sponsorsDropdownRef} onClick={toggleDropdown}>
                     <Link to="#" className="link">
                         <div className='sponsors-link'>
