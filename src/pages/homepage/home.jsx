@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Title from '../../components/title/title';
 import { sponsors } from '../sponsors/sponsors';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const { t } = useTranslation();
@@ -276,21 +277,25 @@ const Home = () => {
                 <img src='/fsum_24.png' className='car-image' data-aos="fade-left" alt="FSUM 24 Car" />
             </div>
 
-            {/*<div className="santander-container">
-                <Title size="h1" title={t('santander.title')} />
+            <div className="santander-container">
+                <Title size="h1" title={t('falperra.title')} />
 
                 <div className="image-wrapper">
-                    <a href="https://www.santander.pt/universitarios?utm_campaign=BN_ACC_ACST_SU_PAS0_CCO_Matriculas0225_Universidade_Minho_NA_NGAL&utm_source=siteuniversidades&utm_medium=banner&utm_content=NA&utm_term=NA">
+                    <Link to="/falperra">
                         <img
-                            src='/santander_home.png'
+                            src='/falperra/prototype.jpg'
                             className="santander-image"
                             alt="Santander Banner"
                         />
-                    </a>
+                    </Link>
+
+                    <div className="image-text">
+                        {t('falperra.short')}
+                    </div>
 
                     <div className="overlay">{t('santander.more')}</div>
                 </div>
-            </div>*/}
+            </div>
 
             <div className="slider-container" data-aos="fade">
                 <Title size="h1" title={t('news')} />

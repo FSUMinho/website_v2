@@ -40,7 +40,6 @@ export const sponsors = {
         { name: "Tracopower", img: "/sponsors/tracopower.png", url: "https://www.tracopower.com/int" },
         { name: "IHH", img: "/sponsors/IHH.png", url: "https://www.isabellenhuette.de/en/" },
         { name: "VLB", img: "/sponsors/vlb.png", url: "https://vlb-group.com/pt-pt/" },
-        { name: "Mais Rent", img: "/sponsors/mais_rent.png", url: "https://maisrent.pt/pt" },
         { name: "Poliamol", img: "/sponsors/poliamol.png", url: "https://www.poliamol.pt/" },
         { name: "JMartins & Dias", img: "/sponsors/jmd.svg", url: "https://www.jmartinsdias.pt/home"},
         { name: "Placa Nobre", img: "/sponsors/placa_nobre.png", url: "https://www.palcanobre.pt/"},
