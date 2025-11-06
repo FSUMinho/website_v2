@@ -188,6 +188,12 @@ const NavBar = () => {
                 </li>*/}
 
                 <li className='navLink'>
+                    <Link to="/falperra" className="link" onClick={closeHamburgerMenu}>
+                        {t('falperra.title-short')}
+                    </Link>
+                </li>
+
+                <li className='navLink'>
                     <Link to="/contact" className='link' onClick={closeHamburgerMenu}>
                         {t('footer.contact')}
                     </Link>

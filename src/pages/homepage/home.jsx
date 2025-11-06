@@ -280,21 +280,21 @@ const Home = () => {
             <div className="santander-container">
                 <Title size="h1" title={t('falperra.title')} />
 
-                <div className="image-wrapper">
-                    <Link to="/falperra">
+                <Link className="image-wrapper" to="/falperra">
+                    <div>
                         <img
                             src='/falperra/prototype.jpg'
                             className="santander-image"
                             alt="Santander Banner"
                         />
-                    </Link>
 
-                    <div className="image-text">
-                        {t('falperra.short')}
+                        <div className="image-text">
+                            {t('falperra.short')}
+                        </div>
+
+                        <div className="overlay">{t('santander.more')}</div>
                     </div>
-
-                    <div className="overlay">{t('santander.more')}</div>
-                </div>
+                </Link>
             </div>
 
             <div className="slider-container" data-aos="fade">
