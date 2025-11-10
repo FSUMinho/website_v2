@@ -283,7 +283,7 @@ const Home = () => {
                 <Link className="image-wrapper" to="/falperra">
                     <div>
                         <img
-                            src='/falperra/prototype.jpg'
+                            src='/falperra/falperra.jpg'
                             className="santander-image"
                             alt="Santander Banner"
                         />
