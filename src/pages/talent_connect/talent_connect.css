@@ -6,8 +6,6 @@
 .talent-text {
   text-align: justify;
   margin-bottom: 40px;
-  line-height: 1.6;
-  color: #555;
 }
 
 .oportunities-container {
@@ -109,8 +107,9 @@
 
 .card-header {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
   padding-bottom: 12px;
   border-bottom: 2px solid #f5f5f5;

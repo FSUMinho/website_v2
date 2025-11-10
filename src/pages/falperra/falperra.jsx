@@ -2,9 +2,20 @@ import './falperra.css';
 import Title from '../../components/title/title';
 import { useTranslation } from 'react-i18next';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const Falperra = () => {
     const { t } = useTranslation();
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const isMobile = windowWidth <= 768;
 
     const criteriaData = [
         { name: t('falperra.juri-item0'), value: 40 },
@@ -27,7 +38,7 @@ const Falperra = () => {
                 fill="white" 
                 textAnchor={x > cx ? 'start' : 'end'} 
                 dominantBaseline="central"
-                fontSize="18"
+                fontSize={isMobile ? "14" : "18"}
                 fontWeight="bold"
                 style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}
             >
@@ -53,7 +64,7 @@ const Falperra = () => {
                                 <li key={i}>
                                     {t('falperra.participation7')}
                                     <ul className='content-list secondary-list'>
-                                        {Array.from({ length: 5 }, (_, j) => (
+                                        {Array.from({ length: 7 }, (_, j) => (
                                             <li key={j}>{t(`falperra.participation-subitem${j}`)}</li>
                                         ))}
                                     </ul>
@@ -82,7 +93,7 @@ const Falperra = () => {
                 <Title size='h2' title={t('falperra.subtitle3')} />
                 <p className='section-description'>{t('falperra.juri-description')}</p>
                 <div className='criteria-chart-container'>
-                    <ResponsiveContainer width="100%" height={400}>
+                    <ResponsiveContainer width="100%" height={isMobile ? 300 : 400}>
                         <PieChart>
                             <Pie
                                 data={criteriaData}
@@ -90,7 +101,7 @@ const Falperra = () => {
                                 cy="50%"
                                 labelLine={false}
                                 label={renderCustomLabel}
-                                outerRadius={120}
+                                outerRadius={isMobile ? 80 : 120}
                                 fill="#8884d8"
                                 dataKey="value"
                             >
@@ -99,13 +110,13 @@ const Falperra = () => {
                                 ))}
                             </Pie>
                             <Legend
-                                layout="vertical"
+                                layout={isMobile ? "horizontal" : "vertical"}
                                 iconType="circle"
-                                verticalAlign="middle" 
-                                align="left"
-                                height={36}
+                                verticalAlign={isMobile ? "bottom" : "middle"} 
+                                align={isMobile ? "center" : "left"}
+                                wrapperStyle={isMobile ? { paddingTop: '20px' } : {}}
                                 formatter={(value, entry) => (
-                                    <span style={{ color: '#333', fontSize: '1.1rem' }}>
+                                    <span style={{ color: '#333', fontSize: isMobile ? '0.9rem' : '1.1rem' }}>
                                         {value}
                                     </span>
                                 )}
@@ -143,7 +154,7 @@ const Falperra = () => {
                         <span className='download-text'>{t('falperra.download-regulations')}</span>
                     </a>
                     <a 
-                        href="/falperra/assets.zip" 
+                        href="/falperra/logos.zip" 
                         download
                         className='download-button'
                     >

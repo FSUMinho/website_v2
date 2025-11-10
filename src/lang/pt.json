@@ -189,6 +189,8 @@
 
         "falperra": {
             "title": "Cartaz da Rampa da Falperra",
+            "title-short": "Cartaz Falperra",
+            "short": "Cria o cartaz oficial da 45ª Rampa Internacional da Falperra",
             "description": "A Rampa Internacional da Falperra é uma das provas de montanha mais prestigiadas e históricas da Europa, atraindo pilotos e fãs de todo o mundo às curvas emblemáticas de Braga, Portugal. Para celebrar a sua 45.ª edição, convidamos artistas, designers e entusiastas do desporto motorizado a criar o cartaz oficial do evento — uma peça visual que capte a emoção, a velocidade e o espírito da Falperra. O teu design pode tornar-se a imagem de uma lenda do automobilismo internacional. Deixa a tua criatividade subir até ao topo!",
             "subtitle1": "Condições de participação",
             "participation0": "Os concorrentes devem frequentar a Universidade do Minho;",
@@ -203,7 +205,9 @@
             "participation-subitem1": "15, 16 e 17 de maio de 2026",
             "participation-subitem2": "Campeonato Europeu de Montanha",
             "participation-subitem3": "Taça Portugal de Montanha",
-            "participation-subitem4": "Logo do Clube Automóvel do Minho (CAM)",
+            "participation-subitem4": "Logo do Clube Automóvel do Minho (CAM) ou alguma variante desenvolvida pelos artistas (ex.: Logo todo branco)",
+            "participation-subitem5": "Os logótipos fornecidos no ficheiro ZIP devem obrigatoriamente constar no rodapé do cartaz, sem qualquer tipo de alteração",
+            "participation-subitem6": "A disposição dos logos deve seguir a ordem numérica indicada no nome de cada ficheiro — da esquerda para a direita (ou seja, o ficheiro “1 - [nome da associação]” deve ser colocado à esquerda de todos, seguido do “2 - [nome da associação]”, e assim sucessivamente)",
             "subtitle2": "Submissão de propostas",
             "submission0": "As propostas devem ser enviadas entre 15 de novembro de 2025 e 5 de janeiro de 2026 para o email cartaz.fsuminho@gmail.com",
             "submission1": "O email deve ter como assunto: “Concurso Cartaz Falperra – [Nome da Equipa ou Participante]”.",

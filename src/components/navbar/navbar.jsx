@@ -140,7 +140,7 @@ const NavBar = () => {
                         {t('navbar.team')}
                     </Link>
                 </li>
-
+   
                 <li className="navLink dropdown desktop-link" ref={sponsorsDropdownRef} onClick={toggleDropdown}>
                     <Link to="#" className="link">
                         <div className='sponsors-link'>
@@ -180,10 +180,16 @@ const NavBar = () => {
                         {t('navbar.recruitment')}
                     </Link>
                 </li>
-
+ 
                 <li className='navLink'>
                     <Link to="/talent_connect" className="link" onClick={closeHamburgerMenu}>
                         Talent Connect
+                    </Link>
+                </li>
+
+                <li className='navLink'>
+                    <Link to="/falperra" className="link" onClick={closeHamburgerMenu}>
+                        {t('falperra.title-short')}
                     </Link>
                 </li>
 
