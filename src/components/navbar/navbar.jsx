@@ -181,11 +181,11 @@ const NavBar = () => {
                     </Link>
                 </li>
  
-                {/*<li className='navLink'>
+                <li className='navLink'>
                     <Link to="/talent_connect" className="link" onClick={closeHamburgerMenu}>
                         Talent Connect
                     </Link>
-                </li>*/}
+                </li>
 
                 <li className='navLink'>
                     <Link to="/falperra" className="link" onClick={closeHamburgerMenu}>
