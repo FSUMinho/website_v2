@@ -154,7 +154,7 @@ const Falperra = () => {
                         <span className='download-text'>{t('falperra.download-regulations')}</span>
                     </a>
                     <a 
-                        href="/falperra/assets.zip" 
+                        href="https://drive.google.com/file/d/1IzEyplp_kZH_KlS_Kx1jYXEn2jVPZf4z/view?usp=sharing" 
                         download
                         className='download-button'
                     >
