@@ -58,13 +58,13 @@ const Falperra = () => {
 
                 <Title size='h2' title={t('falperra.subtitle1')} />
                 <ul className='content-list primary-list'>
-                    {Array.from({ length: 8 }, (_, i) => {
+                    {Array.from({ length: 9 }, (_, i) => {
                         if (i === 7) {
                             return (
                                 <li key={i}>
                                     {t('falperra.participation7')}
                                     <ul className='content-list secondary-list'>
-                                        {Array.from({ length: 7 }, (_, j) => (
+                                        {Array.from({ length: 5 }, (_, j) => (
                                             <li key={j}>{t(`falperra.participation-subitem${j}`)}</li>
                                         ))}
                                     </ul>
@@ -154,7 +154,7 @@ const Falperra = () => {
                         <span className='download-text'>{t('falperra.download-regulations')}</span>
                     </a>
                     <a 
-                        href="/falperra/logos.zip" 
+                        href="/falperra/assets.zip" 
                         download
                         className='download-button'
                     >
