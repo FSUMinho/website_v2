@@ -14,6 +14,7 @@ export const sponsors = {
     Silver: [
         { name: "Tesla", img: "/sponsors/tesla.png", url: "https://www.tesla.com/pt_pt" },
         { name: "Cadflow", img: "/sponsors/cadflow.png", url: "https://www.cadflow.pt/" },
+        { name: "Critical Techworks", img: "/sponsors/ctw.png", url: "https://www.criticaltechworks.com/" },
     ],
     Bronze: [
         { name: "Bosch", img: "/sponsors/bosch.png", url: "https://www.bosch.pt/" },
