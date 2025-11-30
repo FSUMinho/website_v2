@@ -428,9 +428,12 @@ h1 {
     .homepage-container {
         gap: 7vh;
     }
-
+    
     .background-image {
-        background-position: 50% 50%;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+        will-change: auto;
     }
     
     .logo-white {
