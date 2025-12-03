@@ -19,6 +19,65 @@
         "name": "Luís Feijó",
         "email": "lfeijo@borgwarner.com"
       }
+    },
+    {
+      "id": 2,
+      "company": "VLB Group",
+      "title": "TÉCNICO/A DE PROJETOS E DESENVOLVIMENTO (M/F)",
+      "filter": "jobs",
+      "shortDescription": "Desenvolvimento e otimização técnica de máquinas industriais.",
+      "fullDescription": "A VLB Group, empresa que se dedica ao fabrico, montagem e automação de máquinas de curvar tubo e perfilagem, com sede em Vila Nova de Famalicão, pretende reforçar a sua equipa com um técnico/a de projetos e desenvolvimento (m/f).",
+      "requirements": [
+        "Licenciatura ou Mestrado em Engenharia Mecânica; ",
+        "Capacidade de análise, identificação e apresentação de soluções técnicas;",
+        "Capacidade de desenvolvimento de trabalho em equipa multidisciplinar;",
+        "Capacidade de tomada de decisões e orientação para os resultados."
+      ],
+      "functions": [
+        "Fazer o desenvolvimento 2D e 3D de máquinas e Ferramentas;",
+        "Projetos de máquinas e/ou ferramentas;",
+        "Gestão documental e classificação de componentes;",
+        "Codificação das peças constituintes das máquinas/ferramentas;",
+        "Elaboração do Dossier Técnico; Avaliação de Riscos e documentação técnica associada;",
+        "Validação do cumprimento dos requisitos da máquina segundo a legislação aplicável;",
+        "Suporte na resolução de problemas produtivos e pós-venda;",
+        "Acompanhamento da montagem;",
+        "Apoio à produção nos problemas detetados, com vista a resolução conjunta;",
+        "Preparação da documentação necessária para a colocação em fabrico - BOM, esquemas, etc."
+      ],
+      "contact": {
+        "name": "Cátia Moreira",
+        "email": "catia.moreira@vlb-group.com"
+      }
+    },
+    {
+      "id": 3,
+      "company": "VLB Group",
+      "title": "TÉCNICO/A DESENVOLVIMENTO SOFTWARE",
+      "filter": "jobs",
+      "shortDescription": "Desenvolvimento e programação de software para controlo e automação industrial.",
+      "fullDescription": "A VLB Group, empresa que se dedica ao fabrico, montagem e automação de máquinas de curvar tubo e perfilagem, com sede em Vila Nova de Famalicão, pretende reforçar a sua equipa com um técnico/a de desenvolvimento software.",
+      "requirements": [
+        "Licenciatura ou Mestrado em Engenharia Eletrotécnica;",
+        "Capacidade de análise, identificação e apresentação de soluções técnicas;",
+        "Espírito crítico e resiliente;",
+        "Capacidade de desenvolvimento de trabalho em equipa multidisciplinar. "
+      ],
+      "functions": [
+        "Desenvolver e atualizar aplicações de controlo industrial e outros dispositivos programáveis;",
+        "Colaborar na definição das lógicas de funcionamento das máquinas e desenvolver o respetivo código;",
+        "Programar interfaces gráficas para operador, adaptadas a cada máquina;",
+        "Integrar o software com sensores, atuadores, servomotores e sistemas de automação;",
+        "Realizar testes de software em fábrica e apoiar na resolução de bugs ou falhas de funcionamento;",
+        "Apoiar no comissionamento de máquinas em cliente, assegurando a configuração e arranque dos sistemas;",
+        "Criar documentação técnica e backups de código para cada projeto;",
+        "Participar na melhoria contínua dos sistemas existentes e na introdução de novas soluções tecnológicas;",
+        "Colaborar com as equipas de projeto, montagem e pós-venda para garantir uma ação integrada e eficiente."
+      ],
+      "contact": {
+        "name": "Cátia Moreira",
+        "email": "catia.moreira@vlb-group.com"
+      }
     }
   ]
 }

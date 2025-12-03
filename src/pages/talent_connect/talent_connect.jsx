@@ -182,6 +182,17 @@ const TalentConnect = () => {
                 </section>
               )}
 
+              {selectedOpportunity.requirements && (
+                <section className='modal-section'>
+                  <h3>{t('talent.functions', { defaultValue: 'Functions' })}</h3>
+                  <ul className='modal-list'>
+                    {selectedOpportunity.functions.map((func, index) => (
+                      <li className='modal-list-item' key={index}>{func}</li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+
               {selectedOpportunity.benefits && (
                 <section className='modal-section'>
                   <h3>{t('talent.benefits', { defaultValue: 'Benefits' })}</h3>
