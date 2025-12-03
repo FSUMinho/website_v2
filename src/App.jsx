@@ -105,7 +105,7 @@ const App = () => {
     const timer = setTimeout(() => setIsLoading(false), 2000);
     return () => clearTimeout(timer);
   }, [location.pathname, meta.title, meta.description, meta.keywords]);
-
+ 
   return (
     <div style={appContainerStyle}>
       <NavBar />
@@ -118,7 +118,7 @@ const App = () => {
           <Route path="/invest" element={<Invest />} />
           <Route path="/competitions" element={<Competitions />} />
           <Route path="/recruitment" element={<Recruitment />} />
-          {/*<Route path="/talent_connect" element={<TalentConnect />} />*/}
+          <Route path="/talent_connect" element={<TalentConnect />} />
           <Route path="/falperra" element={<Falperra />} />
           <Route path="*" element={<No_Page />} />
         </Routes>
