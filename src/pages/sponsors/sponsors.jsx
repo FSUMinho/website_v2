@@ -38,7 +38,8 @@ export const sponsors = {
         { name: "Subic Group", img: "/sponsors/subic.png", url: "https://subic.pt/" },
         { name: "Moura Laser", img: "/sponsors/moura-laser.png", url: "https://www.mouralaser.pt/pt/" },
         { name: "Tufama", img: "/sponsors/tufama.png", url: "https://www.tufama.pt/" },
-        { name: "Loctite", img: "/sponsors/loctite.png", url: "https://www.henkel-adhesives.com/pt/pt/empresa/as-nossas-marcas/loctite-new-we.html"}
+        { name: "Loctite", img: "/sponsors/loctite.png", url: "https://www.henkel-adhesives.com/pt/pt/empresa/as-nossas-marcas/loctite-new-we.html"},
+        { name: "Adamastor", img: "/sponsors/adamastor.jpg", url: "https://www.adamastor.com.pt/home" },
     ],
     partners: [
         { name: "Tracopower", img: "/sponsors/tracopower.png", url: "https://www.tracopower.com/int" },

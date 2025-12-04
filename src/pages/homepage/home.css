@@ -429,12 +429,11 @@ h1 {
         gap: 7vh;
     }
     
-    .home-container {
-        background-position: 50% 50%;
-    }
-    
     .background-image {
-        background-position: 50% 50%;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover;
+        will-change: auto;
     }
     
     .logo-white {
