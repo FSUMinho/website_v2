@@ -17,7 +17,7 @@ export const sponsors = {
         { name: "Critical TechWorks", img: "/sponsors/ctw.png", url: "https://www.criticaltechworks.com/" },
         { name: "Althima", img: "/sponsors/althima.jpeg", url: "https://althima.com/pt" },
         { name: "Altair", img: "/sponsors/altair.png", url: "https://altair.com/" },
-        { name: "Jasil", img: "/sponsors/jasil.png", url: "https://jasil.com/" }
+        { name: "Jasil", img: "/sponsors/jasil.jpg", url: "https://jasil.com/" }
     ],
     Bronze: [
         { name: "Bosch", img: "/sponsors/bosch.png", url: "https://www.bosch.pt/" },
