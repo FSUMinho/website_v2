@@ -40,6 +40,8 @@ export const sponsors = {
         { name: "Tufama", img: "/sponsors/tufama.png", url: "https://www.tufama.pt/" },
         { name: "Loctite", img: "/sponsors/loctite.png", url: "https://www.henkel-adhesives.com/pt/pt/empresa/as-nossas-marcas/loctite-new-we.html"},
         { name: "Adamastor", img: "/sponsors/adamastor.jpg", url: "https://www.adamastor.com.pt/home" },
+        { name: "CVR", img: "/sponsors/cvr.jpg", url: "https://www.cvresiduos.pt/" },
+        { name: "Edaetech", img: "/sponsors/edaetech.png", url: "https://edaetech.pt/pt-pt/" }
     ],
     partners: [
         { name: "Tracopower", img: "/sponsors/tracopower.png", url: "https://www.tracopower.com/int" },
