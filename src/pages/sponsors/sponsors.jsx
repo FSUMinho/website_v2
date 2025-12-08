@@ -49,7 +49,7 @@ export const sponsors = {
         { name: "VLB", img: "/sponsors/vlb.png", url: "https://vlb-group.com/pt-pt/" },
         { name: "Poliamol", img: "/sponsors/poliamol.png", url: "https://www.poliamol.pt/" },
         { name: "JMartins & Dias", img: "/sponsors/jmd.svg", url: "https://www.jmartinsdias.pt/home"},
-        { name: "Placa Nobre", img: "/sponsors/placa_nobre.png", url: "https://www.palcanobre.pt/"},
+        { name: "Placa Nobre", img: "/sponsors/placa_nobre.png", url: "https://www.placanobre.pt/"},
         { name: "Cordex", img: "/sponsors/cordex.png", url: "https://cordex.com/pt/home-pt/"},
         { name: "Metalotrofa", img: "/sponsors/metalotrofa.jpeg", url: "https://www.metalotrofa.com/" },
         { name: "Satus Aluminio", img: "/sponsors/status_aluminio.png", url: "https://www.statusaluminio.com/"},
