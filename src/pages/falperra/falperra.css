@@ -230,16 +230,16 @@
 
     .downloads-container {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         gap: 15px;
         margin: 30px 0 40px 0;
         padding: 0;
     }
 
     .download-button {
-        width: 100%;
-        padding: 25px 30px;
-        min-width: unset;
-        box-shadow: 0 2px 12px rgba(229, 37, 38, 0.15);
+        width: 80%;
+        padding: 20px 25px;
     }
 
     .download-button:active {
