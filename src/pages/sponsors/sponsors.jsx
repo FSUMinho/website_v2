@@ -17,7 +17,8 @@ export const sponsors = {
         { name: "Critical TechWorks", img: "/sponsors/ctw.png", url: "https://www.criticaltechworks.com/" },
         { name: "Althima", img: "/sponsors/althima.jpeg", url: "https://althima.com/pt" },
         { name: "Altair", img: "/sponsors/altair.png", url: "https://altair.com/" },
-        { name: "Jasil", img: "/sponsors/jasil.jpg", url: "https://jasil.com/" }
+        { name: "Jasil", img: "/sponsors/jasil.jpg", url: "https://jasil.com/" },
+        { name: "Inegi", img: "/sponsors/inegi.png", url: "https://www.inegi.pt/pt/"},
     ],
     Bronze: [
         { name: "Bosch", img: "/sponsors/bosch.png", url: "https://www.bosch.pt/" },
@@ -31,7 +32,6 @@ export const sponsors = {
         { name: "Einhell", img: "/sponsors/einhell.png", url: "https://www.einhell.pt/"},
         { name: "Bontaz", img: "/sponsors/bontaz.png", url: "https://www.bontaz.com/en/"},
         { name: "Quantal", img: "/sponsors/quantal.png", url: "https://www.quantal.pt/"},
-        { name: "Inegi", img: "/sponsors/inegi.png", url: "https://www.inegi.pt/pt/"},
         { name: "Wondermac", img: "/sponsors/wondermac.png", url: "https://www.wondermac.pt/" },
         { name: "Catim", img: "/sponsors/catim.png", url: "https://www.catim.pt/" },
         { name: "Norelem", img: "/sponsors/norelem.png", url: "https://norelem.es/pt" },
@@ -41,7 +41,9 @@ export const sponsors = {
         { name: "Loctite", img: "/sponsors/loctite.png", url: "https://www.henkel-adhesives.com/pt/pt/empresa/as-nossas-marcas/loctite-new-we.html"},
         { name: "Adamastor", img: "/sponsors/adamastor.jpg", url: "https://www.adamastor.com.pt/home" },
         { name: "CVR", img: "/sponsors/cvr.jpg", url: "https://www.cvresiduos.pt/" },
-        { name: "Edaetech", img: "/sponsors/edaetech.png", url: "https://edaetech.pt/pt-pt/" }
+        { name: "Edaetech", img: "/sponsors/edaetech.png", url: "https://edaetech.pt/pt-pt/" },
+        { name: "Casa das Jantes", img: "/sponsors/casa_jantes.png", url: "https://casadasjantes.pt/" },
+        { name: "Addvolt", img: "/sponsors/addvolt.png", url: "https://addvolt.com/" }
     ],
     partners: [
         { name: "Tracopower", img: "/sponsors/tracopower.png", url: "https://www.tracopower.com/int" },
