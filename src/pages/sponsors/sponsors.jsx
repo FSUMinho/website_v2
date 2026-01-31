@@ -43,7 +43,8 @@ export const sponsors = {
         { name: "CVR", img: "/sponsors/cvr.jpg", url: "https://www.cvresiduos.pt/" },
         { name: "Edaetech", img: "/sponsors/edaetech.png", url: "https://edaetech.pt/pt-pt/" },
         { name: "Casa das Jantes", img: "/sponsors/casa_jantes.png", url: "https://casadasjantes.pt/" },
-        { name: "Addvolt", img: "/sponsors/addvolt.png", url: "https://addvolt.com/" }
+        { name: "Addvolt", img: "/sponsors/addvolt.png", url: "https://addvolt.com/" },
+        { name: "Agovi", img: "/sponsors/agovi.png", url: "https://agovi.pt/" },
     ],
     partners: [
         { name: "Tracopower", img: "/sponsors/tracopower.png", url: "https://www.tracopower.com/int" },
@@ -55,7 +56,8 @@ export const sponsors = {
         { name: "Cordex", img: "/sponsors/cordex.png", url: "https://cordex.com/pt/home-pt/"},
         { name: "Metalotrofa", img: "/sponsors/metalotrofa.jpeg", url: "https://www.metalotrofa.com/" },
         { name: "Satus Aluminio", img: "/sponsors/status_aluminio.png", url: "https://www.statusaluminio.com/"},
-        { name: "Clube Automóvel do Minho", img: "/sponsors/cam.jpg", url: "https://www.facebook.com/clubeautomovelminho/?locale=pt_PT"}
+        { name: "Clube Automóvel do Minho", img: "/sponsors/cam.jpg", url: "https://www.facebook.com/clubeautomovelminho/?locale=pt_PT"},
+        { name: "Polishapes", img: "/sponsors/polishapes.jpeg", url: "https://polishapes.com/"}
     ],
     software: [
         { name: "RapidHarness", img: "/sponsors/rapidharness.png", url: "https://rapidharness.com/" },
