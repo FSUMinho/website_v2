@@ -78,14 +78,14 @@ const Recruitment = () => {
                     <h3>{t('recruitment.mechanical')}</h3>
                     <img src="/system.png" className='sector-icon' alt="Mechanical sector" />
                     <p className='option-text'>{t('recruitment.mechanical-text')}</p>
-                    <a href='https://forms.gle/tBnmoUVp8H8JX5E46' className='apply-button'>{t('recruitment.expo')}</a>
+                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSdNDgAcc4fX6EsQNlbd8OLz9Ir68WVRMuWq0Lk0gTAbF3crVw/viewform?usp=header' className='apply-button'>{t('recruitment.expo')}</a>
                 </div>
 
                 <div className='sector-form-container'>
                     <h3>{t('recruitment.electrical')}</h3>
                     <img src="/lightning.png" className='sector-icon' alt="Electrical sector" />
                     <p className='option-text'>{t('recruitment.electrical-text')}</p>
-                    <a href='https://forms.gle/Lzg3Z8wKjsn5jUYe7' className='apply-button'>{t('recruitment.expo')}</a>
+                    <a href='https://forms.gle/7bVbtwcN8mpUJm1H7' className='apply-button'>{t('recruitment.expo')}</a>
                 </div>
 
                 <div className='sector-form-container'>

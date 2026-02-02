@@ -119,7 +119,6 @@ const App = () => {
           <Route path="/competitions" element={<Competitions />} />
           <Route path="/recruitment" element={<Recruitment />} />
           <Route path="/talent_connect" element={<TalentConnect />} />
-          <Route path="/falperra" element={<Falperra />} />
           <Route path="*" element={<No_Page />} />
         </Routes>
       </div>
