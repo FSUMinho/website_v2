@@ -65,13 +65,13 @@ const Recruitment = () => {
                 ))}
             </div>
 
-            <div style={{display: "none"}}>
+            <div>
                 <Title size="h2" title={t('recruitment.dates-title')} />
             </div>
 
-            <p className='recruitment-text' style={{display: "none"}}>{t('recruitment.dates-text')}</p>
+            <p className='recruitment-text'>{t('recruitment.dates-text')}</p>
 
-            <Title size="h2" title={t('recruitment.expo')} />
+            <Title size="h2" title={t('recruitment.sectors-title')} />
 
             <div className='options-container'>
                 <div className='sector-form-container'>
