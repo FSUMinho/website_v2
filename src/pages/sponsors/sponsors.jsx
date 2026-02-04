@@ -57,7 +57,8 @@ export const sponsors = {
         { name: "Metalotrofa", img: "/sponsors/metalotrofa.jpeg", url: "https://www.metalotrofa.com/" },
         { name: "Satus Aluminio", img: "/sponsors/status_aluminio.png", url: "https://www.statusaluminio.com/"},
         { name: "Clube Automóvel do Minho", img: "/sponsors/cam.jpg", url: "https://www.facebook.com/clubeautomovelminho/?locale=pt_PT"},
-        { name: "Polishapes", img: "/sponsors/polishapes.jpeg", url: "https://polishapes.com/"}
+        { name: "Polishapes", img: "/sponsors/polishapes.jpeg", url: "https://polishapes.com/"},
+        { name: "Inser", img: "/sponsors/inser.jpg", url: "https://inser.pt/index.php?id_category=61&controller=category&id_lang=2"}
     ],
     software: [
         { name: "RapidHarness", img: "/sponsors/rapidharness.png", url: "https://rapidharness.com/" },
