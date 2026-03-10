@@ -277,26 +277,6 @@ const Home = () => {
                 <img src='/fsum_24.png' className='car-image' data-aos="fade-left" alt="FSUM 24 Car" />
             </div>
 
-            <div className="santander-container">
-                <Title size="h1" title={t('falperra.title')} />
-
-                <Link className="image-wrapper" to="/falperra">
-                    <div>
-                        <img
-                            src='/falperra/falperra.jpg'
-                            className="santander-image"
-                            alt="Santander Banner"
-                        />
-
-                        <div className="image-text">
-                            {t('falperra.short')}
-                        </div>
-
-                        <div className="overlay">{t('santander.more')}</div>
-                    </div>
-                </Link>
-            </div>
-
             <div className="slider-container" data-aos="fade">
                 <Title size="h1" title={t('news')} />
 
