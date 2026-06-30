@@ -10,6 +10,7 @@ export const sponsors = {
     Gold: [
         { name: "BorgWarner", img: "/sponsors/borgwarner.png", url: "https://www.borgwarner.com/" },
         { name: "Kroftools", img: "/sponsors/kroftools.png", url: "https://www.kroftools.com/en/" },
+        { name: "Piep", img: "/sponsors/piep.png", url: "https://www.piep.pt/" },
     ],
     Silver: [
         { name: "Tesla", img: "/sponsors/tesla.png", url: "https://www.tesla.com/pt_pt" },
@@ -19,6 +20,10 @@ export const sponsors = {
         { name: "Altair", img: "/sponsors/altair.png", url: "https://altair.com/" },
         { name: "Jasil", img: "/sponsors/jasil.jpg", url: "https://jasil.com/" },
         { name: "Inegi", img: "/sponsors/inegi.png", url: "https://www.inegi.pt/pt/"},
+        { name: "Clube Automóvel do Minho", img: "/sponsors/cam.jpg", url: "https://www.facebook.com/clubeautomovelminho/?locale=pt_PT"},
+        { name: "Quantal", img: "/sponsors/quantal.png", url: "https://www.quantal.pt/"},
+        { name: "Etma Metal Parts", img: "/sponsors/etma.png", url: "https://www.etma.pt/"},
+        { name: "Cachapuz", img: "/sponsors/cachapuz.png", url: "https://www.cachapuz.com/"},
     ],
     Bronze: [
         { name: "Bosch", img: "/sponsors/bosch.png", url: "https://www.bosch.pt/" },
@@ -26,12 +31,9 @@ export const sponsors = {
         { name: "Cepra", img: "/sponsors/cepra.png", url: "https://www.cepra.pt/" },
         { name: "Haas", img: "/sponsors/geen-haas.jpg", url: "https://www.haascnc.com/content/ghf/en/home.html" },
         { name: "Donelab", img: "/sponsors/donelab.png", url: "https://www.donelab.pt/" },
-        { name: "Piep", img: "/sponsors/piep.png", url: "https://www.piep.pt/" },
         { name: "CNC4A", img: "/sponsors/cnc4a.jpg", url: "https://www.cnc4a.com/" },
-        { name: "Etma Metal Parts", img: "/sponsors/etma.png", url: "https://www.etma.pt/"},
         { name: "Einhell", img: "/sponsors/einhell.png", url: "https://www.einhell.pt/"},
         { name: "Bontaz", img: "/sponsors/bontaz.png", url: "https://www.bontaz.com/en/"},
-        { name: "Quantal", img: "/sponsors/quantal.png", url: "https://www.quantal.pt/"},
         { name: "Wondermac", img: "/sponsors/wondermac.png", url: "https://www.wondermac.pt/" },
         { name: "Catim", img: "/sponsors/catim.png", url: "https://www.catim.pt/" },
         { name: "Norelem", img: "/sponsors/norelem.png", url: "https://norelem.es/pt" },
@@ -45,6 +47,9 @@ export const sponsors = {
         { name: "Casa das Jantes", img: "/sponsors/casa_jantes.png", url: "https://casadasjantes.pt/" },
         { name: "Addvolt", img: "/sponsors/addvolt.png", url: "https://addvolt.com/" },
         { name: "Agovi", img: "/sponsors/agovi.png", url: "https://agovi.pt/" },
+        { name: "Ricardo & Barbosa", img: "/sponsors/ricardo_barbosa.png", url: "https://www.ricardo-barbosa.com/pt/"},
+        { name: "Fluke", img: "/sponsors/fluke.png", url: "https://www.fluke.com/pt-pt"},
+        { name: "Tecnogial", img: "/sponsors/tecnogial.png", url: "https://tecnogial.pt/"}
     ],
     partners: [
         { name: "Tracopower", img: "/sponsors/tracopower.png", url: "https://www.tracopower.com/int" },
@@ -56,10 +61,13 @@ export const sponsors = {
         { name: "Cordex", img: "/sponsors/cordex.png", url: "https://cordex.com/pt/home-pt/"},
         { name: "Metalotrofa", img: "/sponsors/metalotrofa.jpeg", url: "https://www.metalotrofa.com/" },
         { name: "Satus Aluminio", img: "/sponsors/status_aluminio.png", url: "https://www.statusaluminio.com/"},
-        { name: "Clube Automóvel do Minho", img: "/sponsors/cam.jpg", url: "https://www.facebook.com/clubeautomovelminho/?locale=pt_PT"},
         { name: "Polishapes", img: "/sponsors/polishapes.jpeg", url: "https://polishapes.com/"},
         { name: "Inser", img: "/sponsors/inser.jpg", url: "https://inser.pt/index.php?id_category=61&controller=category&id_lang=2"},
-        { name: "PartsBox", img: "/sponsors/partsbox.png", url: "https://partsbox.com/pt/"}
+        { name: "PartsBox", img: "/sponsors/partsbox.png", url: "https://partsbox.com/pt/"},
+        { name: "FDS", img: "/sponsors/fds.png", url: "https://www.fds.pt/"},
+        { name: "FABINVENTORS", img: "/sponsors/fabinventors.png", url: "https://fabinventors.com/"},
+        { name: "Servilaser", img: "/sponsors/servilaser.jpg", url: "https://www.servilaser.pt/" },
+
     ],
     software: [
         { name: "RapidHarness", img: "/sponsors/rapidharness.png", url: "https://rapidharness.com/" },
@@ -68,7 +76,9 @@ export const sponsors = {
     institutions: [
         { name: "EEUM", img: "/sponsors/eeum.png", url: "https://www.eng.uminho.pt/pt" },
         { name: "GEPE", img: "/sponsors/gepe.png", url: "https://www.gepe.dei.uminho.pt/" },
-        { name: "DEM", img: "/sponsors/dem.png", url: "https://dem.uminho.pt/" }
+        { name: "DEM", img: "/sponsors/dem.png", url: "https://dem.uminho.pt/" },
+        { name: "IPDJ", img: "/sponsors/ipdj.jpg", url: "https://ipdj.gov.pt/" },
+        { name: "Câmara Municipal de Braga", img: "/sponsors/cm_braga.png", url: "https://www.cm-braga.pt/" },
     ]
 };
 
