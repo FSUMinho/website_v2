@@ -11,6 +11,8 @@ export const sponsors = {
         { name: "BorgWarner", img: "/sponsors/borgwarner.png", url: "https://www.borgwarner.com/" },
         { name: "Kroftools", img: "/sponsors/kroftools.png", url: "https://www.kroftools.com/en/" },
         { name: "Piep", img: "/sponsors/piep.png", url: "https://www.piep.pt/" },
+        { name: "Jasil", img: "/sponsors/jasil.jpg", url: "https://jasil.com/" },
+        { name: "Clube Automóvel do Minho", img: "/sponsors/cam.jpg", url: "https://www.facebook.com/clubeautomovelminho/?locale=pt_PT"},
     ],
     Silver: [
         { name: "Tesla", img: "/sponsors/tesla.png", url: "https://www.tesla.com/pt_pt" },
@@ -18,9 +20,7 @@ export const sponsors = {
         { name: "Critical TechWorks", img: "/sponsors/ctw.png", url: "https://www.criticaltechworks.com/" },
         { name: "Althima", img: "/sponsors/althima.jpeg", url: "https://althima.com/pt" },
         { name: "Altair", img: "/sponsors/altair.png", url: "https://altair.com/" },
-        { name: "Jasil", img: "/sponsors/jasil.jpg", url: "https://jasil.com/" },
         { name: "Inegi", img: "/sponsors/inegi.png", url: "https://www.inegi.pt/pt/"},
-        { name: "Clube Automóvel do Minho", img: "/sponsors/cam.jpg", url: "https://www.facebook.com/clubeautomovelminho/?locale=pt_PT"},
         { name: "Quantal", img: "/sponsors/quantal.png", url: "https://www.quantal.pt/"},
         { name: "Etma Metal Parts", img: "/sponsors/etma.png", url: "https://www.etma.pt/"},
         { name: "Cachapuz", img: "/sponsors/cachapuz.png", url: "https://www.cachapuz.com/"},
