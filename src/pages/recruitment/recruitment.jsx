@@ -78,21 +78,21 @@ const Recruitment = () => {
                     <h3>{t('recruitment.mechanical')}</h3>
                     <img src="/system.png" className='sector-icon' alt="Mechanical sector" />
                     <p className='option-text'>{t('recruitment.mechanical-text')}</p>
-                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSdNDgAcc4fX6EsQNlbd8OLz9Ir68WVRMuWq0Lk0gTAbF3crVw/viewform?usp=header' className='apply-button'>{t('recruitment.expo')}</a>
+                    <a href='https://docs.google.com/forms/d/e/1FAIpQLScLcJHdEbnN49WtvB3qCpyf4UWQ3YopamyPU-MyRiD9HKd71w/viewform' className='apply-button'>{t('recruitment.expo')}</a>
                 </div>
 
                 <div className='sector-form-container'>
                     <h3>{t('recruitment.electrical')}</h3>
                     <img src="/lightning.png" className='sector-icon' alt="Electrical sector" />
                     <p className='option-text'>{t('recruitment.electrical-text')}</p>
-                    <a href='https://forms.gle/7bVbtwcN8mpUJm1H7' className='apply-button'>{t('recruitment.expo')}</a>
+                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSfS3PJkFl6JB7FZY2fUgom8yuE3XK3JHjCRjMTWUh5RQysAbg/viewform' className='apply-button'>{t('recruitment.expo')}</a>
                 </div>
 
                 <div className='sector-form-container'>
                     <h3>{t('recruitment.management')}</h3>
-                    <img src="/team/mnt.png" className='sector-icon' alt="Management sector" />
+                    <img src="/mnt.png" className='sector-icon' alt="Management sector" />
                     <p className='option-text'>{t('recruitment.management-text')}</p>
-                    <a href='https://forms.gle/BwDVs4GvgBCWZxe2A' className='apply-button'>{t('recruitment.expo')}</a>
+                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSf7abRlgYhx2F7l8vYp2t0o04dNwMRaQUjzgLFJRhwJnLOK2Q/viewform' className='apply-button'>{t('recruitment.expo')}</a>
                 </div>
             </div>
 
