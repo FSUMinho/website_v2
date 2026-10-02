@@ -21,7 +21,7 @@
 
         "about_us": {
             "title": "Sobre nós",
-            "text": "Somos um grupo de estudantes da Universidade do Minho com uma paixão pelo desporto motorizado. Como a mais recente adição à Formula Student em Portugal, pretendemos entregar um projeto com bases sólidas e, a curto prazo, tornarmo-nos uma referência no norte do país.",
+            "text": "Somos um grupo de estudantes da Universidade do Minho com uma paixão pelo desporto motorizado. Após conclusão do nosso primeiro protótipo, pretendemos continuar a evoluir o nosso projeto e, a curto prazo, tornarmo-nos uma referência no norte do país.",
             "members": "Membros",
             "courses": "Cursos",
             "years": "Anos",
@@ -88,6 +88,10 @@
             "knowledge-text": "Apesar da nossa experiência, estamos sempre prontos para aprender mais. A partilha de conhecimento com profissionais é fundamental para o nosso crescimento.",
             "tiers-title": "Pacotes de investimento",
             "partner-title": "Parceiros",
+            "diamond-title": "Diamante",
+            "gold-title": "Ouro",
+            "silver-title": "Prata",
+            "bronze-title": "Bronze",
             "social": "Promoção nas redes sociais da FSUMinho",
             "website": "Logo presente no portfolio de patrocinadores no website da equipa",
             "car": "Logo presente no carro",
@@ -108,7 +112,8 @@
             "sectorial": "Exclusividade setorial",
             "unique-banner": "Banners únicos para o patrocinador",
             "activations": "Prioridade na ativação de benefícios", 
-            "speach": "Discurso no roll-out do carro"
+            "speach": "Discurso no roll-out do carro",
+            "email" : "Presença na assinatura de email da equipa"
         },
 
         "contact": {

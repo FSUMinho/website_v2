@@ -182,7 +182,7 @@ const Home = () => {
                     <StatsCard
                         image='/team.png'
                         stat={t('about_us.members')}
-                        value={57}
+                        value={47}
                         orientation="1"
                     />
                     <StatsCard
@@ -194,7 +194,7 @@ const Home = () => {
                     <StatsCard
                         image='/graduation-hat.png'
                         stat={t('about_us.courses')}
-                        value={21}
+                        value={19}
                         orientation="1"
                     />
                     <StatsCard
@@ -274,7 +274,7 @@ const Home = () => {
                     <p className='car-description'>{t('car.description')}</p>
                 </div>
 
-                <img src='/fsum_24.png' className='car-image' data-aos="fade-left" alt="FSUM 24 Car" />
+                <img src='/fsum_26.JPG' className='car-image' data-aos="fade-left" alt="FSUM 24 Car" />
             </div>
 
             <div className="slider-container" data-aos="fade">

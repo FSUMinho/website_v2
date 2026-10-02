@@ -50,7 +50,7 @@ const Invest = () => {
 
     const tiers = [
         {
-            name: "Diamond",
+            name: t('invest.diamond-title'),
             icon: "/sponsors/diamond.png",
             benefits: [
                 'invest.social', 'invest.website', 'invest.car', 'invest.banner', 
@@ -63,7 +63,7 @@ const Invest = () => {
             value: "8000€"
         },
         {
-            name: "Gold",
+            name: t('invest.gold-title'),
             icon: "/sponsors/gold-medal.png",
             benefits: [
                 'invest.social', 'invest.website', 'invest.car', 'invest.banner', 
@@ -74,17 +74,17 @@ const Invest = () => {
             value: "6000€"
         },
         {
-            name: "Silver",
+            name: t('invest.silver-title'),
             icon: "/sponsors/silver-medal.png",
             benefits: [
                 'invest.social', 'invest.website', 'invest.car', 'invest.banner', 
                 'invest.kit', 'invest.rollout', 'invest.job-fair', 'invest.co-creation2',
-                'invest.events', 'invest.cv'
+                'invest.events', 'invest.cv', 'invest.email'
             ],
             value: "4000€"
         },
         {
-            name: "Bronze",
+            name: t('invest.bronze-title'),
             icon: "/sponsors/bronze-medal.png",
             benefits: [
                 'invest.social', 'invest.website', 'invest.car', 'invest.banner', 

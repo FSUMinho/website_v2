@@ -210,14 +210,20 @@ const ContactForm = () => {
                 <div className='contacts-list'>
                     <div className='contact-item'>
                         <h3>Team Leader</h3>
-                        <p className='contact-name'><a href='https://www.linkedin.com/in/nuno-costa-57346b281/'>Nuno Costa</a></p>
-                        <p>Phone: (+351) 934 195 938</p>
+                        <p className='contact-name'><a href='https://www.linkedin.com/in/joão-oliveira-945226345/'>João Oliveira</a></p>
+                        <p>Phone: (+351) 925 789 441</p>
                     </div>
 
                     <div className='contact-item'>
-                        <h3>Head of Management</h3>
-                        <p className='contact-name'><a href='https://www.linkedin.com/in/pedro-ribeiro-sousa/'>Pedro Ribeiro</a></p>
-                        <p>Phone: (+351) 910 955 836</p>
+                        <h3>Project Manager</h3>
+                        <p className='contact-name'><a href='https://www.linkedin.com/in/josé-ribeiro-855832218/'>José Ribeiro</a></p>
+                        <p>Phone: (+351) 912 512 565</p>
+                    </div>
+
+                    <div className='contact-item'>
+                        <h3>Head of Sponsors</h3>
+                        <p className='contact-name'><a href='https://www.linkedin.com/in/daniel-coelho-10946632b/'>Daniel Coelho</a></p>
+                        <p>Phone: (+351) 961 089 959</p>
                     </div>
 
                     <div className='contact-item'>
@@ -225,6 +231,7 @@ const ContactForm = () => {
                         <p className='contact-name'><a href='https://www.linkedin.com/in/h%C3%A9lder-puga-8b6b4243/'>Hélder Puga</a></p>
                         <p>Email: puga@dem.uminho.pt</p>
                     </div>
+                    
                 </div>
             </div>
         </div>

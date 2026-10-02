@@ -21,7 +21,7 @@
 
         "about_us": {
             "title": "About us",
-            "text": "We are a group of students from the University of Minho with a passion for motorsport. As the latest addition to the Formula Student scene in Portugal, we aim to deliver a project with a solid foundation and, in the short term, become a reference in the north of the country.",
+            "text": "We are a group of students from the University of Minho with a passion for motorsport. Having completed our first prototype, we aim to continue developing our project and, in the short term, become a reference in the north of the country.",
             "members": "Members",
             "courses": "Courses",
             "years": "Years",
@@ -88,6 +88,10 @@
             "knowledge-text": "Even with our experience, we are always eager to learn. Sharing knowledge with professionals is essential for our growth.",
             "tiers-title": "Investment packages",
             "partner-title": "Partners",
+            "diamond-title": "Diamond",
+            "gold-title": "Gold",
+            "silver-title": "Silver",
+            "bronze-title": "Bronze",
             "social": "Promotion on FSUMinho's social media",
             "website": "Logo displayed in the sponsors' portfolio on the team's website",
             "car": "Logo displayed on the car",
@@ -108,7 +112,8 @@
             "sectorial": "Sector exclusivity",
             "unique-banner": "Unique banners for the sponsor",
             "activations": "Priority in activating benefits",
-            "speach": "Speech at the car roll-out"
+            "speach": "Speech at the car roll-out",
+            "email" : "Presence in the team’s email signature"
         },
 
         "contact": {
