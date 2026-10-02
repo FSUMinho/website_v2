@@ -54,21 +54,26 @@ const Team = () => {
 
     const [selectedSectorId, setSelectedSectorId] = useState(sectors[0].id);
     const [isTransitioning, setIsTransitioning] = useState(false);
-    const [displayedSector, setDisplayedSector] = useState(sectors[0]);
+    const [displayedSectorId, setDisplayedSectorId] = useState(sectors[0].id);
+    const displayedSector = sectors.find(sector => sector.id === displayedSectorId);
+
+    // Preload every sector photo so switching sectors never waits on the network
+    useEffect(() => {
+        sectors.forEach(sector => {
+            const img = new Image();
+            img.src = sector.photo;
+        });
+    }, [sectors]);
 
     useEffect(() => {
-        if (selectedSectorId) {
-            const newSector = sectors.find(sector => sector.id === selectedSectorId);
-            if (newSector) {
-                setIsTransitioning(true);
-                const timer = setTimeout(() => {
-                    setDisplayedSector(newSector);
-                    setIsTransitioning(false);
-                }, 150);
-                return () => clearTimeout(timer);
-            }
-        }
-    }, [selectedSectorId, sectors]);
+        if (selectedSectorId === displayedSectorId) return;
+        setIsTransitioning(true);
+        const timer = setTimeout(() => {
+            setDisplayedSectorId(selectedSectorId);
+            setIsTransitioning(false);
+        }, 120);
+        return () => clearTimeout(timer);
+    }, [selectedSectorId, displayedSectorId]);
 
     const pageData = {
         title: "Meet the Team",
@@ -122,7 +127,6 @@ const Team = () => {
                         src={displayedSector.photo}
                         alt={displayedSector.title} 
                         className='sector-photo' 
-                        loading="lazy"
                         decoding="async"
                     />
                 </div>

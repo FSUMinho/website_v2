@@ -1,5 +1,5 @@
 import './navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../../hooks/useLanguage';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect, useRef } from 'react';
@@ -8,112 +8,74 @@ const NavBar = () => {
     const { t } = useTranslation();
     const { currentLanguage, handleChangeLanguage } = useLanguage();
     const flagImage = currentLanguage === 'en' ? '/navbar/en.png' : '/navbar/pt.png';
+    const { pathname } = useLocation();
 
     const [sponsorsDropdownOpen, setDropdownOpen] = useState(false);
-    const [archiveDropdownOpen, setArchiveDropdownOpen] = useState(false);
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
     const sponsorsDropdownRef = useRef(null);
-    const archiveDropdownRef = useRef(null);
     const navRef = useRef(null);
-    const hamburgerRef = useRef(null);
 
+    // Close every menu whenever the route changes
     useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (hamburgerOpen) {
-                const hamburgerButton = hamburgerRef.current;
-                const navLinksElement = document.querySelector('.nav-links');
-                
-                if (hamburgerButton && !hamburgerButton.contains(event.target) && 
-                    navLinksElement && !navLinksElement.contains(event.target)) {
-                    setHamburgerOpen(false);
-                    const hamburger = document.querySelector('.hamburger');
-                    const navLinks = document.querySelector('.nav-links');
-                    if (hamburger) hamburger.classList.remove('active');
-                    if (navLinks) navLinks.classList.remove('active');
-                    return;
-                }
-            }
+        setDropdownOpen(false);
+        setHamburgerOpen(false);
+    }, [pathname]);
 
-            if (sponsorsDropdownOpen && sponsorsDropdownRef.current && 
+    // Close menus on outside click or Escape
+    useEffect(() => {
+        if (!sponsorsDropdownOpen && !hamburgerOpen) return;
+
+        const handlePointerDown = (event) => {
+            if (hamburgerOpen && navRef.current && !navRef.current.contains(event.target)) {
+                setHamburgerOpen(false);
+            }
+            if (sponsorsDropdownOpen && sponsorsDropdownRef.current &&
                 !sponsorsDropdownRef.current.contains(event.target)) {
                 setDropdownOpen(false);
             }
-            
-            if (archiveDropdownOpen && archiveDropdownRef.current && 
-                !archiveDropdownRef.current.contains(event.target)) {
-                setArchiveDropdownOpen(false);
+        };
+
+        const handleKeyDown = (event) => {
+            if (event.key === 'Escape') {
+                setDropdownOpen(false);
+                setHamburgerOpen(false);
             }
         };
 
-        if (sponsorsDropdownOpen || archiveDropdownOpen || hamburgerOpen) {
-            document.addEventListener('mousedown', handleClickOutside);
-            document.addEventListener('touchstart', handleClickOutside);
-        }
-
+        document.addEventListener('pointerdown', handlePointerDown);
+        document.addEventListener('keydown', handleKeyDown);
         return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-            document.removeEventListener('touchstart', handleClickOutside);
+            document.removeEventListener('pointerdown', handlePointerDown);
+            document.removeEventListener('keydown', handleKeyDown);
         };
-    }, [sponsorsDropdownOpen, archiveDropdownOpen, hamburgerOpen]);
+    }, [sponsorsDropdownOpen, hamburgerOpen]);
 
+    // Lock page scroll while the mobile menu is open
     useEffect(() => {
-        if (hamburgerOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'unset';
-        }
-
+        document.body.style.overflow = hamburgerOpen ? 'hidden' : '';
         return () => {
-            document.body.style.overflow = 'unset';
+            document.body.style.overflow = '';
         };
     }, [hamburgerOpen]);
 
+    // Drop the mobile menu if the window grows to desktop width
+    useEffect(() => {
+        const desktop = window.matchMedia('(min-width: 1151px)');
+        const handleChange = (event) => {
+            if (event.matches) setHamburgerOpen(false);
+        };
+        desktop.addEventListener('change', handleChange);
+        return () => desktop.removeEventListener('change', handleChange);
+    }, []);
+
     const toggleDropdown = () => {
-        setDropdownOpen(!sponsorsDropdownOpen);
-    };
-
-    const toggleArchiveDropdown = () => {
-        setArchiveDropdownOpen(!archiveDropdownOpen);
-    };
-
-    const closeAllDropdowns = () => {
-        setDropdownOpen(false);
-        setArchiveDropdownOpen(false);
-    };
-
-    const closeHamburgerMenu = () => {
-        setHamburgerOpen(false);
-        const hamburger = hamburgerRef.current;
-        const navLinks = document.querySelector('.nav-links');
-        if (hamburger) hamburger.classList.remove('active');
-        if (navLinks) navLinks.classList.remove('active');
-    };
-
-    const closeAllMenus = () => {
-        closeAllDropdowns();
-        closeHamburgerMenu();
+        setDropdownOpen(open => !open);
     };
 
     const toggleHamburger = () => {
-        const newHamburgerState = !hamburgerOpen;
-        setHamburgerOpen(newHamburgerState);
-        
+        setHamburgerOpen(open => !open);
         setDropdownOpen(false);
-        setArchiveDropdownOpen(false);
-        
-        const hamburger = hamburgerRef.current;
-        const navLinks = document.querySelector('.nav-links');
-        
-        if (hamburger && navLinks) {
-            if (newHamburgerState) {
-                hamburger.classList.add('active');
-                navLinks.classList.add('active');
-            } else {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            }
-        }
     };
 
     return (
@@ -122,73 +84,98 @@ const NavBar = () => {
                 <img className="nav-logo" src="/logo_white.png" alt="FSUMinho Logo" />
             </Link>
 
-            <div className='hamburger' ref={hamburgerRef} onClick={toggleHamburger}>
+            <div
+                className={`hamburger ${hamburgerOpen ? 'active' : ''}`}
+                onClick={toggleHamburger}
+                role="button"
+                aria-label="Menu"
+                aria-expanded={hamburgerOpen}
+            >
                 <div className='bar'></div>
                 <div className='bar'></div>
                 <div className='bar'></div>
             </div>
 
-            <ul style={navLinks} className='nav-links'>
+            <ul
+                style={navLinks}
+                className={`nav-links ${hamburgerOpen ? 'active' : ''}`}
+                onClick={(e) => {
+                    // Also covers tapping the link for the page you're already on
+                    if (e.target.closest('a')) setHamburgerOpen(false);
+                }}
+            >
                 <li style={navLink} title={t('navbar.lang')}>
                     <img src={flagImage} 
                     style={langSelect}
-                    onClick={handleChangeLanguage} />
+                    onClick={handleChangeLanguage}
+                    alt={t('navbar.lang')} />
                 </li>
 
                 <li className="navLink">
-                    <Link to="/team" className="link" onClick={closeHamburgerMenu}>
+                    <Link to="/team" className="link">
                         {t('navbar.team')}
                     </Link>
                 </li>
    
-                <li className="navLink dropdown desktop-link" ref={sponsorsDropdownRef} onClick={toggleDropdown}>
-                    <Link to="#" className="link">
+                <li className="navLink dropdown desktop-link" ref={sponsorsDropdownRef}>
+                    <span
+                        className="link"
+                        role="button"
+                        tabIndex={0}
+                        aria-haspopup="true"
+                        aria-expanded={sponsorsDropdownOpen}
+                        onClick={toggleDropdown}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                toggleDropdown();
+                            }
+                        }}
+                    >
                         <div className='sponsors-link'>
                             {t('navbar.sponsors')}
-                            <img src='/archive_assets/arrow.png' className={sponsorsDropdownOpen ? 'arrow rotate' : 'arrow'} />
+                            <img src='/archive_assets/arrow.png' className={sponsorsDropdownOpen ? 'arrow rotate' : 'arrow'} alt="" />
                         </div>
-                    </Link>
-                    
-                    {sponsorsDropdownOpen && (
-                        <ul className="dropdown-menu">
-                            <li><Link to="/sponsors" className="dropdown-link" onClick={closeAllMenus}>{t('navbar.companies')}</Link></li>
-                            <li><Link to="/invest" className="dropdown-link" onClick={closeAllMenus}>{t('navbar.invest')}</Link></li>
-                        </ul>
-                    )}
+                    </span>
+
+                    <ul className={`dropdown-menu ${sponsorsDropdownOpen ? 'open' : ''}`}>
+                        <li><Link to="/sponsors" className="dropdown-link" onClick={() => setDropdownOpen(false)}>{t('navbar.companies')}</Link></li>
+                        <li><Link to="/invest" className="dropdown-link" onClick={() => setDropdownOpen(false)}>{t('navbar.invest')}</Link></li>
+                    </ul>
                 </li>
 
                 <li className="navLink mobile-link">
-                    <Link to="/sponsors" className="link" onClick={closeHamburgerMenu}>
+                    <Link to="/sponsors" className="link">
                         {t('navbar.sponsors')}
                     </Link>
                 </li>
 
                 <li className="navLink mobile-link">
-                    <Link to="/invest" className="link" onClick={closeHamburgerMenu}>
+                    <Link to="/invest" className="link">
                         {t('navbar.invest')}
                     </Link> 
                 </li>
 
                 <li className="navLink">
-                    <Link to="/competitions" className="link" onClick={closeHamburgerMenu}>
+                    <Link to="/competitions" className="link">
                         {t('navbar.competitions')}
                     </Link>
                 </li>
 
                 <li className='navLink'>
-                    <Link to="/recruitment" className="link" onClick={closeHamburgerMenu}>
+                    <Link to="/recruitment" className="link">
                         {t('navbar.recruitment')}
                     </Link>
                 </li>
  
                 <li className='navLink'>
-                    <Link to="/talent_connect" className="link" onClick={closeHamburgerMenu}>
+                    <Link to="/talent_connect" className="link">
                         Talent Connect
                     </Link>
                 </li>
 
                 <li className='navLink'>
-                    <Link to="/contact" className='link' onClick={closeHamburgerMenu}>
+                    <Link to="/contact" className='link'>
                         {t('footer.contact')}
                     </Link>
                 </li>
