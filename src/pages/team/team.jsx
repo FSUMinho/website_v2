@@ -9,46 +9,60 @@ const Team = () => {
 
     const sectors = useMemo(() => [
         {
-            id: 'management',
-            title: 'Management',
-            icon: `/team/mnt.png`,
-            description: t('team.management'),
-            photo: `/team/mnt_photo.jpg`,
+            id: 'sponsors',
+            title: 'Sponsors',
+            icon: `/team/sponsors.png`,
+            description: t('team.sponsors'),
+            photo: `/team/sponsors_photo.png`,
+        },
+        {
+            id: 'logistics',
+            title: 'Logistics',
+            icon: `/team/logistics.png`,
+            description: t('team.logistics'),
+            photo: `/team/logistics_photo.png`,
+        },
+        {
+            id: 'marketing',
+            title: 'Marketing',
+            icon: `/team/marketing.png`,
+            description: t('team.marketing'),
+            photo: `/team/marketing_photo.png`,
         },
         {
             id: 'powertrain',
             title: 'Powertrain',
             icon: `/team/pwrt.png`,
             description: t('team.powertrain'),
-            photo: `/team/powertrain_photo.jpg`,
+            photo: `/team/powertrain_photo.png`,
         },
         {
             id: 'esw',
             title: 'Electronics & Software',
             icon: `/team/ecu.png`,
             description: t('team.esw'),
-            photo: `/team/esw_photo.jpg`,
+            photo: `/team/esw_photo.png`,
         },
         {
             id: 'drivetrain',
             title: 'Drivetrain',
             icon: `/team/dvrt.png`,
             description: t('team.drivetrain'),
-            photo: `/team/drivetrain_photo.jpg`,
+            photo: `/team/drivetrain_photo.png`,
         },
         {
             id: 'chassisaero',
             title: 'Chassis & Aero',
             icon: `/team/chassis_aero.png`,
             description: t('team.chassiaero'),
-            photo: `/team/chassis_photo.jpg`,
+            photo: `/team/chassis_photo.png`,
         },
         {
             id: 'suspension',
             title: 'Suspension & Steering',
             icon: `/team/suspension_steering.png`,
             description: t('team.suspension'),
-            photo: `/team/suspension_photo.jpg`,
+            photo: `/team/suspension_photo.png`,
         },
     ], [t]);
 
@@ -94,7 +108,7 @@ const Team = () => {
                     backgroundImage: `linear-gradient(
                         rgba(0, 0, 0, 0.5),
                         rgba(0, 0, 0, 0.5)
-                    ), url('/team/team_photo.jpg')`,
+                    ), url('/team/team_photo_s26.jpg')`,
                 }}>
                 <h1 className='team-title' data-aos="fade">{t('team.title')}</h1>
             </div>

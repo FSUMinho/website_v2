@@ -83,10 +83,12 @@ const Home = () => {
 
     const [currentImage, setCurrentImage] = useState(0);
     const images = [
+        './archive_assets/fspt_26.jpg',
         './archive_assets/fspt_25.jpg',
         '/fspt_group_photo.jpg',
         '/archive_assets/fspt24.jpg',
         '/fspt24_2.jpg',
+        '/team/team_photo_s26.jpg',
         '/team/team_photo.jpg',
     ];
 
