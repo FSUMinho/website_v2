@@ -67,6 +67,8 @@ export const sponsors = {
         { name: "FDS", img: "/sponsors/fds.png", url: "https://www.fds.pt/"},
         { name: "FABINVENTORS", img: "/sponsors/fabinventors.png", url: "https://fabinventors.com/"},
         { name: "Servilaser", img: "/sponsors/servilaser.jpg", url: "https://www.servilaser.pt/" },
+        { name: "FilFogo", img: "/sponsors/filfogo.png", url: "http://www.grupofilfogo.com/" },
+        { name: "Igus", img: "/sponsors/igus.png", url: "https://www.igus.pt/" },
 
     ],
     software: [
