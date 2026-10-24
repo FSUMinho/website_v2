@@ -1,4 +1,6 @@
 .carspage-container {
+    /* The one dark tone used by the specs, gallery and gallery modal */
+    --car-dark: #1e1e1e;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,6 +8,9 @@
     row-gap: 0;
     z-index: 1;
     overflow-x: hidden;
+    /* The page ends on the dark gallery: cancel the app's 70px bottom padding
+       (contentStyle in App.jsx) so no white strip shows above the footer */
+    margin-bottom: -70px;
 }
 
 .carspage-container .cars-container {
@@ -44,41 +49,164 @@
     height: auto;
 }
 
+.carspage-container .car-back-link {
+    position: absolute;
+    top: 24px;
+    left: 2%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.carspage-container .car-back-link img {
+    width: 14px;
+    height: 14px;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+.carspage-container .car-back-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.carspage-container .car-back-link:hover img {
+    transform: rotate(90deg) translateY(4px);
+}
+
+.carspage-container .car-back-link:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 4px;
+}
+
+.carspage-container .car-highlights {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: min(1200px, 80%);
+    padding: 40px 0 20px;
+}
+
+.carspage-container .car-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 0 12px;
+    border-left: 1px solid #f0f0f0;
+}
+
+.carspage-container .car-highlight:first-child {
+    border-left: 0;
+}
+
+.carspage-container .car-highlight-value {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #111;
+}
+
+.carspage-container .car-highlight-unit {
+    margin-left: 4px;
+    font-size: 1.2rem;
+    color: #e52526;
+}
+
+.carspage-container .car-highlight-label {
+    font-size: 0.95rem;
+    color: #596275;
+}
+
 .carspage-container .gallery-container {
     width: min(1200px, 80%);
     padding-top: 10px;
     padding-bottom: 20px;
 }
 
-.carspage-container .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    align-items: stretch;
-    gap: 20px;
-    margin-top: 1.3rem;
+/* Small reference to the competitions this car took part in, under the story */
+.carspage-container .car-competitions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-.carspage-container .gallery-card {
-    overflow: hidden;
-    border-radius: 20px;
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    height: 190px;
-    margin: 0;
+.carspage-container .car-competitions-label {
+    color: #596275;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
-.carspage-container .gallery-card-wide {
-    grid-column: span 2;
+.carspage-container .car-competition-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border: 1px solid rgba(229, 37, 38, 0.55);
+    border-radius: 999px;
+    color: #111;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.carspage-container .car-competition-result {
+    color: #e52526;
+    font-weight: 700;
+}
+
+/* The arrow image is white: dark on the pill, white once it turns red */
+.carspage-container .car-competition-link img {
+    width: 10px;
+    height: 10px;
+    transform: rotate(-90deg);
+    filter: invert(1);
+}
+
+.carspage-container .car-competition-link:hover {
+    background-color: #e52526;
+    border-color: #e52526;
+    color: white;
+}
+
+.carspage-container .car-competition-link:hover .car-competition-result {
+    color: white;
+}
+
+.carspage-container .car-competition-link:hover img {
+    filter: none;
+}
+
+.carspage-container .car-competition-link:focus-visible {
+    outline: 2px solid #e52526;
+    outline-offset: 3px;
+}
+
+/* One background and one continuous blueprint grid behind specs + gallery */
+.carspage-container .car-dark-band {
+    width: 100%;
+    background-color: var(--car-dark);
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center top;
+    color: #fff;
+}
+
+.carspage-container .car-dark-band .section-title {
+    color: #fff;
 }
 
 .carspage-container .gallery-section {
-    background-color: #171717;
     width: 100%;
-    padding-bottom: 20px;
-}
-
-.carspage-container .gallery-section .section-title {
-    color: #fff;
+    padding-bottom: 40px;
 }
 
 .carspage-container .gallery-section .gallery-container {
@@ -86,24 +214,15 @@
     margin-left: auto;
 }
 
-.carspage-container .gallery-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .carspage-container .specs-container {
     width: 100%;
     margin: 0;
-    background-color: #fff;
-    color: #111;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .carspage-container .car-container {
@@ -111,7 +230,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 0 10%;
+    margin: 20px 10% 40px;
     gap: 10vh;
 }
 
@@ -125,21 +244,30 @@
     border-radius: 20px;
     background-color: #f0f0f081;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    top: 55px;
 }
 
 @media (max-width: 992px) {
     .carspage-container .car-container {
         gap: 5vh;
     }
-
-    .carspage-container .gallery-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
 }
 
 @media (max-width: 800px) {
+    .carspage-container .car-highlights {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 24px;
+        width: 90%;
+        padding-top: 30px;
+    }
+
+    .carspage-container .car-highlight:nth-child(3) {
+        border-left: 0;
+    }
+
+    .carspage-container .car-highlight-value {
+        font-size: 2.4rem;
+    }
+
     .carspage-container .background-image {
         background-attachment: scroll;
         background-position: center center;
@@ -152,16 +280,11 @@
     }
 
     .carspage-container .gallery-container {
-        width: min(600px, 80%);
+        width: 90%;
     }
 
-    .carspage-container .gallery-grid {
-        grid-template-columns: 1fr;
-        gap: 5vh;
-    }
-
-    .carspage-container .gallery-card-wide {
-        grid-column: span 1;
+    .carspage-container .car-competitions {
+        justify-content: center;
     }
 
     .carspage-container .car-container {
@@ -170,9 +293,6 @@
         gap: 5vh;
     }
 
-    .carspage-container .car-image {
-        top: 0;
-    }
 }
 
 @media (max-width: 576px) {

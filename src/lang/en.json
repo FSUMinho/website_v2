@@ -248,18 +248,24 @@
         "specs": {
             "title": "Technical Specifications",
             "performance": {
+                "title": "Performance",
+                "acceleration": "0–100 km/h",
                 "speed": "Max speed",
                 "weight": "Total weight"
             },
 
             "powertrain": {
+                "title": "Powertrain",
                 "type-engine": "Type of engine",
                 "power": "Max power",
                 "binary": "Max torque"
             },
 
             "chassis": {
+                "title": "Chassis",
                 "type-chassis": "Type of chassis",
+                "material": "Material",
+                "material-steel": "S355JR steel",
                 "wheelbase": "Wheelbase"
             },
 
@@ -272,7 +278,13 @@
         },
 
         "gallery": {
-            "title": "Gallery"
+            "title": "Gallery",
+            "open": "Open photo",
+            "close": "Close",
+            "previous": "Previous photo",
+            "next": "Next photo",
+            "more": "View all",
+            "count": "{{count}} photos"
         },
 
         "about_car": {
@@ -282,7 +294,11 @@
 
         "garage": {
             "title": "Garage FSUMinho",
-            "view-details": "View details"
+            "view-details": "View details",
+            "competitions": "Competitions",
+            "intro": "Every FSUMinho car starts as a blank sheet and ends on the track. These are the machines our students designed, built and pushed to the limit, each one taking the team a step further than the last.",
+            "back": "Back to the garage",
+            "visit": "Visit the garage"
         }
     }
 }

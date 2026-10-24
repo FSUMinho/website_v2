@@ -249,18 +249,24 @@
         "specs": {
             "title": "Especificações Técnicas",
             "performance": {
+                "title": "Desempenho",
+                "acceleration": "0–100 km/h",
                 "speed": "Velocidade máxima",
                 "weight": "Peso total"
             },
 
             "powertrain": {
+                "title": "Powertrain",
                 "type-engine": "Tipo de motor",
                 "power": "Potência máxima",
                 "binary": "Binário máximo"
             },
 
             "chassis": {
+                "title": "Chassis",
                 "type-chassis": "Tipo de chassis",
+                "material": "Material",
+                "material-steel": "Aço S355JR",
                 "wheelbase": "Distância entre eixos"
             },
 
@@ -273,7 +279,13 @@
         },
 
         "gallery": {
-            "title": "Galeria"
+            "title": "Galeria",
+            "open": "Abrir foto",
+            "close": "Fechar",
+            "previous": "Foto anterior",
+            "next": "Foto seguinte",
+            "more": "Ver todas",
+            "count": "{{count}} fotos"
         },
 
         "about_car": {
@@ -283,7 +295,11 @@
 
         "garage": {
             "title": "Garagem FSUMinho",
-            "view-details": "Ver detalhes"
+            "view-details": "Ver detalhes",
+            "competitions": "Competições",
+            "intro": "Cada carro da FSUMinho começa numa folha em branco e acaba na pista. Estas são as máquinas que os nossos estudantes projetaram, construíram e levaram ao limite, cada uma a levar a equipa mais longe do que a anterior.",
+            "back": "Voltar à garagem",
+            "visit": "Visite a garagem"
         }
         
     }

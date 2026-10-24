@@ -1,39 +1,41 @@
 import './garage.css';
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Garage from '../../components/garage/garage';
-import Title from '../../components/title/title';
 import { Helmet } from 'react-helmet';
+import cars from '../../data/cars';
 
-const Archive = () => {
+const GaragePage = () => {
     const { t } = useTranslation();
 
     const pageData = {
-        title: "Garage Archive",
-        description: "FSUMinho garage history and achievements",
-        keywords: "garage, archive, history, FSUMinho, Formula Student"
+        title: "Garage - FSUMinho",
+        description: "Explore the Formula Student prototypes designed, built and raced by FSUMinho.",
+        keywords: "garage, cars, prototypes, FSUM 01, FSUMinho, Formula Student"
     };
 
     return (
-        <div className='arquive-container'>
+        <div className='garage-page'>
             <Helmet>
                 <title>{pageData.title}</title>
                 <meta name="description" content={pageData.description} />
                 <meta name="keywords" content={pageData.keywords} />
             </Helmet>
 
-            <Title size="h1" title={t('garage.title')} />
+            {/* Same photo banner as the team page */}
+            <div className='garage-hero'>
+                <h1 className='garage-hero-title' data-aos="fade">{t('garage.title')}</h1>
+            </div>
 
-            <div className='garage-container' data-aos="fade-up">
-                <Garage
-                    detailsUrl="/car"
-                    background="/car/FSUM_01_side.jpg"
-                    logo="/car/FSUM01_logo_white.png"
-                />
+            <p className='p1 garage-intro' data-aos="fade">{t('garage.intro')}</p>
 
+            <div className='garage-list' data-aos="fade-up">
+                {/* Newest car first */}
+                {[...cars].reverse().map(car => (
+                    <Garage key={car.id} car={car} />
+                ))}
             </div>
         </div>
     );
 }
 
-export default Archive;
+export default GaragePage;

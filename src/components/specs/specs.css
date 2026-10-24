@@ -1,7 +1,7 @@
 .specs {
     width: min(1200px, 80%);
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .specs-grid {
@@ -12,39 +12,56 @@
     margin-top: 1.3rem;
 }
 
+/* Dark card outlined in red all the way round */
 .specs-card {
+    position: relative;
     overflow: hidden;
+    padding: 22px 22px 8px;
+    border: 1px solid rgba(229, 37, 38, 0.55);
     border-radius: 20px;
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.04));
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.specs-card:hover {
+    transform: translateY(-4px);
+    border-color: #e52526;
+    box-shadow: 0 12px 30px rgba(229, 37, 38, 0.2);
 }
 
 .specs-card-title {
-    margin: 0;
-    padding: 10px 12px;
-    background: #e52526;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 0 0 10px;
     color: #fff;
     font-size: 1rem;
     font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     line-height: 1.25;
+}
+
+.specs-card-index {
+    color: #e52526;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
 }
 
 .specs-list {
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 12px 18px;
+    padding: 0;
 }
 
 .specs-row {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    min-height: 42px;
-    border-bottom: 1px solid #f0f0f0;
-    color: #596275;
-    font-size: 0.78rem;
+    flex-direction: column;
+    gap: 2px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .specs-row:last-child {
@@ -56,10 +73,25 @@
     margin: 0;
 }
 
+.specs-row dt {
+    color: #a3aab5;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
 .specs-row dd {
-    color: #111;
+    color: #fff;
+    font-size: 1.5rem;
     font-weight: 700;
-    text-align: right;
+    line-height: 1.2;
+    font-variant-numeric: tabular-nums;
+}
+
+.specs-unit {
+    margin-left: 4px;
+    color: #e52526;
+    font-size: 0.9rem;
 }
 
 @media (max-width: 992px) {
@@ -70,11 +102,35 @@
 
 @media (max-width: 800px) {
     .specs {
-        width: min(600px, 80%);
+        width: min(600px, 90%);
     }
 
     .specs-grid {
         grid-template-columns: 1fr;
-        gap: 5vh;
+        gap: 16px;
+    }
+
+    /* Label and value on one line to keep the stacked cards short */
+    .specs-row {
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 10px 0;
+    }
+
+    .specs-row dd {
+        font-size: 1.15rem;
+        text-align: right;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .specs-card {
+        transition: none;
+    }
+
+    .specs-card:hover {
+        transform: none;
     }
 }

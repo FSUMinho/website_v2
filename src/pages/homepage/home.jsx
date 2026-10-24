@@ -276,7 +276,15 @@ const Home = () => {
                     <p className='car-description'>{t('car.description')}</p>
                 </div>
 
-                <img src='/fsum_26.JPG' className='car-image' data-aos="fade-left" alt="FSUM 24 Car" />
+                <Link to="/garage" className='car-image-link' data-aos="fade-left">
+                    <img src='/fsum_26.JPG' className='car-image' alt="FSUM 01" />
+                    <span className='car-image-invite'>
+                        {t('garage.visit')}
+                        <span className='car-image-arrow'>
+                            <img src="/archive_assets/arrow.png" alt="" />
+                        </span>
+                    </span>
+                </Link>
             </div>
 
             <div className="slider-container" data-aos="fade">

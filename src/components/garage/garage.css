@@ -1,119 +1,166 @@
-.garage-wrapper {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto 30px;
-}
-
+/* Garage card — same shape and treatment as the competition cards */
 .garage-card {
-    border-radius: 16px;
-    height: 200px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
-    background-size: cover;
-    background-position: 0% 15%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    height: 260px;
+    margin: 0 auto 30px;
     padding: 0 30px;
-}
-
-.garage-logo {
-    flex-shrink: 0;
-    width: 170px;
-    height: 170px;
-    object-fit: contain;
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
-}
-
-.garage-details-button {
-    margin-left: auto;
-    padding: 8px 0;
-    background: none;
-    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    isolation: isolate;
+    background-color: #000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     color: white;
-    font: inherit;
     cursor: pointer;
-    white-space: nowrap;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.garage-details-button:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
+.garage-background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
 }
 
-.garage-details-button:focus-visible {
-    outline: 2px solid white;
+.garage-background::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.garage-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+}
+
+.garage-card:hover .garage-background {
+    transform: scale(1.04);
+}
+
+.garage-card:hover .garage-background::after {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.garage-card:focus-visible {
+    outline: 3px solid #e52526;
     outline-offset: 4px;
 }
 
-@media (max-width: 992px) {
-    .garage-wrapper {
-        max-width: 90%;
-    }
+.garage-logo {
+    width: 220px;
+    height: auto;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+}
 
+.garage-year {
+    font-size: 32px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.garage-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* "View details" + red arrow, revealed on hover / keyboard focus */
+.garage-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.garage-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e52526;
+}
+
+.garage-arrow img {
+    width: 16px;
+    height: 16px;
+    transform: rotate(-90deg);
+}
+
+.garage-card:hover .garage-details,
+.garage-card:focus-visible .garage-details {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 992px) {
     .garage-card {
-        height: 160px;
+        max-width: 90%;
+        height: 200px;
         padding: 0 24px;
     }
 
     .garage-logo {
-        width: 110px;
-        height: 110px;
-    }
-}
-
-@media (max-width: 768px) {
-    .garage-card {
-        padding: 20px;
-        height: auto;
-        min-height: 140px;
-        background-color: #000;
-        background-size: cover, contain;
-        background-position: center;
-        background-repeat: no-repeat;
+        width: 170px;
     }
 
-    .garage-logo {
-        width: 90px;
-        height: 90px;
+    .garage-year {
+        font-size: 26px;
     }
 }
 
 @media (max-width: 576px) {
-    .garage-wrapper {
-        max-width: 100%;
-    }
-
     .garage-card {
+        max-width: 100%;
+        height: 160px;
         border-radius: 12px;
-        padding: 16px;
-        flex-direction: column;
-        box-sizing: border-box;
-        min-height: calc(168px + 1.5lh);
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        text-align: center;
+        padding: 0 20px;
     }
 
     .garage-logo {
-        width: 80px;
-        height: 80px;
+        width: 130px;
     }
 
-    .garage-details-button {
-        margin-left: 0;
+    .garage-year {
+        font-size: 22px;
+    }
+
+    .garage-header {
+        gap: 4px;
+    }
+
+    /* Too narrow for the text: keep only the arrow */
+
+    .garage-details {
+        font-size: 0;
+        gap: 0;
+    }
+
+    .garage-arrow {
+        width: 32px;
+        height: 32px;
     }
 }
 
-@media (max-width: 400px) {
-    .garage-card {
-        padding: 12px;
-        min-height: calc(146px + 1.25lh);
-    }
-
-    .garage-logo {
-        width: 70px;
-        height: 70px;
+@media (prefers-reduced-motion: reduce) {
+    .garage-card,
+    .garage-background,
+    .garage-background::after,
+    .garage-details {
+        transition: none;
     }
 }

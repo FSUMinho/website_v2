@@ -1,15 +1,57 @@
-.arquive-container {
+.garage-page {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.garage-container {
+/* Photo banner, same treatment as .team-title-container on the team page */
+.garage-hero {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 40vh;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/garage/fsum01/gallery/fspt26_1.jpg');
+    background-size: cover;
+    background-position: center 40%;
+    background-attachment: fixed;
+    color: white;
+}
+
+.garage-hero-title {
+    margin: 0;
+    padding: 0 5%;
+    text-align: center;
+}
+
+.garage-intro {
+    max-width: 900px;
+    margin: 40px 10% 20px;
+    text-align: justify;
+}
+
+.garage-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
     padding: 20px;
+}
+
+@media (max-width: 800px) {
+    .garage-hero {
+        height: 25vh;
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 500px) {
+    .garage-intro {
+        margin: 30px 5% 10px;
+        font-size: 1rem;
+    }
 }

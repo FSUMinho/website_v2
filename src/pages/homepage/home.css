@@ -176,12 +176,134 @@
     text-align: justify;
 }
 
-.car-image {
+/* The car photo links to the garage; hovering reveals the invite */
+.car-image-link {
+    position: relative;
+    display: block;
+    flex-shrink: 0;
     width: 40%;
-    height: auto;
     border-radius: 20px;
-    background-color: #f0f0f081;
+    overflow: hidden;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.car-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #f0f0f081;
+    transition: transform 0.5s ease;
+}
+
+.car-image-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.car-image-invite {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Same red arrow as the garage cards */
+.car-image-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #e52526;
+    transition: transform 0.3s ease;
+}
+
+.car-image-arrow img {
+    width: 16px;
+    height: 16px;
+    transform: rotate(-90deg);
+}
+
+.car-image-link:hover,
+.car-image-link:focus-visible {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+}
+
+.car-image-link:hover .car-image,
+.car-image-link:focus-visible .car-image {
+    transform: scale(1.04);
+}
+
+.car-image-link:hover::after,
+.car-image-link:focus-visible::after {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.car-image-link:hover .car-image-invite,
+.car-image-link:focus-visible .car-image-invite {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.car-image-link:hover .car-image-arrow {
+    transform: translateX(4px);
+}
+
+.car-image-link:focus-visible {
+    outline: 3px solid #e52526;
+    outline-offset: 4px;
+}
+
+/* No hover on touch screens: keep a small invite visible in the corner */
+@media (hover: none) {
+    .car-image-invite {
+        inset: auto 12px 12px auto;
+        gap: 8px;
+        padding: 6px 6px 6px 14px;
+        border-radius: 999px;
+        font-size: 0.95rem;
+        background-color: rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(5px);
+        opacity: 1;
+        transform: none;
+    }
+
+    .car-image-arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+    .car-image-arrow img {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .car-image-link,
+    .car-image,
+    .car-image-invite,
+    .car-image-arrow,
+    .car-image-link::after {
+        transition: none;
+    }
 }
 
 .santander-container {
@@ -502,7 +624,7 @@ h1 {
         gap: 5vh;
     }
     
-    .car-image {
+    .car-image-link {
         width: 80%;
     }
     
@@ -562,7 +684,7 @@ h1 {
         font-size: 1.2rem;
     }
     
-    .car-image {
+    .car-image-link {
         width: 95%;
     }
     
