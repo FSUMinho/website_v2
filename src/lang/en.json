@@ -9,7 +9,8 @@
             "competitions": "Competitions",
             "cars": "Cars",
             "recruitment": "Recruitment",
-            "lang": "Change language"
+            "lang": "Change language",
+            "garage": "Garage"
         },
 
         "news": "Latest news",
@@ -242,6 +243,46 @@
             "finals2": "Any matters not covered in these regulations will be resolved by the contest organizers.",
             "download-regulations": "Download Regulations",
             "download-assets": "Download Logos and photos"
+        },
+
+        "specs": {
+            "title": "Technical Specifications",
+            "performance": {
+                "speed": "Max speed",
+                "weight": "Total weight"
+            },
+
+            "powertrain": {
+                "type-engine": "Type of engine",
+                "power": "Max power",
+                "binary": "Max torque"
+            },
+
+            "chassis": {
+                "type-chassis": "Type of chassis",
+                "wheelbase": "Wheelbase"
+            },
+
+            "suspension-brakes": {
+                "title": "Suspension and Braking",
+                "type-arm": "Type of arm",
+                "tyres": "Tyres",
+                "brakes": "Brakes"
+            }
+        },
+
+        "gallery": {
+            "title": "Gallery"
+        },
+
+        "about_car": {
+            "title": "More about",
+            "description": "The FSUM 01 marks the beginning of FSUMinho’s history in Formula Student competitions. Guided by a philosophy of simplicity and ease of production, the team’s first prototype focuses on laying the right foundations, enabling the team to learn and develop in the years to come. The FSUM 01 is just the first step, and there is now a long road ahead to improve. This prototype embodies the team’s motto, “Racing is a matter of spirit, not strength”, by Janet Guthrie. With tremendous resilience and motivation, the team managed to overcome all the difficulties they encountered, resulting in the creation of the FSUM 01."
+        },
+
+        "garage": {
+            "title": "Garage FSUMinho",
+            "view-details": "View details"
         }
     }
 }

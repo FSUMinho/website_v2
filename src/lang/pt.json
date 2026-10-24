@@ -9,7 +9,8 @@
             "competitions": "Competições",
             "cars": "Carros",
             "recruitment": "Recrutamento",
-            "lang": "Mudar linguagem"
+            "lang": "Mudar linguagem",
+            "garage": "Garagem"
         },
 
         "news": "Últimas notícias",
@@ -243,6 +244,47 @@
             "finals2": "Os casos omissos neste regulamento serão resolvidos pela organização do concurso.",
             "download-regulations": "Descarregar regulamento",
             "download-assets": "Descarregar logos e fotos"
+        },
+
+        "specs": {
+            "title": "Especificações Técnicas",
+            "performance": {
+                "speed": "Velocidade máxima",
+                "weight": "Peso total"
+            },
+
+            "powertrain": {
+                "type-engine": "Tipo de motor",
+                "power": "Potência máxima",
+                "binary": "Binário máximo"
+            },
+
+            "chassis": {
+                "type-chassis": "Tipo de chassis",
+                "wheelbase": "Distância entre eixos"
+            },
+
+            "suspension-brakes": {
+                "title": "Suspensão e Travagem",
+                "type-arm": "Tipo de braço",
+                "tyres": "Pneus",
+                "brakes": "Travões"
+            }
+        },
+
+        "gallery": {
+            "title": "Galeria"
+        },
+
+        "about_car": {
+            "title": "Mais sobre",
+            "description": "O FSUM 01 marca o início da história da FSUMinho em competições de Formula Student. Seguindo uma filosofia de simplicidade e facilidade de produção, o primeiro protótipo da equipa foca-se em consolidar os fundamentos certos, permitindo à equipa aprender e evoluir nos anos seguintes. O FSUM 01 é apenas o primeiro passo  e agora há todo um caminho pela frente para melhorar. Este protótipo aplica o lema da equipa, “Racing is a matter of spirit, not strength”, de Janet Guthrie. Com enorme resiliência e motivação, a equipa conseguiu superar todas as dificuldades encontradas, dando origem ao FSUM 01."
+        },
+
+        "garage": {
+            "title": "Garagem FSUMinho",
+            "view-details": "Ver detalhes"
         }
+        
     }
 }

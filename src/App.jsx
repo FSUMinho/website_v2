@@ -15,6 +15,8 @@ import Invest from './pages/invest/invest';
 import Recruitment from './pages/recruitment/recruitment';
 import TalentConnect from './pages/talent_connect/talent_connect'
 import Falperra  from './pages/falperra/falperra';
+import Car from './pages/team_archive/cars/cars';
+import Garage from './pages/garage/garage';
 
 const pageMeta = {
   '/': {
@@ -63,6 +65,17 @@ const pageMeta = {
     title: "Falperra contest - FSUMinho",
     description: "Design the poster for the 45th Falperra Hillclimb",
     keywords: "recruitment, carrers, fsuminho, formula student"
+  },
+
+  '/car': {
+    title: 'Car 2 - FSUMinho',
+    description: 'FSUMinho Formula Student team car page',
+    keywords: 'car, fsuminho, formula student, motorsport'
+  },
+  '/garage': {
+    title: 'Garage - FSUMinho',
+    description: 'FSUMinho garage history and cars',
+    keywords: 'garage, cars, fsuminho, formula student'
   }
 };
 
@@ -119,6 +132,8 @@ const App = () => {
           <Route path="/competitions" element={<Competitions />} />
           <Route path="/recruitment" element={<Recruitment />} />
           <Route path="/talent_connect" element={<TalentConnect />} />
+          <Route path="/car" element={<Car />} />
+          <Route path="/garage" element={<Garage />} />
           <Route path="*" element={<No_Page />} />
         </Routes>
       </div>

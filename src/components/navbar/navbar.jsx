@@ -162,6 +162,12 @@ const NavBar = () => {
                     </Link>
                 </li>
 
+                <li className="navLink">
+                    <Link to="/garage" className="link">
+                        {t('navbar.garage')}
+                    </Link>
+                </li>
+
                 <li className='navLink'>
                     <Link to="/recruitment" className="link">
                         {t('navbar.recruitment')}
