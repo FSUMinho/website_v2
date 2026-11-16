@@ -1,6 +1,3 @@
-// Every competition the team has entered, oldest first. Used by the Competitions page,
-// and by each car page through the car's `competitions` list of ids (see cars.js).
-
 const FSPT = {
     name: 'Formula Student Portugal',
     logo: '/archive_assets/FSPT_Logo_White_Square.svg',

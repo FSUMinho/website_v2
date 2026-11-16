@@ -1,12 +1,3 @@
-// Every car in the garage. Add a new entry here and it shows up on /garage
-// with its own details page at /garage/<id>.
-//
-// Text fields ending in "Key" are i18n keys; everything else is shown as-is.
-//
-// Media: each car has its own folder, public/garage/<id>/, laid out as
-//   logo.png, logo_white.png, cover.jpg (garage card), hero.jpg (top of the car page),
-//   about.jpg (next to the story) and gallery/ (any number of photos).
-
 const media = (id) => (file) => `/garage/${id}/${file}`;
 const fsum01 = media('fsum01');
 
@@ -15,10 +6,10 @@ const cars = [
         id: 'fsum01',
         name: 'FSUM 01',
         year: '2026',
-        logo: fsum01('logo.png'),
+        logo: fsum01('logo.svg'),
         logoWhite: fsum01('logo_white.png'),
         cover: fsum01('cover.jpg'),
-        hero: fsum01('hero.jpg'),
+        hero: fsum01('herov2.jpg'),
         aboutImage: fsum01('about.jpg'),
         descriptionKey: 'about_car.description',
 
@@ -70,12 +61,12 @@ const cars = [
 
         // Any number of photos: the page previews the first few and the rest open in a modal
         gallery: [
-            { src: fsum01('gallery/fspt26_1.jpg'), alt: 'FSUM 01 at FSPT26' },
-            { src: fsum01('gallery/fspt26_2.jpg'), alt: 'FSUM 01 at FSPT26' },
-            { src: fsum01('gallery/tyre.jpg'), alt: 'FSUM 01 tyre' },
+            { src: fsum01('gallery/fsum01_26.jpeg'), alt: 'FSUM 01 at FSPT26' },
             { src: fsum01('gallery/interior.jpg'), alt: 'FSUM 01 interior' },
+            { src: fsum01('gallery/tyre.jpg'), alt: 'FSUM 01 tyre' },
             { src: fsum01('gallery/seat.jpg'), alt: 'FSUM 01 seat' },
-            { src: fsum01('gallery/top_view.jpeg'), alt: 'FSUM 01' },
+            { src: fsum01('gallery/fspt26_2.jpg'), alt: 'FSUM 01 at FSPT26' },
+            { src: fsum01('gallery/fspt26_3.JPG'), alt: 'FSUM 01' },
         ],
     },
 ];

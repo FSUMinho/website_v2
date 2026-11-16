@@ -69,7 +69,7 @@ const Cars = () => {
                     <img src="/archive_assets/arrow.png" alt="" />
                     {t('garage.back')}
                 </Link>
-                <div data-aos="fade-up">
+                <div className="car-logo" data-aos="fade-up">
                     <img className='logo-white' src={car.logo} alt={`Logo ${car.name}`} />
                 </div>
             </div>

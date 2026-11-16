@@ -1,5 +1,4 @@
 .carspage-container {
-    /* The one dark tone used by the specs, gallery and gallery modal */
     --car-dark: #1e1e1e;
     display: flex;
     flex-direction: column;
@@ -8,8 +7,6 @@
     row-gap: 0;
     z-index: 1;
     overflow-x: hidden;
-    /* The page ends on the dark gallery: cancel the app's 70px bottom padding
-       (contentStyle in App.jsx) so no white strip shows above the footer */
     margin-bottom: -70px;
 }
 
@@ -44,9 +41,15 @@
     z-index: -1;
 }
 
+.carspage-container .car-logo {
+    width: min(1024px, 100%);
+}
+
 .carspage-container .logo-white {
+    display: block;
     width: 50%;
     height: auto;
+    margin-inline: auto;
 }
 
 .carspage-container .car-back-link {
@@ -126,7 +129,6 @@
     padding-bottom: 20px;
 }
 
-/* Small reference to the competitions this car took part in, under the story */
 .carspage-container .car-competitions {
     display: flex;
     flex-wrap: wrap;
@@ -161,7 +163,6 @@
     font-weight: 700;
 }
 
-/* The arrow image is white: dark on the pill, white once it turns red */
 .carspage-container .car-competition-link img {
     width: 10px;
     height: 10px;
@@ -188,7 +189,6 @@
     outline-offset: 3px;
 }
 
-/* One background and one continuous blueprint grid behind specs + gallery */
 .carspage-container .car-dark-band {
     width: 100%;
     background-color: var(--car-dark);
@@ -222,7 +222,6 @@
     align-items: center;
     justify-content: center;
     padding-top: 20px;
-    padding-bottom: 30px;
 }
 
 .carspage-container .car-container {
@@ -242,6 +241,8 @@
     width: 40%;
     height: auto;
     border-radius: 20px;
+    position: relative;
+    top: 30px;
     background-color: #f0f0f081;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
