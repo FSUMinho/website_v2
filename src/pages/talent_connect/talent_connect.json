@@ -78,6 +78,39 @@
         "name": "Cátia Moreira",
         "email": "catia.moreira@vlb-group.com"
       }
+    },
+    {
+      "id": 4,
+      "company": "COFICAB",
+      "title": "Engenheiro de Simulações Computacionais — Estágio Profissional (M/F)",
+      "filter": "internships",
+      "shortDescription": "Simulações elétricas, térmicas e mecânicas, com integração de inteligência artificial para otimização de produtos e processos.",
+      "fullDescription": "O Grupo COFICAB, líder mundial no fabrico de fios e cabos para a indústria automóvel, pretende recrutar um Engenheiro de Simulações Computacionais em regime de estágio profissional. Localizada no distrito de Guarda e com horário de tempo inteiro. Candidaturas através do envio de CV para email em anexo indicando no assunto “Candidatura - Engenheiro de Simulações Computacionais”.",
+      "requirements": [
+        "Formação superior em Engenharia Eletrotécnica, Eletromecânica, Mecânica, Física ou áreas afins.",
+        "Experiência na utilização de software de simulação ou de ferramentas equivalentes.",
+        "Experiência e/ou conhecimentos em Inteligência Artificial.",
+        "Bons conhecimentos de análise de elementos finitos (FEA) e modelação numérica.",
+        "Capacidade analítica, rigor técnico e espírito de equipa.",
+        "Domínio da língua inglesa, falada e escrita.",
+        "Competências valorizadas: organização e gestão de prioridades, boa comunicação, espírito de equipa, atitude proativa, orientação para a resolução de problemas e vontade de aprender e crescer profissionalmente."
+      ],
+      "functions": [
+        "Executar simulações e análises numéricas em ambientes multidisciplinares, nomeadamente nas áreas elétrica, térmica e mecânica.",
+        "Desenvolver modelos computacionais detalhados e interpretar os respetivos resultados.",
+        "Apoiar as equipas de projeto na definição de soluções técnicas com base nas simulações realizadas.",
+        "Garantir a qualidade e a precisão dos resultados através de metodologias de validação adequadas."
+      ],
+      "benefits": [
+        "Integração numa empresa inovadora e orientada para a tecnologia.",
+        "Integração numa equipa técnica altamente qualificada.",
+        "Participação em projetos desafiantes e tecnologicamente avançados.",
+        "Oportunidades de desenvolvimento e evolução profissional num ambiente de inovação."
+      ],
+      "contact": {
+        "name": "Eunice Santos / Dinis Costa",
+        "emails": ["eunice.santos@coficab.com", "dinis.costa@coficab.com"]
+      }
     }
   ]
 }
