@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './competition.css';
 
-const Competition = ({ background, logo, year, country, city, circuit, class_, overall, results }) => {
+const Competition = ({ id, background, logo, year, country, city, circuit, class_, overall, results, defaultOpen = false }) => {
     const { t } = useTranslation();
-    const [showTable, setShowTable] = useState(false);
+    const [showTable, setShowTable] = useState(defaultOpen);
 
     const toggleTable = () => {
         setShowTable(!showTable);
@@ -18,7 +18,7 @@ const Competition = ({ background, logo, year, country, city, circuit, class_, o
     };
 
     return (
-        <div className="competition-wrapper">  
+        <div className="competition-wrapper" id={id ? `competition-${id}` : undefined}>
             <div 
                 className="competition-card"
                 style={{

@@ -1,12 +1,35 @@
 import './competitions.css';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Competition from '../../../components/competition/competition';
 import Title from '../../../components/title/title';
 import { Helmet } from 'react-helmet';
+import competitions from '../../../data/competitions';
+
+// Fixed navbar height plus a little breathing room
+const NAVBAR_OFFSET = 90;
 
 const Archive = () => {
     const { t } = useTranslation();
+    // ?c=<competition id> (e.g. from a car page) scrolls to that card and opens it
+    const [searchParams] = useSearchParams();
+    const target = searchParams.get('c');
+
+    useEffect(() => {
+        if (!target) return;
+        // Wait a beat: the app scrolls every new page to the top after it renders
+        const timer = setTimeout(() => {
+            const card = document.getElementById(`competition-${target}`);
+            if (!card) return;
+            // Sum offsetTop rather than use scrollIntoView: the list's fade-up animation
+            // starts 100px low, which would make the browser overshoot
+            let top = 0;
+            for (let node = card; node; node = node.offsetParent) top += node.offsetTop;
+            window.scrollTo({ top: top - NAVBAR_OFFSET, behavior: 'smooth' });
+        }, 150);
+        return () => clearTimeout(timer);
+    }, [target]);
 
     const pageData = {
         title: "Competitions Archive",
@@ -25,69 +48,13 @@ const Archive = () => {
             <Title size="h1" title={t('archive.title')} />
 
             <div className='competitions-container' data-aos="fade-up">
-                <Competition
-                    background="/fspt_group_photo.jpg"
-                    logo="/archive_assets/FSPT_Logo_White_Square.svg"
-                    year='2023'
-                    country='Portugal'
-                    city='Castelo Branco'
-                    circuit='Kartódromo de Castelo Branco'
-                    class_="Concept Class"
-                    overall="2"
-                    results={{
-                        "Business Plan Presentation": "1", 
-                        "Engineering Design": "2", 
-                        "Cost of Manufacturing": "5"
-                    }}
-                />
-
-                <Competition
-                    background="/archive_assets/fspt24.jpg"
-                    logo="/archive_assets/FSPT_Logo_White_Square.svg"
-                    year='2024'
-                    country='Portugal'
-                    city='Castelo Branco'
-                    circuit='Kartódromo de Castelo Branco'
-                    class_="EV"
-                    overall="7"
-                    results={{
-                        "Business Plan Presentation": "6", 
-                        "Engineering Design": "9", 
-                        "Cost of Manufacturing": "2"
-                    }}
-                />
-
-                <Competition
-                    background="/archive_assets/fspt_25.jpg"
-                    logo="/archive_assets/FSPT_Logo_White_Square.svg"
-                    year='2025'
-                    country='Portugal'
-                    city='Castelo Branco'
-                    circuit='Kartódromo de Castelo Branco'
-                    class_="2"
-                    overall="3"
-                    results={{
-                        "Business Plan Presentation": "3", 
-                        "Engineering Design": "5", 
-                        "Cost of Manufacturing": "1"
-                    }}
-                />
-
-                <Competition
-                    background="/archive_assets/fspt_26.jpg"
-                    logo="/archive_assets/FSPT_Logo_White_Square.svg"
-                    year='2026'
-                    country='Portugal'
-                    city='Castelo Branco'
-                    circuit='Kartódromo de Castelo Branco'
-                    class_="1"
-                    overall="6"
-                    results={{
-                        "Business Plan Presentation": "5", 
-                        "Engineering Design": "8", 
-                        "Cost of Manufacturing": "4"
-                    }}
-                />
+                {competitions.map(competition => (
+                    <Competition
+                        key={competition.id}
+                        {...competition}
+                        defaultOpen={competition.id === target}
+                    />
+                ))}
             </div>
         </div>
     );

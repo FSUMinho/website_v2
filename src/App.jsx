@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import './App.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -15,6 +15,9 @@ import Invest from './pages/invest/invest';
 import Recruitment from './pages/recruitment/recruitment';
 import TalentConnect from './pages/talent_connect/talent_connect'
 import Falperra  from './pages/falperra/falperra';
+import Car from './pages/team_archive/cars/cars';
+import Garage from './pages/garage/garage';
+import cars from './data/cars';
 
 const pageMeta = {
   '/': {
@@ -63,7 +66,19 @@ const pageMeta = {
     title: "Falperra contest - FSUMinho",
     description: "Design the poster for the 45th Falperra Hillclimb",
     keywords: "recruitment, carrers, fsuminho, formula student"
-  }
+  },
+
+  '/garage': {
+    title: 'Garage - FSUMinho',
+    description: 'Explore the Formula Student prototypes designed, built and raced by FSUMinho.',
+    keywords: 'garage, cars, prototypes, fsuminho, formula student'
+  },
+
+  ...Object.fromEntries(cars.map(car => [`/garage/${car.id}`, {
+    title: `${car.name} - FSUMinho`,
+    description: `${car.name}, a Formula Student prototype by FSUMinho: specifications and gallery.`,
+    keywords: `${car.name}, car, fsuminho, formula student, motorsport`
+  }]))
 };
 
 const App = () => {
@@ -119,6 +134,10 @@ const App = () => {
           <Route path="/competitions" element={<Competitions />} />
           <Route path="/recruitment" element={<Recruitment />} />
           <Route path="/talent_connect" element={<TalentConnect />} />
+          <Route path="/garage" element={<Garage />} />
+          <Route path="/garage/:carId" element={<Car />} />
+          {/* Old address of the FSUM 01 page */}
+          <Route path="/car" element={<Navigate to="/garage/fsum01" replace />} />
           <Route path="*" element={<No_Page />} />
         </Routes>
       </div>

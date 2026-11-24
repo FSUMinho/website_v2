@@ -1,0 +1,226 @@
+/* Preview grid: first and sixth tiles are wide so two full rows of four columns line up */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 20px;
+    margin-top: 1.3rem;
+}
+
+.gallery-grid > .gallery-card:first-child,
+.gallery-grid > .gallery-card:nth-child(6) {
+    grid-column: span 2;
+}
+
+.gallery-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    height: 190px;
+    margin: 0;
+    /* beats the navbar's mobile `button { padding }` rule */
+    padding: 0;
+    cursor: zoom-in;
+}
+
+.gallery-card:focus-visible {
+    outline: 3px solid #e52526;
+    outline-offset: 3px;
+}
+
+.gallery-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-card:hover .gallery-image {
+    transform: scale(1.05);
+}
+
+/* "View all" tile: the next photo, darkened, with the count on top */
+.gallery-more {
+    cursor: pointer;
+}
+
+.gallery-more-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    color: white;
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s ease;
+}
+
+.gallery-more-count {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.gallery-more:hover .gallery-more-label {
+    background-color: rgba(229, 37, 38, 0.75);
+}
+
+/* Modal with every photo */
+.gallery-modal {
+    position: fixed;
+    inset: 0;
+    /* Above the fixed navbar, below the photo viewer */
+    z-index: 99999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.85);
+    animation: gallery-fade 0.2s ease;
+}
+
+.gallery-modal-panel {
+    display: flex;
+    flex-direction: column;
+    width: min(1200px, 100%);
+    max-height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    /* Same dark tone as the page's specs + gallery band */
+    background-color: var(--car-dark, #1e1e1e);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gallery-modal-title {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 0;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.gallery-modal-count {
+    font-size: 0.95rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.gallery-modal-close {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: background-color 0.3s ease;
+}
+
+.gallery-modal-close:hover {
+    background-color: #e52526;
+}
+
+.gallery-modal-close:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.gallery-modal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.gallery-modal-grid .gallery-card {
+    height: 220px;
+    border-radius: 14px;
+}
+
+@keyframes gallery-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 992px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-modal-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 800px) {
+    .gallery-grid {
+        gap: 12px;
+    }
+
+    .gallery-card {
+        height: 130px;
+        border-radius: 14px;
+    }
+
+    .gallery-modal {
+        padding: 0;
+    }
+
+    .gallery-modal-panel {
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .gallery-modal-header {
+        padding: 14px 16px;
+    }
+
+    .gallery-modal-title {
+        font-size: 1.3rem;
+    }
+
+    .gallery-modal-grid {
+        gap: 10px;
+        padding: 16px;
+    }
+
+    .gallery-modal-grid .gallery-card {
+        height: 140px;
+        border-radius: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery-modal {
+        animation: none;
+    }
+
+    .gallery-image,
+    .gallery-more-label {
+        transition: none;
+    }
+}
