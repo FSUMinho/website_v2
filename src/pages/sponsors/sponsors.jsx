@@ -49,7 +49,8 @@ export const sponsors = {
         { name: "Agovi", img: "/sponsors/agovi.png", url: "https://agovi.pt/" },
         { name: "Ricardo & Barbosa", img: "/sponsors/ricardo_barbosa.png", url: "https://www.ricardo-barbosa.com/pt/"},
         { name: "Fluke", img: "/sponsors/fluke.png", url: "https://www.fluke.com/pt-pt"},
-        { name: "Tecnogial", img: "/sponsors/tecnogial.png", url: "https://tecnogial.pt/"}
+        { name: "Tecnogial", img: "/sponsors/tecnogial.png", url: "https://tecnogial.pt/"},
+        { name: "LaserMold", img: "/sponsors/laserMold.jpg", url: "https://lasermold.pt/"}
     ],
     partners: [
         { name: "Tracopower", img: "/sponsors/tracopower.png", url: "https://www.tracopower.com/int" },
